@@ -91,7 +91,7 @@ deploy:
   repo: git@gitee.com:kox_baba/kox_baba.git
   branch: master
 - type: git
-  repo: https://github.com/nicecoders/nicecoders.github.io.git
+  repo: git@github.com:j710328466/j710328466.github.io.git
   branch: master
 - type: baidu_url_submitter
 
