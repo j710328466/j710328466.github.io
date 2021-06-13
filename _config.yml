@@ -3,7 +3,7 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: 极简.teddy
+title: jsonskin'blog
 subtitle:
 description: web,vue,react,webpack,node
 author: teddy
@@ -91,7 +91,7 @@ deploy:
   repo: git@gitee.com:kox_baba/kox_baba.git
   branch: master
 - type: git
-  repo: https://github.com/j710328466/j710328466.github.io.git
+  repo: https://github.com/nicecoders/nicecoders.github.io.git
   branch: master
 - type: baidu_url_submitter
 

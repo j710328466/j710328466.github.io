@@ -45,7 +45,7 @@ categories: 版本管理
 ### 将 gitHub 上的仓库克隆到本地
 
 ```js
-* git clone (https://github.com/j710328466/yourItem.git)（j710328466/yourBlog.git替换成你博客的地址）
+* git clone (https://github.com/nicecoders/yourItem.git)（nicecoders/yourBlog.git替换成你博客的地址）
 ```
 
 > 这个步骤以后你的本地项目文件夹下面就会多出个文件夹，该文件夹名即为你github上面的项目名，如图我多出了个yourItem文件夹，我们把本地项目文件夹下的所有文件（除了新多出的那个文件夹不用），其余都复制到那个新多出的文件夹下

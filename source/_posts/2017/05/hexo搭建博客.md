@@ -41,7 +41,7 @@ date: 2017-05-01 19:59:16
 * 如果你是用 coding 仓库
 > deploy:
     type: coding
-    repo: https://github.com/j710328466/j710328466.github.io.git
+    repo: https://github.com/nicecoders/nicecoders.github.io.git
     branch: master
 ```
 

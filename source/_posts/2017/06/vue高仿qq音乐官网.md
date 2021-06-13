@@ -11,7 +11,7 @@ categories: web项目
 
 部分地方不全部根据原版，也有自由发挥的，目前功能模块比较简陋，如果显示不完整，请下载以下api文件并打开
 > [网易云音乐API](https://github.com/Binaryify/NeteaseCloudMusicApi)
-> 项目地址：[github](https://github.com/j710328466/vue-qqmusic)
+> 项目地址：[github](https://github.com/nicecoders/vue-qqmusic)
 > 预览地址：[demo](http://182.254.147.168:8564/#/)
 
 ## Build Setup
