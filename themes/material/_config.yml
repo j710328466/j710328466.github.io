@@ -33,7 +33,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-    slogan: "坚持不一定成功，不坚持一定会失败"
+    slogan: "服下红色药丸，发现这个世界的真相"
     theme_color: "#77546f"
     theme_sub_color: "#77546f"
     hyperlink_color: "#679cc5"
@@ -71,8 +71,8 @@ background:
 # Images Settings
 img:
     logo: "/img/logo.png"
-    avatar: "/img/avatar.png"
-    daily_pic: "/img/daily_pic.jpg"
+    avatar: "/img/logo.png"
+    daily_pic: "/img/daily_pic.png"
     sidebar_header: "/img/sidebar_header.png"
     random_thumbnail: "/img/random/material-"
     footer_image:
