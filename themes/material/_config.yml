@@ -221,6 +221,10 @@ sidebar:
             link: "/timeline"
             icon: schedule
             divider: false
+        歌单:
+            link: "/playlist"
+            icon: music
+            divider: false
         # 图库:
         #     link: "/gallery"
         #     icon: class
@@ -254,15 +258,15 @@ sidebar:
 # If you want to use gitment or gitalk,you should get the client_id and client_secret from https://github.com/settings/applications/new
 # If you want to use valine,you should get the app_id and app_key from https://leancloud.cn ,more setting please see https://valine.js.org
 comment:
-    use: valine
-    valine_leancloud_appId: rPK96ccJ5oUVLp1IItphCUfo-9Nh9j0Va
-    valine_leancloud_appKey: u5PSs1HdKn2i5sA4RwTtd2I7
-    valine_notify: true
-    valine_placeholder: 说说你的感想~
-    valine_pageSize: 10
+    use: gitalk
+    # valine_leancloud_appId: rPK96ccJ5oUVLp1IItphCUfo-9Nh9j0Va
+    # valine_leancloud_appKey: u5PSs1HdKn2i5sA4RwTtd2I7
+    # valine_notify: true
+    # valine_placeholder: 说说你的感想~
+    # valine_pageSize: 10
     # shortname: # duoshuo or disqus shortname
-    # changyan_appid:
-    # changyan_conf:
+    # changyan_appid: cyvvSORHM
+    # changyan_conf: prod_50fd8c1d11d197dfccfc0e6eec6b51be
     # changyan_thread_key_type: path
     # livere_data_uid:
     # gitment_repo:   # git repo of the hexo
@@ -278,10 +282,10 @@ comment:
     # valine_lang: zh-cn # i18n
     # valine_placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
     # valine_guest_info: nick,mail,link #valine comment header info
-    # gitalk_repo: # git repo of the hexo
-    # gitalk_owner: # git repo's owner
-    # gitalk_client_id: # github app client id
-    # gitalk_client_secret: # github app client secret
+    gitalk_repo: j710328466.github.io
+    gitalk_owner: j710328466
+    gitalk_client_id: 668f116882a92d028e83
+    gitalk_client_secret: 8db9ba64d2e5a5b77ef27f6ad2a80a2850857ea2
     # wildfire_database_provider: firebase # firebase or wilddog
     # wildfire_wilddog_site_id:
     # wildfire_firebase_api_key:

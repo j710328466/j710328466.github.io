@@ -90,4 +90,4 @@ comment: false
 * 生活：世界很大，不要只生活在自己的小小世界里。
 * 理想：至少做一件能改变他人、乃至影响世界的事。
 
-{% aplayer "日落大道" "梁博" "http://orjedzer5.bkt.clouddn.com/blog/song/%E6%A2%81%E5%8D%9A%20%E6%97%A5%E8%90%BD%E5%A4%A7%E9%81%93.mp3" "autoplay" %}
+{% aplayer "you just like a shit" "曼森" "http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/This%20Is%20The%20New%20Shit.mp3" "autoplay" %}
