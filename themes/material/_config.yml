@@ -221,10 +221,6 @@ sidebar:
             link: "/timeline"
             icon: schedule
             divider: false
-        歌单:
-            link: "/playlist"
-            icon: music
-            divider: false
         # 图库:
         #     link: "/gallery"
         #     icon: class
