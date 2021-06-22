@@ -40,6 +40,11 @@
                 <% } %>
 
                 <!-- Post Comments -->
+                <% if(page.pay !== false) { %>
+                    <%- partial('_partial/pay') %>
+                <% } %>
+
+                <!-- Post Comments -->
                 <% if(page.comment !== false) { %>
                     <%- partial('_partial/comment') %>
                 <% } %>

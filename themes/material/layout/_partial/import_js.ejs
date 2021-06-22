@@ -58,14 +58,14 @@
 	}
 </script>
 
-<% if(true) { %>
+<% if(theme.aplayer.enable === true) { %>
     <link href="https://cdn.bootcdn.net/ajax/libs/aplayer/1.9.1/APlayer.min.css" rel="stylesheet">    <!-- // 这里div的样式是笔者自己修改过的，你可以直接使用APlayer官方的原配置： -->
     <script src="https://cdn.bootcdn.net/ajax/libs/aplayer/1.9.1/APlayer.min.js"></script>
     <div id="aplayer" style="position:fixed;right:16px;bottom:16px;z-index: 99;"></div>
     <script>
       const ap = new APlayer({
         container: document.getElementById('aplayer'),
-        autoplay: true, //自动播放
+        autoplay: '<%= theme.aplayer.autoplay %>', //自动播放
         listFolded: true, //播放列表默认折叠
         listMaxHeight: 90, //播放列表最大高度
         order: 'list', //音频循环顺序, 可选值: 'list', 'random'
@@ -78,11 +78,11 @@
         mini: true, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
         audio: [{
             name: 'you just like a shit',
-            artist: '曼森',
+            artist: 'red pill',
             lrc: '[00:00.00]jsonSkin\n[00:04.01]is\n[00:08.02]red pill',
-            cover: '/img/favicon.png',
+            cover: '/img/logo.png',
             url: 'http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/This%20Is%20The%20New%20Shit.mp3'
-          },
+            },
         ]
       });
     </script>

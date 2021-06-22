@@ -51,6 +51,11 @@ js_effect:
 reading:
     entry_excerpt: 80
 
+# aplayer
+aplayer:
+    enable: true
+    autoplay: false
+
 # Thumbnail Settings
 thumbnail:
     purecolor:
@@ -73,7 +78,7 @@ img:
     logo: "/img/logo.png"
     avatar: "/img/logo.png"
     daily_pic: "/img/daily_pic.png"
-    sidebar_header: "/img/sidebar_header.png"
+    sidebar_header: "/img/daily_pic.png"
     random_thumbnail: "/img/random/material-"
     footer_image:
         #upyun_logo:
@@ -93,7 +98,7 @@ fonts:
     custom_font_host:
 
 # Card Elevation Level
-card_elevation: 4
+card_elevation: 6
 
 # Copyright
 # Specify the date when the site was setup.
@@ -304,7 +309,7 @@ search:
 # Available value:
 #     baidu | google | cnzz
 analytics:
-    google_site_id:
+    google_site_id: 
     baidu_site_id:
     cnzz_site_id:
 
