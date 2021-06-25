@@ -34,12 +34,12 @@ scheme: Paradox
 # UI & UX: slogan, color, effect
 uiux:
     slogan: "服下红色药丸，发现这个世界的真相"
-    theme_color: "#77546f"
-    theme_sub_color: "#77546f"
+    theme_color: "#548687"
+    theme_sub_color: "#8FBC94"
     hyperlink_color: "#679cc5"
-    button_color: "#1b1d3a"
-    android_chrome_color: "#0097A7"
-    nprogress_color: "#fff"
+    button_color: "#56445D"
+    android_chrome_color: "#548687"
+    nprogress_color: "#8FBC94"
     nprogress_buffer: "888"
 
 # JS Effect Switches
@@ -68,7 +68,7 @@ thumbnail:
 #        type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
     purecolor: "#F5F5F5"
-    bgimg: "/img/bg.png"
+    bgimg: "/img/bg.jpg"
     bing:
         enable: false
         parameter:
@@ -109,7 +109,7 @@ copyright_since: 2016
 # You can specify the text you want to show in footer, HTML tag is supported.
 #   For example, you can setup ICP license number as:
 #       '<a href="http://www.miitbeian.gov.cn" rel="nofollow">某ICP备xxxxxxxx号-x</a>'
-footer_text:
+footer_text: <a href="https://www.miitbeian.gov.cn" rel="nofollow" target="_blank">浙ICP备18048268号-1</a>
 
 # Qrcode for redirect at other device
 #    use: choose which method to generate the qrcode for each posts.
@@ -128,7 +128,7 @@ qrcode:
 #        theme: # Available value in /source/css/prettify/[theme].min.css
 prettify:
     enable: false
-    theme: "github-v2"
+    # theme: "hanabi"
 
 #    Hanabi (https://github.com/egoist/hanabi)
 #        line_number: [true/false] # Show line number for code block
@@ -138,7 +138,7 @@ prettify:
 #                    - If `includeDefaultColors` is false, this will instead default color pool
 hanabi:
     enable: true
-    line_number: true
+    line_number: false
     includeDefaultColors: true
     customColors:
 
@@ -147,7 +147,7 @@ hanabi:
 #   For example, you can setup a CC license as:
 #       'This blog is under a <a href="/creativecommons.html" target="_blank">CC BY-NC-SA 3.0 Unported License</a>'
 # You can also use Front-Matter `license` to override this setting.
-license: 
+license: <a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备18048268号-1</a>
 
 # Gallery Panel
 # You must activate Formspree before using
