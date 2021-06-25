@@ -29,6 +29,9 @@
     <!-- Title -->
     <%
         var title = page.title;
+        var description = page.description || config.description
+
+        <!-- {% block title %} {{ config.title }} - {{ theme.description }} {% endblock %} -->
 
         if (is_archive()) {
             title = __('sidebar.archive');
@@ -49,9 +52,11 @@
     %>
     <title>
         <% if (title) { %>
-            <%= title + ' | ' %>
+            <%= config.keywords + ' - ' + title + ' | ' + description %>
         <% } %>
-        <%= config.title %>
+        <% if (is_home()) { %>
+            <%= config.title + ' - ' + description %>
+        <% } %>
     </title>
 
     <!-- Favicons -->
@@ -94,19 +99,24 @@
                 <%- cssLsload({path:(theme.vendors.materialcdn + '/css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
             <% } %>
         <% } %>
-
-    <% } else { %>
-        <%- cssLsload({path:('css/material.min.css'),key:'material_css'}) %>
-        <%- cssLsload({path:('css/style.min.css'),key:'style_css'}) %>
+        <!-- <link rel="stylesheet" href="<%= url_for('css/material.min.css') %>">
+        <link rel="stylesheet" href="<%= url_for('css/style.min.css') %>">
 
         <% if (theme.prettify.enable){ %>
-            <% if ( (is_post()) ) { %>
-                <%- cssLsload({path:('css/prettify.min.css'),key:'prettify_css'}) %>
-                <%- cssLsload({path:('css/prettify/' + theme.prettify.theme + '.min.css'),key:'prettify_theme'}) %>
-            <% } %>
-        <% } %>
+            <link rel="stylesheet" href="<%= url_for('css/prettify.min.css') %>">
+        <% } %> -->
 
+    <% } else { %>
+        <link rel="stylesheet" href="<%= url_for('css/material.min.css') %>">
+        <link rel="stylesheet" href="<%= url_for('css/style.min.css') %>">
+        <!-- <%- cssLsload({path:('css/material.min.css'),key:'material_css'}) %>
+        <%- cssLsload({path:('css/style.min.css'),key:'style_css'}) %> -->
+
+        <% if (theme.prettify.enable){ %>
+            <link rel="stylesheet" href="<%= url_for('css/prettify.min.css') %>">
+        <% } %>
     <% } %>
+
 
     <% if(theme.scheme === 'Isolation') { %>
         <% if(theme.vendors.fontawesome) { %>

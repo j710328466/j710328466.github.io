@@ -4,7 +4,7 @@
         <ul id="settings-dropdown" class="dropdown-menu">
             <% for (var i in theme.sidebar.dropdown) { %>
                 <li>
-                    <a href="<%= theme.sidebar.dropdown[i].link %>" target="_blank" title="<%= i %>">
+                    <a href="<%= theme.sidebar.dropdown[i].link %>" rel="<%= theme.sidebar.dropdown[i].link.indexOf('http') > -1 ? '' : 'external nofollow' %>" target="_blank" title="<%= i %>">
                         <% if(theme.sidebar.dropdown[i].icon) { %>
                             <i class="material-icons sidebar-material-icons sidebar-indent-left1pc-element"><%= theme.sidebar.dropdown[i].icon %></i>
                         <% } %>
@@ -33,7 +33,7 @@
     <!-- Archives  -->
     <% if(theme.sidebar.archives.use === true) { %>
         <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <a href="#" rel="external nofollow" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <% if(theme.sidebar.archives.icon) { %>
                     <i class="material-icons sidebar-material-icons"><%= theme.sidebar.archives.icon %></i>
                 <% } %>
@@ -59,7 +59,7 @@
     <!-- Categories  -->
     <% if(theme.sidebar.categories.use === true) { %>
         <li class="dropdown">
-            <a href="#" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
+            <a href="#" rel="external nofollow" class="ripple-effect dropdown-toggle" data-toggle="dropdown">
                 <% if(theme.sidebar.categories.icon) { %>
                     <i class="material-icons sidebar-material-icons"><%= theme.sidebar.categories.icon %></i>
                 <% } %>
@@ -85,7 +85,7 @@
     <!-- Pages  -->
     <% for (var i in theme.sidebar.pages){ %>
         <li>
-            <a href="<%= theme.sidebar.pages[i].link %>" title="<%= i %>">
+            <a href="<%= theme.sidebar.pages[i].link %>" rel="<%= theme.sidebar.pages[i].link.indexOf('http') > -1 ? '' : 'external nofollow' %>" title="<%= i %>">
                 <% if(theme.sidebar.pages[i].icon){ %>
                     <i class="material-icons sidebar-material-icons"><%= theme.sidebar.pages[i].icon %></i>
                 <% } %>
@@ -100,7 +100,7 @@
     <!-- Article Number  -->
     <% if(theme.sidebar.article_num.use === true) { %>
         <li>
-            <a href="/archives">
+            <a href="/archives" rel="external nofollow">
                 <%= __('sidebar.article_num') %>
                 <span class="sidebar-badge"><%= site.posts.length %></span>
             </a>

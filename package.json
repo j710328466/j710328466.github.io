@@ -7,15 +7,17 @@
   },
   "scripts": {
     "new": "hexo new ${title}",
+    "build": "gulp build",
     "s": "hexo s",
-    "g": "hexo g",
-    "d": "hexo g && hexo d",
+    "g": "hexo clean && hexo g",
+    "d": "hexo clean && hexo g && gulp build && hexo d",
     "cz": "git add . && git cz",
     "log": "conventional-changelog --config node_modules/jimi-web-changelog/lib/log -i CHANGELOG.md -s -r 0",
     "v": "standard-version -r patch"
   },
   "dependencies": {
     "hexo": "^5.4.0",
+    "hexo-autonofollow": "^1.0.1",
     "hexo-baidu-url-submit": "^0.0.6",
     "hexo-deployer-git": "^3.0.0",
     "hexo-generator-archive": "^1.0.0",
@@ -45,6 +47,14 @@
   "devDependencies": {
     "commitizen": "^4.2.4",
     "conventional-changelog-cli": "^2.0.11",
+    "gulp": "^4.0.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlclean": "^2.7.22",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-uglify": "^3.0.2",
+    "hexo-generator-baidu-sitemap": "^0.1.9",
     "jimi-web-changelog": "^0.1.7"
   }
 }

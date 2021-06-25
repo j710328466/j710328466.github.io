@@ -3,9 +3,10 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: jsonskin'blog
+title: Jsonskin's Blog
 subtitle:
-description: web,vue,react,webpack,node
+keywords: 红色药丸,red pill,nlp,jsonskin
+description: 社会表面是父系男权，实际上是迎合讨好女性的“女本位社会”。服用蓝色药丸继续在梦境，服用红色药丸了解真相。
 author: jsonskin
 language: zh-CN
 timezone:
@@ -101,3 +102,18 @@ baidu_url_submit:
   host: blog.jzxer.cn
   token: SSFG70EWxRbTjmuY
   path: baidu_urls.txt
+
+# 百度关键词
+# https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd=langzi
+sitemap:
+  path: sitemap.xml
+baidusitemap:
+  path: baidusitemap.xml
+
+# 自动添加nofollow
+nofollow:
+  enable: true
+  exclude:
+    - www.jzxer.cn
+    - blog.jzxer.cn
+    - 友链地址 

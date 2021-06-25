@@ -77,5 +77,5 @@
 <% if(theme.vendors.materialcdn) { %>
     <%- cssLsload({path:(theme.vendors.materialcdn + '/css/material-icons.css'),key:'material_icons'}) %>
 <% } else { %>
-    <%- cssLsload({path:('css/material-icons.css'),key:'material_icons'}) %>
+    <link rel="stylesheet" href="<%= url_for('css/material-icons.css') %>">
 <% } %>
