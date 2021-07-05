@@ -11,7 +11,7 @@
                 <br>
             </p> -->
             <p style="margin-bottom: 0; font-size:12px;">恭喜你发现了我，让我带你用全新的视角去看待这个真实的世界</p>
-            <strong><%- __('post.permalink') %></strong><a href="<%= page.permalink %>"><%= page.permalink %></a>
+            <strong><%- __('post.permalink') %></strong><a href="<%= page.permalink %>"><%= decodeURIComponent(page.permalink) %></a>
         </blockquote>
     <% } %>
 

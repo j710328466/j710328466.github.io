@@ -2,7 +2,7 @@
 title: 对迷男的一些思考
 date: 2021-06-24 00:02:45
 tags: [pickup]
-categories: Debian
+categories: 
 permalink:
 password: 
 description: 我不会成为任何一个人，既非坏人也不是好人，既非卑鄙小人也不是正人君子，既非英雄也不是懦夫。
