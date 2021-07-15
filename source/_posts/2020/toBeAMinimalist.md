@@ -3,6 +3,7 @@ title: 成为一个minimalismer
 date: 2020-02-20 14:06:05
 tags: [极简主义]
 categories: 生活
+keywords: 极简主义,minimalist
 ---
 
 ## 概念
