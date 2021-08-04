@@ -56,5 +56,6 @@
     "gulp-uglify": "^3.0.2",
     "hexo-generator-baidu-sitemap": "^0.1.9",
     "jimi-web-changelog": "^0.1.7"
-  }
+  },
+  "aliyunPipe": "https://rdc.aliyun.com/ec/projects/295984/pipelines"
 }
