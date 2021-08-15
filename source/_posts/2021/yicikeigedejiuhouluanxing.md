@@ -1,15 +1,13 @@
 ---
-title: 一次K歌的酒后乱性
+title: 一次酒后强吻女生
 date: 2021-01-31 23:04:10
 tags: [雄性魅力, pickup]
-keywords: 
-categories: 
+keywords: 强吻,红色药丸,redpill,雄性极性
+categories: 雄性魅力
 permalink:
 password: 
-description: 一次参加朋友的K歌局，强吻了一个女生
+description: 参加朋友的K歌局，强吻了一个女生
 ---
-
-# 一次K歌的酒后乱性
 
 我真的不能喝酒...
 

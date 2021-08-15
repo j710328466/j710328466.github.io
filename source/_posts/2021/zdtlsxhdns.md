@@ -1,5 +1,5 @@
 ---
-title: 坐地铁路上邂逅的女生
+title: 搭讪地铁路上的女生
 date: 2021-06-19 21:25:42
 tags: [雄性魅力, pickup]
 keywords: 搭讪
@@ -14,7 +14,7 @@ description: 一次去玩剧本杀的路上在地铁路上搭讪的小姐姐
 
 故事就这样开始了...
 
-<img src="/img/gallery/2021-06-25.png" width="300" alt="S小姐" align=center />
+<img src="/img/gallery/2021-06-25.jpeg" width="300" alt="S小姐" align=center />
 
 > 当天她的穿着
 
