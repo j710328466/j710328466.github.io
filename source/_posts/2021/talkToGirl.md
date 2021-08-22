@@ -1,8 +1,8 @@
 ---
 title: A型男生和女生聊天
 date: 2021-08-15 14:33:28
-tags: [雄性魅力, 极度自我]
-keywords: 雄性魅力,极度自我,红色药丸,redpill
+tags: [雄性魅力, 聊天话术]
+keywords: 雄性魅力,极度自我,红色药丸,redpill,聊天话术,把妹话术
 description: 一次使用自我框架和女生聊天
 ---
 
@@ -16,12 +16,12 @@ description: 一次使用自我框架和女生聊天
 > 暂无图片，后续补上
 
 2. 女生B：一个小网红，整过容，据她说胸就花了几十万...
-<img src="/img/gallery/2021-08-08-kk2.jpeg" width="300" alt="珂珂" align=center />
-<img src="/img/gallery/2021-08-08-kk-3.jpeg" width="300" alt="珂珂" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-kk2.jpeg" width="300" alt="珂珂" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-kk-3.jpeg" width="300" alt="珂珂" align=center />
 
 3. 女生C：一个纯情可爱的女孩，泳池派对上认识的
-<img src="/img/gallery/2021-08-08-rain-4.jpeg" width="300" alt="小雨" align=center />
-<img src="/img/gallery/2021-08-08-rain-5.jpeg" width="300" alt="小雨" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-rain-4.jpeg" width="300" alt="小雨" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-rain-5.jpeg" width="300" alt="小雨" align=center />
 
 
 ## 过程
@@ -30,15 +30,15 @@ description: 一次使用自我框架和女生聊天
 
 女生大学毕业一年多，刚和男友分手，玩的比较开，目测是属于比较粘人的那种类型。
 
-<img src="/img/gallery/2021-08-10-apple.jpeg" width="300" alt="苹果" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-10-apple.jpeg" width="300" alt="苹果" align=center />
 
 这里开场拍了拍她，对方发了个表情包，反应很好，可以尝试插入男女框架，升高两人的暧昧温度。我就调侃了一下想吃你。
 
-<img src="/img/gallery/2021-08-10-apple-2.jpeg" width="300" alt="苹果" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-10-apple-2.jpeg" width="300" alt="苹果" align=center />
 
 她又发了一个可爱的表情，对我的信息产生了回应。这里我给了一点聊天技巧里的 pull，创造暧昧的氛围，让她感觉到我对她的兴趣
 
-<img src="/img/gallery/2021-08-10-apple-3.jpeg" width="300" alt="苹果" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-10-apple-3.jpeg" width="300" alt="苹果" align=center />
 
 接下来我们要及时掐断这个舒适区，我这里又给了她 push 的感觉，让她的情绪波动起来。
 
@@ -48,7 +48,7 @@ description: 一次使用自我框架和女生聊天
 
 其它女生组了一个游泳派对的局，我参加这个局的时候，通过她的昵称加了她。（微信昵称叫：寻找萧亚轩的快乐）我就知道这个女生不简单，属于是那种如果有钱，可以上，没钱，情绪价值到位了也能上的类型。
 
-<img src="/img/gallery/2021-08-08-kk.jpeg" width="300" alt="珂珂" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-kk.jpeg" width="300" alt="珂珂" align=center />
 
 女生比我大两岁，然后聊天什么的氛围也还不错，一上来我就和她说荤段子。测试她的承受度到哪里。
 
@@ -69,9 +69,9 @@ description: 一次使用自我框架和女生聊天
 
 > 现实和线上丢失了一致性，对于男生来说是致命的，女生的感觉很灵敏，它会直接导致女生对你失去兴趣。认为你是个B型男生
 
-<img src="/img/gallery/2021-08-08-rain-3.jpeg" width="200" alt="小雨" align=center />
-<img src="/img/gallery/2021-08-08-rain.jpeg" width="200" alt="小雨" align=center />
-<img src="/img/gallery/2021-08-08-rain-2.jpeg" width="200" alt="小雨" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-rain-3.jpeg" width="200" alt="小雨" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-rain.jpeg" width="200" alt="小雨" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-rain-2.jpeg" width="200" alt="小雨" align=center />
 
 这里聊天的性张力，是通过之前和女生相处给女生留下的印象产生的。但是由于后续需求感暴露的太强，需要再观望一段时间。
 

@@ -40,7 +40,7 @@ description: 20年去西安旅行，在仙鹤酒吧搭讪的一个舞蹈女生
 
 后面其实也知道结果，这个女生今晚是带不走了，因为对对方真的只是想上床的心态，所以连微信都没要就回客栈了。
 
-<img src="/img/gallery/2020-10-05.jpeg" width="300" alt="舞蹈老师" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2020-10-05.jpeg" width="300" alt="舞蹈老师" align=center />
 
 ## 反思
 
@@ -50,7 +50,7 @@ description: 20年去西安旅行，在仙鹤酒吧搭讪的一个舞蹈女生
 
 另外发一张10月三号我刚到西安的时候认识的一个女生，当时是我手机快没电了，就向她借了个充电宝，并且坐到了她的边上。（长得挺清秀的一姑娘，感觉很适合作老婆的女孩，哈哈哈~）
 
-<img src="/img/gallery/2020-10-3.jpeg" width="300" alt="李哈哈的照片" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2020-10-3.jpeg" width="300" alt="李哈哈的照片" align=center />
 
 
 

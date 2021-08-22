@@ -14,7 +14,7 @@ description: 一次去玩剧本杀的路上在地铁路上搭讪的小姐姐
 
 故事就这样开始了...
 
-<img src="/img/gallery/2021-06-25.jpeg" width="300" alt="S小姐" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-06-25.jpeg" width="300" alt="S小姐" align=center />
 
 > 当天她的穿着
 
@@ -58,4 +58,4 @@ description: 一次去玩剧本杀的路上在地铁路上搭讪的小姐姐
 
 2. 在女生给出兴趣信号的时候，向女生抛出了模糊邀约，明确告诉女生，我加你微信是为了约你。
 
-<img src="/img/gallery/2021-06-19-2.png" width="300" alt="S小姐" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-06-19-2.png" width="300" alt="S小姐" align=center />

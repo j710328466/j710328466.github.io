@@ -17,7 +17,7 @@ description: 就一次假期无聊，想想出去玩一下
 
 下面的照片是我在买奶茶的时候她拍的，喝完奶茶，我们就准备去她另外一个朋友那里了。
 
-<img src="/img/gallery/2015-07-01.jpeg" width="300" alt="D小姐" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2015-07-01.jpeg" width="300" alt="D小姐" align=center />
 很多女生心里其实虚荣心都很重，拍照其实就是其中一方面，可惜当时我还比较不懂。
 
 晚上我们和她的朋友吃完饭之后，四五个人，就我一个男生就去了ktv唱歌。期间我发现了一个很有意思的事情，就是下图展示的那样。这个女生和我靠的很近，几乎贴在一起。
@@ -31,7 +31,7 @@ description: 就一次假期无聊，想想出去玩一下
 3. 我的寡言少语，可能被女生误判为 神秘感（高价值）
 4. 我的眼神交流，事实证明，我的眼神很能传递信息给女生（自发天生的，原理还在探索中），男生女生交流，语言的部分只占了 7%，剩下的93% 来自其它方面。
 
-<img src="/img/gallery/2015-05-01.jpeg" width="300" alt="D小姐" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2015-05-01.jpeg" width="300" alt="D小姐" align=center />
 
 > 这个女生很漂亮，但是有一点口吃。
 

@@ -9,5 +9,5 @@ description: 搭讪健身房前台的兼职妹子
 等待篡写中
 ## 背景
 
-<img src="/img/gallery/2017-08-01.jpeg" width="300" alt="w小姐" align=center />
-<img src="/img/gallery/2017-08-01-2.jpeg" width="300" alt="w小姐" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2017-08-01.jpeg" width="300" alt="w小姐" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2017-08-01-2.jpeg" width="300" alt="w小姐" align=center />

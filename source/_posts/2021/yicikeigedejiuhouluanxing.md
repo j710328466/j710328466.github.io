@@ -39,14 +39,14 @@ description: 参加朋友的K歌局，强吻了一个女生
 
 我在女生默认的情况下，打的带她回了家...
 
-<img src="/img/gallery/2021-01-31.jpeg" width="300" alt="S小姐" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-01-31.jpeg" width="300" alt="S小姐" align=center />
 
 
 ## 总结
 
 这次经历，我总体来说就是很大程度上激发了我自己的雄性极性，让一些行为变得更有男人味，去超过大部分不敢作或想都不敢想的男人。也发现了一个能够很大程度上征服女生的一种方式。释放自己的DHV，并在一定程度上降低自己的需求感。
 
-<img src="/img/gallery/2021-01-31-2.jpeg" width="300" alt="S小姐" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-01-31-2.jpeg" width="300" alt="S小姐" align=center />
 
 我和女生的聊天信息也证明了这一点，ps的部分是说，当有一个比我高比我帅可能还比我有钱的男生之间作选择时，我展现的价值赢过了那个男生。
 

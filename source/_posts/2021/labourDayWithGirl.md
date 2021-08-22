@@ -9,4 +9,4 @@ description: 五一妹子约我去洛阳玩耍，应邀我去参加了这次旅�
 ## 起因
 
 篡写中。。。
-<img src="/img/gallery/2021-05-01.jpeg" width="300" alt="M小姐" align=center />
+<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-05-01.jpeg" width="300" alt="M小姐" align=center />
