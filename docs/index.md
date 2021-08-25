@@ -1,7 +1,7 @@
 ---
 hero:
   title: niceNote
-  desc: Json's 学习笔记
+  desc: 💊 Json's 学习笔记
   actions:
     - text: 开始学习
       link: /fea
@@ -19,3 +19,4 @@ footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by Json
 ---
 
 嗨~
+

@@ -3,7 +3,7 @@ nav:
   title: 前端
   path: /fea
 group:
-  title: 设计模式
+  title: 💊 设计模式
   order: 3
 ---
 

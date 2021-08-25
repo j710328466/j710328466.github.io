@@ -3,7 +3,7 @@ nav:
   title: 前端
   path: /fea
 group:
-  title: canvas
+  title: 💊 canvas
   order: 4
 ---
 

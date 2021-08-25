@@ -3,11 +3,15 @@ nav:
   title: 前端
   path: /fea
 group:
-  title: canvas
+  title: 💊 canvas
   order: 6
 ---
 
 ## 动画案例
+
+### 液体海报
+
+<code src="./demos/demo1/index.jsx" />
 
 ### 大转盘（doing）
 
