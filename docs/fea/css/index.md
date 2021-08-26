@@ -13,7 +13,7 @@ group:
 
 <code src="./demos/demo1/index.tsx" />
 
-### 涂鸦按钮
+### 按钮合集
 
 <code src="./demos/demo2/index.tsx" />
 

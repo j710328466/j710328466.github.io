@@ -48,7 +48,8 @@
         border: 1px solid ;
         font-family: 'Righteous' sans-serif;
         font-weight: 300;
-        font-size: 20;
+        font-size: 20px;
+        text-align: center;
         transition: .5s;
         letter-spacing: 1px;
     }
@@ -100,4 +101,57 @@
             }
         }
     }
+    .button-container-4 {
+        position: relative;
+        height: 45px;
+        width: 200px;
+        background: #fff;
+        color: #6cf;
+        text-align: center;
+        line-height: 45px;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box;
+        margin: 40px auto;
+        border: 1px solid #ccc;
+        cursor: pointer;
+    }
+    .button-container-4::before {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 1px;
+        right: -2px;
+        top: -2px;
+        background-color: #6cf;
+        z-index: -1;
+        transition: width .4s linear, height .4s linear;
+    }
+    .button-container-4::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 1px;
+        left: -2px;
+        bottom: -2px;
+        background-color: #6cf;
+        z-index: -1;
+        transition: width .4s linear, height .4s linear;
+    }
+    .button-container-4:hover {
+        &::before {
+            content: "";
+            transition: width .4s linear, height .4s linear;
+            width: 201px;
+            height: 46px;
+        }
+        &::after {
+            content: "";
+            transition: width .4s linear, height .4s linear;
+            width: 201px;
+            height: 46px;
+        }
+    }
+    
 }

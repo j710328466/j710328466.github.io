@@ -18,7 +18,10 @@ export default (): any => {
         </div>
         <div className="btn button-container-3">
             <span className="mas">MASK2</span>
-            <button type="button" name="Hover">MASK2</button>
+            <button type="button" name="Hover">MASK3</button>
+        </div>
+        <div className="button-container-4">
+            描边动画
         </div>
     </div>
   )
