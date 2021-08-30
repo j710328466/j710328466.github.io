@@ -9,8 +9,8 @@ head:
     apple_touch_icon: "/img/favicon.png"
     keywords: '红色药丸,red pill,nlp,jsonskin'
     site_verification:
-        google:
-        baidu:
+        google: google-site-verification=YHgG1NlKmVKfNyXAe36GYpGuVmbxOspxFVF_yNLyab0
+        baidu: SSFG70EWxRbTjmuY
 
     # Enable generate structured-data as JSON+LD for SEO or not.
     #        Set as 'false' if it cause some wrong when `hexo g`.
