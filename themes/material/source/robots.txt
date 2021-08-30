@@ -1,8 +1,18 @@
-User-agent: * Allow: /
+#hexo robots.txt
+User-agent: *
+
+Allow: /
 Allow: /archives/
+Allow: /categories/
+Allow: /tags/
+
 Disallow: /vendors/
-Disallow: /categories/
+Disallow: /js/
+Disallow: /css/
+Disallow: /fonts/
+Disallow: /vendors/
+Disallow: /fancybox/
 
-
-Sitemap: http://blog.jzxer.cn/sitemap.xml
-Sitemap: http://blog.jzxer.cn/baidusitemap.xml
+Sitemap: https://blog.jzxer.cn/search.xml
+Sitemap: https://blog.jzxer.cn/sitemap.xml
+Sitemap: https://blog.jzxer.cn/baidusitemap.xml
