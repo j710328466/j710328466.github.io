@@ -4,7 +4,7 @@ nav:
   path: /fea
 group:
   title: 💊 canvas
-  order: 1
+  order: 2
 ---
 
 ## 基础入门

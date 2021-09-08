@@ -9,6 +9,14 @@ group:
 
 ## 动画案例
 
+### 粒子背景
+
+<code src="./demos/demo3/index.jsx" />
+
+### 粒子图片
+
+<code src="./demos/demo2/index.jsx" />
+
 ### 贪吃蛇
 
 ```jsx
@@ -800,108 +808,90 @@ export default () => {
     const clockRef = useRef()
 
     function clock() {
-      let now = new Date()
-      let canvas = clockRef && clockRef.current
-      let ctx = canvas.getContext('2d')
+        var theCanv = clockRef.current;
+        var theCanvObject = theCanv.getContext('2d');
+        var x = 200;
+        var y = 200;
 
-      ctx.save()
-      ctx.clearRect(0, 0, 150, 150)
-      ctx.translate(75, 75)
-      ctx.scale(0.4, 0.4)
-      ctx.rotate(-Math.PI / 2)
-      ctx.strokeStyle = 'black'
-      ctx.fillStyle = 'white'
-      ctx.lineWidth = 8
-      ctx.lineCap = 'round'
+        startTime();
 
-      ctx.save()
-      for (let i = 0; i < 12; i++) {
-          ctx.beginPath()
-          ctx.rotate(Math.PI / 6)
-          ctx.moveTo(100, 0)
-          ctx.lineTo(120, 0)
-          ctx.stroke()
-      }
-      ctx.restore()
+        function startTime() {
 
-      ctx.save()
-      ctx.lineWidth = 5
-      for (let i = 0; i < 60; i++) {
-          if (i % 5 != 0) {
-              ctx.beginPath()
-              ctx.moveTo(117, 0)
-              ctx.lineTo(120, 0)
-              ctx.stroke()
-          }
-          ctx.rotate(Math.PI / 30)
-      }
-      ctx.restore()
+            //分秒刻度和表盘
+            theCanvObject.lineWidth = 1;
+            for (var i = 0; i < 60; i++) {
+                drawArc(150, i*6, (i+1)*6);
+            }
+            drawArc(145, 0, 360, true);
 
-      let sec = now.getSeconds()
-      let min = now.getMinutes()
-      let hr = now.getHours()
+            //时刻度
+            theCanvObject.lineWidth = 2;
+            for (var i = 0; i < 12; i++) {
+                drawArc(150, i*30, (i+1)*30);
+            }
+            drawArc(140, 0, 360, true);
 
-      ctx.fillStyle = 'black'
+            //针
+            drawHand(getTime().hour,5,60,'#ECFC00');
+            drawHand(getTime().min,4,100,'#00BB3F');
+            drawHand(getTime().sec,3,130,'#D60062');
 
-      // hours
-      ctx.save()
-      ctx.rotate( hr * (Math.PI / 6) + (Math.PI / 360) * min + (Math.PI / 21600) * sec)
-      ctx.lineWidth = 14
-      ctx.beginPath()
-      ctx.moveTo(-20, 0)
-      ctx.lineTo(80, 0)
-      ctx.stroke()
-      ctx.restore()
+            setInterval(function () {
+                drawArc(135,0,360,true);
+                drawHand(getTime().hour,5,60,'#ECFC00');
+                drawHand(getTime().min,4,100,'#00BB3F');
+                drawHand(getTime().sec,3,130,'#D60062');
+            },1000);
+        }
 
-      // min
-      ctx.save()
-      ctx.rotate((Math.PI / 30) * min + (Math.PI / 1800) * sec)
-      ctx.lineWidth = 10
-      ctx.beginPath()
-      ctx.moveTo(-28, 0)
-      ctx.lineTo(112, 0)
-      ctx.stroke()
-      ctx.restore()
+        function drawArc(iRadius, iBeginAngle, iEndAngle, ifClear) {
+            var beginRadian = iBeginAngle*Math.PI/180;
+            var endRadian = iEndAngle*Math.PI/180;
 
-      // sec
-      ctx.save()
-      ctx.rotate(sec * Math.PI / 30)
-      ctx.strokeStyle = '#d40000'
-      ctx.fillStyle = '#d40000'
-      ctx.lineWidth = 6
-      ctx.beginPath()
-      ctx.moveTo(-30, 0)
-      ctx.lineTo(83, 0)
-      ctx.stroke()
-      ctx.beginPath()
-      ctx.arc(0, 0, 10, 0, Math.PI * 2, true)
-      ctx.fill()
-      ctx.beginPath()
-      ctx.arc(95, 0, 10, 0, Math.PI * 2, true)
-      ctx.stroke()
-      ctx.fillStyle = 'rgba(0, 0, 0, 0)'
-      ctx.arc(0, 0, 3, 0, Math.PI * 2, true)
-      ctx.fill()
-      ctx.restore()
+            theCanvObject.beginPath();      //创建一个路径
+            theCanvObject.moveTo(x, y);     //将路径移到x，y
+            theCanvObject.arc(x, y, iRadius, beginRadian, endRadian, false);
+                                            //画弧
+            !ifClear && theCanvObject.stroke();
 
-      ctx.beginPath()
-      ctx.lineWidth = 14
-      ctx.strokeStyle = '#325fa2'
-      ctx.arc(0, 0, 142, 0, Math.PI * 2, true)
-      ctx.stroke()
+            if (ifClear) {
+                theCanvObject.fillStyle = 'white';
+                theCanvObject.fill();
+            }
 
-      ctx.restore()
+        }
 
-      window.requestAnimationFrame(clock)
+
+        function drawHand(iAngle, iWidth, iLength, iColor) {
+
+            theCanvObject.save();           //保存的是canvas的属性，不是截图
+            theCanvObject.lineWidth = iWidth;
+            theCanvObject.strokeStyle = iColor;
+            drawArc(iLength, iAngle, iAngle);
+            theCanvObject.restore();        //弹出栈中的状态
+
+        }
+
+        //根据当前时间返回各个针要指的度数
+        function getTime() {
+
+            var jTime = {};
+            var iNow = new Date();
+            jTime.sec = -90 + iNow.getSeconds()*6;
+            jTime.min = -90 + iNow.getMinutes()*6 + iNow.getSeconds()/20;
+            jTime.hour = -90 + iNow.getHours()*30 + iNow.getMinutes()/2;
+
+            return jTime;
+        }
     }
 
     useEffect(() => {
-        window.requestAnimationFrame(clock)
+        clock()
     }, [])
 
     return (
         <div>
-            <canvas ref={clockRef} width="200" height="200" />
+            <canvas ref={clockRef} width="600" height="600" />
         </div>
     )
 }

@@ -11,7 +11,7 @@ export default defineConfig({
     type: 'hash',
   },
   mode: 'site',
-  publicPath: '/niceNote/',
+  publicPath: '/',
   resolve: {
     includes: [
       'docs',

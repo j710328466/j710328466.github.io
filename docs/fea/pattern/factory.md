@@ -4,7 +4,7 @@ nav:
   path: /fea
 group:
   title: 💊 设计模式
-  order: 1
+  order: 22
 ---
 
 ## 工厂模式
