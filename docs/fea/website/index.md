@@ -11,6 +11,37 @@ group:
 
 ## 💊 学习文档
 
+### 前沿技术
+
+<table>
+  <tr>
+    <td width="240" align="center">
+      <a target="_blank" href="https://deno.land/">
+        <img src="https://deno.land/logo.svg" width="42" />
+        <br />
+        <strong>deno</strong>
+        <div>新生代 node</div>
+      </a>
+    </td>
+    <td width="240" align="center">
+      <a target="_blank" href="https://lerna.js.org">
+        <img src="https://lerna.js.org/images/lerna-hero.svg" width="42" />
+        <br />
+        <strong>Lerna</strong>
+        <div>包管理器</div>
+      </a>
+    </td>
+    <td width="240" align="center">
+      <a target="_blank" href="https://ant.design">
+        <img src="https://gw.alipayobjects.com/zos/rmsportal/KDpgvguMpGfqaHPjicRK.svg" width="42" />
+        <br />
+        <strong>antd</strong>
+        <div>react UI框架</div>
+      </a>
+    </td>
+  </tr>
+</table>
+
 ### React 方向
 
 <table>

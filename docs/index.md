@@ -8,10 +8,12 @@ hero:
 features:
   - icon: http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/logo.png
     title: NiceCode
-    desc: <a href="https://nicecoders.github.io/nicecode/#/">前端工具合集</a>
+    desc: <a href="https://nicecoders.github.io">前端工具合集</a>
   
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by Json
 ---
 
-嗨~
+嗨，我是 Json，这是我用来记录我的职业生涯总结的各种乱七八糟的知识点
+
+希望能对你有帮助
 
