@@ -79,9 +79,11 @@ feed:
   path: atom.xml
   limit: 20
   hub:
-  content:
-  content_limit: 140
-  content_limit_delim: ' '
+  content: true
+  order_by: -date
+  autodiscovery: true
+  # content_limit: 140
+  # content_limit_delim: ' '
 ## Themes: https://hexo.io/themes/
 theme: material
 
@@ -90,9 +92,6 @@ theme: material
 deploy:  
 - type: git
   repo: git@gitee.com:kox_baba/kox_baba.git
-  branch: master
-- type: git
-  repo: git@github.com:j710328466/j710328466.github.io.git
   branch: master
 - type: baidu_url_submitter
 
