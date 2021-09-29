@@ -61,19 +61,19 @@ function Ajax(type, url, data, success, failed){
     } else {
         xhr = new ActiveXObject('Microsoft.XMLHTTP')
     }
- 
+
    ...(此处省略一系列的业务逻辑细节)
-   
+
    var type = type.toUpperCase();
-    
+
     // 识别请求类型
     if(type == 'GET'){
         if(data){
           xhr.open('GET', url + '?' + data, true); //如果有数据就拼接
-        } 
+        }
         // 发送get请求
         xhr.send();
- 
+
     } else if(type == 'POST'){
         xhr.open('POST', url, true);
         // 如果需要像 html 表单那样 POST 数据，使用 setRequestHeader() 来添加 http 头。
@@ -350,7 +350,7 @@ const JuejinLovers = new Proxy(girl, {
     return girl[key]
   },
   set: function(girl, key, val) {
- 
+
     // 最近一次送来的礼物会尝试赋值给lastPresent字段
     // 需要返回 boolean 判断是否赋值成功
     if(key === 'lastPresent') {
@@ -368,7 +368,7 @@ const JuejinLovers = new Proxy(girl, {
 })
 
 export default () => {
-  
+
   useEffect(() => {
     console.log(JuejinLovers.name)
     JuejinLovers.lastPresent = present
