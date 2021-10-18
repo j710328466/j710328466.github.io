@@ -42,6 +42,63 @@ group:
   </tr>
 </table>
 
+### 动画库
+
+<table>
+  <tr>
+    <td width="240" align="center">
+      <a target="_blank" href="https://airbnb.io/lottie/#/README">
+        <img src="https://airbnb.io/lottie/images/logo.webp" width="42" />
+        <br />
+        <strong>Bodymovin</strong>
+        <div>UI动画生成库</div>
+      </a>
+    </td>
+    <td width="240" align="center">
+      <a target="_blank" href="https://matthew.wagerfield.com/parallax/">
+        <img src="http://matthew.wagerfield.com/parallax/favicon.png" width="42" />
+        <br />
+        <strong>parallaxJs</strong>
+        <div>视差动画库</div>
+      </a>
+    </td>
+    <td width="240" align="center">
+      <a target="_blank" href="https://dixonandmoe.com/rellax/">
+        <img src="http://matthew.wagerfield.com/parallax/favicon.png" width="42" />
+        <br />
+        <strong>rellaxJs</strong>
+        <div>mini 视差动画库</div>
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td width="240" align="center">
+      <a target="_blank" href="https://svgjs.dev/docs/3.0/">
+        <img src="https://svgjs.dev/docs/3.0/assets/images/logo-svg-js-01d-128.png" width="42" />
+        <br />
+        <strong>SvgJs</strong>
+        <div>svg工具库</div>
+      </a>
+    </td>
+    <td width="240" align="center">
+      <a target="_blank" href="https://mojs.github.io/">
+        <img src="https://mojs.github.io/assets/img/logo.svg" width="42" />
+        <br />
+        <strong>MoJs</strong>
+        <div>motion动画库</div>
+      </a>
+    </td>
+    <td width="240" align="center">
+      <a target="_blank" href="https://zzz.dog/">
+        <img src="https://zzz.dog/img/solids.png" width="42" />
+        <br />
+        <strong>zdogJs</strong>
+        <div>伪3D引擎库</div>
+      </a>
+    </td>
+  </tr>
+</table>
+
 ### React 方向
 
 <table>
