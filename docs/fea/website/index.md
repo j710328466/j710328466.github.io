@@ -11,6 +11,29 @@ group:
 
 ## 💊 学习文档
 
+### 外包模板
+
+<table>
+  <tr>
+    <td width="240" align="center">
+      <a target="_blank" href="https://panjiachen.github.io/vue-element-admin-site/zh/">
+        <img src="https://panjiachen.github.io/vue-element-admin-site/home.png" width="42" />
+        <br />
+        <strong>vue-admin</strong>
+        <div>Vue 中台解决方案</div>
+      </a>
+    </td>
+    <td width="240" align="center">
+      <a target="_blank" href="https://pro.ant.design/zh-CN/">
+        <img src="https://pro.ant.design/favicon.png" width="42" />
+        <br />
+        <strong>antd-pro</strong>
+        <div>react 中台解决方案</div>
+      </a>
+    </td>
+  </tr>
+</table>
+
 ### 前沿技术
 
 <table>
@@ -169,14 +192,6 @@ group:
         <br />
         <strong>UmiJS</strong>
         <div>react 企业级应用框架</div>
-      </a>
-    </td>
-    <td width="240" align="center">
-      <a target="_blank" href="https://pro.ant.design/zh-CN/">
-        <img src="https://pro.ant.design/favicon.png" width="42" />
-        <br />
-        <strong>antd-pro</strong>
-        <div>react 中台解决方案</div>
       </a>
     </td>
   </tr>
