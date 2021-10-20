@@ -3,12 +3,12 @@ nav:
   title: 前端
   path: /fea
 group:
-  title: 💊 CI持续集成
+  title: 💊 工具
   order: 9
-  path: /ci
+  path: /tools
 ---
 
-# 💊 CI持续集成
+# CI持续集成
 
 前后端分离的概念现在已经应用的比较广了，它使我们的工作更加的高效，也提升了后期代码的可维护性，减少人力成本。
 

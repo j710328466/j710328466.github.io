@@ -3,12 +3,12 @@ nav:
   title: 前端
   path: /fea
 group:
-  title: 💊 SASS语法
-  order: 8
-  path: /sass
+  title: 💊 css
+  order: 2
+  path: /css
 ---
 
-## 💊 SASS语法
+## SASS语法
 
 ### if 语句
 

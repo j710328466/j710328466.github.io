@@ -12,13 +12,15 @@ group:
 
 ### 使用语义化的命名
 
-```javascript
+**Bad:**
+
+```js
 const yyyymmdstr = moment().format("YYYY/MM/DD");
 ```
 
 **Good:**
 
-```javascript
+```js
 const currentDate = moment().format("YYYY/MM/DD");
 ```
 

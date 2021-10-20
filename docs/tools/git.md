@@ -5,6 +5,7 @@ nav:
 group:
   title: 💊 git
   order: 1
+  path: /git
 ---
 
 # 💊 git

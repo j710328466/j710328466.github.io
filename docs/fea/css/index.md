@@ -4,10 +4,11 @@ nav:
   path: /fea
 group:
   title: 💊 css
-  order: 3
+  order: 2
+  path: /css
 ---
 
-## 💊 css
+## 效果案例
 
 ### 小球动画
 

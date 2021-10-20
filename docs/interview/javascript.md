@@ -4,7 +4,7 @@ nav:
   path: /interview
 group:
   title: 💊 面试题库
-  order: 2
+  order: 3
 ---
 
 ## JavaScript

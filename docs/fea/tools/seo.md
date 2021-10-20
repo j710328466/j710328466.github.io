@@ -3,12 +3,12 @@ nav:
   title: 前端
   path: /fea
 group:
-  title: 💊 SEO
-  order: 7
-  path: /seo
+  title: 💊 工具
+  order: 9
+  path: /tools
 ---
 
-# 💊 SEO
+# SEO
 
 ## 介绍
 
