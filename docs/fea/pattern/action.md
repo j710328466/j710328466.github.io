@@ -16,6 +16,7 @@ group:
 场景：
 
 一台咖啡机，按需求给不同的咖啡：
+
 - 美式咖啡态（american)：只吐黑咖啡
 - 普通拿铁态(latte)：黑咖啡加点奶
 - 香草拿铁态（vanillaLatte）：黑咖啡加点奶再加香草糖浆
@@ -26,52 +27,51 @@ import React, { useRef, useEffect } from 'react';
 
 class CoffeeMachine {
   constructor() {
-    this.state = 'init'
-    this.leftMilk = '500ml'
+    this.state = 'init';
+    this.leftMilk = '500ml';
   }
 
   // 美式
   american() {
     // 尝试在行为函数里拿到咖啡机实例的信息并输出
-    console.log('咖啡机现在的牛奶存储量是:', this.leftMilk)
+    console.log('咖啡机现在的牛奶存储量是:', this.leftMilk);
     console.log('我只吐黑咖啡');
-    return '美式'
+    return '美式';
   }
 
   // 普通拿铁
   latte() {
-    this.american()
+    this.american();
     console.log('加点奶');
-    return '普通拿铁'
+    return '普通拿铁';
   }
 
   // 香草拿铁
   vanillaLatte() {
     this.latte();
     console.log('再加香草糖浆');
-    return '香草拿铁'
+    return '香草拿铁';
   }
 
   // 摩卡
   mocha() {
     this.latte();
     console.log('再加巧克力');
-    return '摩卡'
+    return '摩卡';
   }
 
   changeState(state) {
     this.state = state;
     if (!this[state]) {
-      return
+      return;
     }
-    return this[state]()
+    return this[state]();
   }
 }
 
-const mk = new CoffeeMachine()
+const mk = new CoffeeMachine();
 
-
-export default () => <div>咖啡类型：{mk.changeState('mocha')}</div>
+export default () => <div>咖啡类型：{mk.changeState('mocha')}</div>;
 ```
 
 ### 观察者模式（发布订阅者模式）
@@ -80,51 +80,51 @@ export default () => <div>咖啡类型：{mk.changeState('mocha')}</div>
 
 #### 简单版
 
-```jsx
+```js
 import React from 'react';
 // 主题 保存状态，状态变化之后触发所有观察者对象
 class Publisher {
   constructor() {
-    this.state = 0
-    this.observers = []
+    this.state = 0;
+    this.observers = [];
   }
   getState() {
-    return this.state
+    return this.state;
   }
   setState(state) {
-    this.state = state
-    this.notifyAllObservers()
+    this.state = state;
+    this.notifyAllObservers();
   }
   notifyAllObservers() {
-    this.observers.forEach(observer => {
-      observer.update()
-    })
+    this.observers.forEach((observer) => {
+      observer.update();
+    });
   }
   attach(observer) {
-    this.observers.push(observer)
+    this.observers.push(observer);
   }
 }
 
 // 观察者
 class Observer {
   constructor(name, publisher) {
-    this.name = name
-    this.publisher = publisher
-    this.publisher.attach(this)
+    this.name = name;
+    this.publisher = publisher;
+    this.publisher.attach(this);
   }
   update() {
-    console.log(`${this.name} 更新, state: ${this.publisher.getState()}`)
+    console.log(`${this.name} 更新, state: ${this.publisher.getState()}`);
   }
 }
 
 // 测试
-let pub = new Publisher()
-let o1 = new Observer('o1', pub)
-let o2 = new Observer('02', pub)
+let pub = new Publisher();
+let o1 = new Observer('o1', pub);
+let o2 = new Observer('02', pub);
 
-pub.setState(12)
+pub.setState(12);
 
-export default () => null
+export default () => null;
 ```
 
 #### 复杂版
@@ -152,7 +152,7 @@ class Publisher {
       }
     })
   }
-  
+
   // 通知所有订阅者
   notify() {
     console.log('通知所有订阅者-执行')
@@ -202,7 +202,7 @@ class ProObserver extends Observer {
     this.prdState = {}
     console.log('ProObserver created')
   }
-  
+
   // 重写一个具体的update方法
   update(publisher) {
     console.log('ProObserver 已执行')
@@ -211,7 +211,7 @@ class ProObserver extends Observer {
     // 调用工作函数
     this.work()
   }
-  
+
   // work方法，一个专门搬砖的方法
   work() {
     // 获取需求文档
@@ -245,77 +245,121 @@ hanMeiMei.setState(prd)
 
 ### 策略模式
 
+和状态模式的区别，策略模式更偏向算法，计算逻辑的封装，状态更偏向定值的判断
+
 #### 简单版
 
 业务场景如下：
 
 马上大促要来了，我们本次大促要做差异化询价。啥是差异化询价？就是说同一个商品，我通过在后台给它设置不同的价格类型，可以让它展示不同的价格。具体的逻辑如下：
 
-* 当价格类型为“预售价”时，满 100 - 20，不满 100 打 9 折
-* 当价格类型为“大促价”时，满 100 - 30，不满 100 打 8 折
-* 当价格类型为“返场价”时，满 200 - 50，不叠加
-* 当价格类型为“尝鲜价”时，直接打 5 折
+- 当价格类型为“预售价”时，满 100 - 20，不满 100 打 9 折
+- 当价格类型为“大促价”时，满 100 - 30，不满 100 打 8 折
+- 当价格类型为“返场价”时，满 200 - 50，不叠加
+- 当价格类型为“尝鲜价”时，直接打 5 折
 
 ```jsx
 import React, { useRef, useEffect } from 'react';
 
 class CalculateMoney {
-    // 处理预热价
-    prePrice(originPrice) {
-      if(originPrice >= 100) {
-        return originPrice - 20
-      } 
-      return originPrice * 0.9
+  // 处理预热价
+  prePrice(originPrice) {
+    if (originPrice >= 100) {
+      return originPrice - 20;
     }
+    return originPrice * 0.9;
+  }
 
-    // 处理大促价
-    onSalePrice(originPrice) {
-      if(originPrice >= 100) {
-        return originPrice - 30
-      } 
-      return originPrice * 0.8
+  // 处理大促价
+  onSalePrice(originPrice) {
+    if (originPrice >= 100) {
+      return originPrice - 30;
     }
+    return originPrice * 0.8;
+  }
 
-    // 处理返场价
-    backPrice(originPrice) {
-      if(originPrice >= 200) {
-        return originPrice - 50
-      }
-      return originPrice
+  // 处理返场价
+  backPrice(originPrice) {
+    if (originPrice >= 200) {
+      return originPrice - 50;
     }
+    return originPrice;
+  }
 
-    // 处理尝鲜价
-    freshPrice(originPrice) {
-      return originPrice * 0.5
-    }
+  // 处理尝鲜价
+  freshPrice(originPrice) {
+    return originPrice * 0.5;
+  }
 
-    /**
-     * type: pre 预售 | onSale 大促 | back 返场 | fresh 尝鲜
-     * money: 原始金额
-    **/
-    static get(type, money) {
-      switch (type) {
-        case 'pre':
-          return this.prototype.prePrice(money)
-          break
-        case 'onSale':
-          return this.prototype.onSalePrice(money)
-          break;
-        case 'back':
-          return this.prototype.backPrice(money)
-          break;
-        case 'fresh':
-          return this.prototype.freshPrice(money)
-          break;
-        default:
-          return
-      }
+  /**
+   * type: pre 预售 | onSale 大促 | back 返场 | fresh 尝鲜
+   * money: 原始金额
+   **/
+  static get(type, money) {
+    switch (type) {
+      case 'pre':
+        return this.prototype.prePrice(money);
+        break;
+      case 'onSale':
+        return this.prototype.onSalePrice(money);
+        break;
+      case 'back':
+        return this.prototype.backPrice(money);
+        break;
+      case 'fresh':
+        return this.prototype.freshPrice(money);
+        break;
+      default:
+        return;
     }
+  }
 }
 
-
-let calculateMoney = CalculateMoney.get('back', 10000)
+let calculateMoney = CalculateMoney.get('back', 10000);
 // => 4000000
 
-export default () => <div>初始金额：10000，策略模式：{calculateMoney}</div>
+export default () => <div>初始金额：10000，策略模式：{calculateMoney}</div>;
+```
+
+### 迭代器模式
+
+少有的目的性极强的模式。
+
+举例：for...of...就是对 next 的反复调用。
+
+```js
+// 自带迭代器语法
+const arr = [1,2,3]
+const iterator = arr[Symbol.iterator]()
+
+iterator.next() -> { value: 1, done: false}
+iterator.next() -> { value: 2, done: false}
+iterator.next() -> { value: 3, done: false}
+iterator.next() -> { value: undefined, done: true}
+
+// 手撸版迭代器,闭包
+const itaratorFunc = (arr: any  ) => {
+  const idx = 0
+  const len = arr.length
+
+  if (Object.prototype.toString.call(arr) !== '[object Array]') throw new Error('请输入正确的数组格式')
+
+  return {
+    next: () => {
+      var done = idx >= len
+      var value = !done ? list[idx++] : undefined
+
+      return {
+        done,
+        value
+      }
+    }
+  }
+}
+
+const iterator = itaratorFunc([1,2,3])
+
+const iterator.next()
+const iterator.next()
+const iterator.next()
 ```
