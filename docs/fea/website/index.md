@@ -8,8 +8,22 @@ group:
   path: /website
 ---
 
-
 ## 💊 学习文档
+
+### TS 学习
+
+<table>
+  <tr>
+    <td width="240" align="center">
+      <a target="_blank" href="http://ts.xcatliu.com/">
+        <img src="http://ts.xcatliu.com/favicon.png" width="42" />
+        <br />
+        <strong>TS-book</strong>
+        <div>Ts 入门教程</div>
+      </a>
+    </td>
+  </tr>
+</table>
 
 ### 外包模板
 
@@ -194,8 +208,6 @@ group:
         <div>react 企业级应用框架</div>
       </a>
     </td>
-  </tr>
-  <tr>
     <td width="240" align="center">
       <a target="_blank" href="https://scaffold.ant.design">
         <img src="https://zos.alipayobjects.com/rmsportal/HXZvKsbcQljpFToWbjPj.svg" width="42" />
@@ -204,6 +216,8 @@ group:
         <div>脚手架市场</div>
       </a>
     </td>
+  </tr>
+  <tr>
     <td width="240" align="center">
       <a target="_blank" href="https://nextjs.org/">
         <img src="https://nextjs.org/static/favicon/safari-pinned-tab.svg" width="42" />
@@ -212,7 +226,6 @@ group:
         <div>服务端渲染方案</div>
       </a>
     </td>
-    
   </tr>
 </table>
 
