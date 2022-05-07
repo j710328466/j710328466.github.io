@@ -4,7 +4,7 @@ nav:
   path: /bed
 group:
   title: Go
-  order: 1
+  order: 2
 ---
 
 ## 基础

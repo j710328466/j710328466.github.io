@@ -21,12 +21,12 @@ export default defineConfig({
   locales: [['zh-CN', '中文']],
   navs: [
     null,
-    // {
-    //   title: '其它',
-    //   children: [
-    //     { title: '爬虫', path: '/spider' },
-    //   ],
-    // },
+    {
+      title: '其它',
+      children: [
+        { title: '买房攻略', path: '/other/house/2017' },
+      ],
+    },
     {
       title: 'GitHub',
       path: 'git@github.com:j710328466/learn-note.git',

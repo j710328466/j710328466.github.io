@@ -18,7 +18,7 @@ group:
 
 <code src="./demos/demo9/index.tsx" />
 
-### 3D导航条
+### 3D 导航条
 
 <code src="./demos/demo8/index.tsx" />
 
