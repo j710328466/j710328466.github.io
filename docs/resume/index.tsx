@@ -259,7 +259,7 @@ export default (props) => {
                                 </header>
                                 <div className="item-bd">
                                     <p className="section-content">
-                                        爱好琢磨一些有趣有意思的东西，记录一些自己的学习记录和生活感悟，该博客系统使用之前使用主流博客系统<em>Hexo</em>搭建，后为了更方便记录案例代码，修改为<em>Dumi</em>，代码托管于gitee仓库
+                                        紧跟技术潮流，记录一些自己的学习记录和生活感悟，该博客系统最早使用主流博客系统<em>Hexo</em>搭建，<em>aliyun flow</em>集成部署，后为了更方便记录展示案例代码，修改为<em>Dumi</em>，托管于gitee仓库
                                     </p>
                                 </div>
                             </div>
@@ -277,12 +277,12 @@ export default (props) => {
 
                             <div className="item">
                                 <header className="item-hd">
-                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> 二手商城系统</h3>
+                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> 二手商城系统 · vue2、vuex、vue-router、mongodb、express</h3>
                                     <a className="item-more" href="https://cqu.pt" target="_blank" title="内网外入"><i className="iconfont icon-link"></i></a>
                                 </header>
                                 <div className="item-bd">
                                     <p className="section-content">
-                                        大学快毕业时感觉前端学了半年想自己写一个全栈项目，就选择了这个题材，它前端使用了<em>vue全家桶</em>，<em>muse-UI</em>作为UI框架，后端使用了<em>express</em>作为框架，<em>阿里云oss</em>作为文件资源处理库，<em>mongoDB</em>作为数据库。
+                                        前端使用了<em>vue全家桶</em>，<em>muse-UI</em>作为UI框架，后端使用了<em>express</em>作为框架，<em>阿里云oss</em>作为文件资源处理库，<em>mongoDB</em>作为数据库。
                                     </p>
                                 </div>
                             </div>
