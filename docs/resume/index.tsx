@@ -1,21 +1,16 @@
 import React, { useEffect } from 'react';
 
+
 import styles from './css/index.less'
 
-export default () => {
+export default (props) => {
 
   useEffect(() =>{
-    const header = document.querySelector('.__dumi-default-navbar')
-    const cont = document.querySelector('.__dumi-default-layout-content')
-
-    cont.style['position'] = 'relative'
-    cont.style['top'] = '-64px'
-    header.style.display = 'none'
   }, [])
 
   return (
     <div className={styles.resume}>
-      <p className="last-modified"> 最后更新时间：2022年05月</p>
+      <p className="last-modified"><a onClick={() => location.replace('/')} >回首页</a> 最后更新时间：2022年05月</p>
         <div className="content">
             <header className="content-hd">
                 <section className="title">
@@ -36,6 +31,7 @@ export default () => {
                         <li><a href="https://j710328466.github.io" target="_blank"><span className="contact-link">https://j710328466.github.io</span><i className="iconfont icon-homepage"></i></a></li>
                         <li><a href="https://github.com/j710328466" target="_blank"><span className="contact-link">github.com/j710328466</span><i className="iconfont icon-github"></i></a></li>
                         <li><a href="mailto:710328466@qq.com" target="_blank"><span className="contact-link">710328466@qq.com</span><i className="iconfont icon-email"></i></a></li>
+                        <li><a href="#" target="_blank"><span className="contact-link">极简主义·热爱生活</span><i className="iconfont icon-email"></i></a></li>
                     </ul>
                 </section>
             </header>
@@ -52,7 +48,7 @@ export default () => {
                                 <header className="item-hd">
                                     <span className="item-time">2017.10 ~ 2020.03</span>
                                     <a className="btn item-more" href="http://jimistore.com" target="_blank" title="工作经历">官网</a>
-                                    <h3 className="item-name">杭州早稻科技有限公司</h3>
+                                    <h3 className="item-name" style={{ float: 'right' }}>早稻科技</h3>
                                 </header>
                             </div>
                             <div className="item">
@@ -61,10 +57,9 @@ export default () => {
                                 </header>
                                 <div className="item-bd">
                                     <p className="section-content">
-                                        <strong>项目负责人</strong><strong>前端开发</strong>
-                                        负责优化旧版官网，针对之前用户体验差的基础上向领导提出优化引入服务端渲染框架<em>nextJs</em>，使用<em>antd</em>作为官网辅助样式，使用<em>ant Motion</em>作为动画库，并使用<em>Pm2</em>部署在服务器上，该项目属于公司<em>第一个node项目</em>，对于公司前端具有一定的里程碑意义。
+                                        <strong>前端开发</strong>
+                                        负责优化旧版官网，针对之前用户体验差的基础上向领导提出优化引入服务端渲染框架<em>nextJs</em>，使用<em>antd</em>作为官网辅助样式，使用<em>ant Motion</em>作为动画库，并使用<em>Pm2</em>部署在服务器上，该项目属于公司<em>第一个node端搭建项目</em>，对于公司node后端化具有一定的里程碑意义。
                                     </p>
-
                                 </div>
                             </div>
                             <div className="item">
@@ -73,10 +68,10 @@ export default () => {
                                 </header>
                                 <div className="item-bd">
                                     <p className="section-content">
-                                        <strong>项目负责人</strong><strong>前端开发</strong>
-                                        从最初版本的<em>gulp</em>版本使用<em>Webpack</em>重新搭建脚手架将资源优化到更节约，并引入<em>typescript</em>
-                                        强制规范开发规范，使代码更易读更容易维护，其中开发过的<em>月饼大作战</em>和<em>约会大乱斗</em>
-                                        两款小游戏使用了大量<em>css样式</em>，趣味性颇受领导好评。
+                                        <strong>Owner</strong><strong>前端开发</strong>
+                                        从最初版本的<em>gulp</em>版本使用<em>Webpack</em>重新搭建脚手架将资源优化到更节约，后期引入<em>typescript</em>
+                                        强制规范开发规范，使代码更易维护，其中开发过的<em>月饼大作战</em>和<em>约会大乱斗</em>
+                                        两款小游戏使用了大量<em>css样式</em>，趣味性颇受好评。
                                     </p>
                                 </div>
                             </div>
@@ -86,7 +81,7 @@ export default () => {
                                 </header>
                                 <div className="item-bd">
                                     <p className="section-content">
-                                        <strong>项目负责人</strong><strong>前端开发</strong>
+                                        <strong>前端开发</strong>
                                         该活动依赖于公司最底层工具库，并服务于活动开发，主要作用是为了统一管理优化在活动开发时使用的多端约定的函数方法，该工具包使用<em>typescript</em>规范开发，并放置于公司私有npm仓库中维护，内容包括但不限于：<em>登录授权</em>、
                                         <em>分享</em>、<em>语音验证</em><em>验证码登录</em>、<em>获取验证码</em>等等...
                                     </p>
@@ -105,6 +100,110 @@ export default () => {
                                 </div>
                             </div>
                         </div>
+                        <div className="section-bd">
+                            <div className="item item-main">
+                                <header className="item-hd">
+                                    <span className="item-time">2020.03 ~ 2021.03</span>
+                                    <h3 className="item-name" style={{ float: 'right' }}>佰钧成科技-天猫精灵事业部</h3>
+                                </header>
+                            </div>
+                            <div className="item">
+                                <header className="item-hd">
+                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> 天猫精灵内测平台 · Umi、reactJs、midway、antd、ts</h3>
+                                </header>
+                                <div className="item-bd">
+                                    <p className="section-content">
+                                        <strong>Owner</strong>
+                                        负责该平台的bug维护，功能开发，使用的技术为阿里技术栈：<em>cuz</em>（已开源但体验效果不佳），后重构升级为<em>Umi</em> + <em>midway</em>(eggjs前身)
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <header className="item-hd">
+                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> 天猫精灵安全服务中心 · umi、reactJs、midway、antd、ts</h3>
+                                </header>
+                                <div className="item-bd">
+                                    <p className="section-content">
+                                        <strong>前端开发</strong>
+                                        用户数据采集、用户画像、用户数据申请、内外数据合作评审、数据使用要求规范等业务相关的聚合平台。
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <header className="item-hd">
+                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> 天猫精灵售后服务中心 · umi、antd-mobile-v2、midway、ts</h3>
+                                </header>
+                                <div className="item-bd">
+                                    <p className="section-content">
+                                        <strong>Owner</strong><strong>前端开发</strong>
+                                        属于天猫精灵app端，帮助中心项目，具体满足的需求为：用户售后申请或者是在使用app时问题反馈到运营同学，记录并解决问题。
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <header className="item-hd">
+                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> 数字制造服务平台 · nextJs、antd、midway、ts</h3>
+                                </header>
+                                <div className="item-bd">
+                                    <p className="section-content">
+                                        <strong>前端开发</strong>
+                                        将线上的客户需求提出，运营团队评估，结果交付在线上实现流转的最小闭环（属于beta阶段产品）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="section-bd">
+                            <div className="item item-main">
+                                <header className="item-hd">
+                                    <span className="item-time">2021.03 ~ 2022.02</span>
+                                    <h3 className="item-name" style={{ float: 'right' }}>宇泛智能科技</h3>
+                                </header>
+                            </div>
+                            <div className="item">
+                                <header className="item-hd">
+                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> 蓝色荣耀 · Umi、reactJs、antd、ts、yapi</h3>
+                                </header>
+                                <div className="item-bd">
+                                    <p className="section-content">
+                                        <strong>Owner</strong><strong>前端开发</strong>
+                                        属于供对接甲方使用的平台、将智慧工地概念应用落地的闭环式解决方案，功能包括：签署合同、工人打卡、安全监控、发放薪资、设备监控...
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <header className="item-hd">
+                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> 数据可视化大屏 · easyV-UI、reactJs、yapi</h3>
+                                </header>
+                                <div className="item-bd">
+                                    <p className="section-content">
+                                        <strong>Owner</strong><strong>前端开发</strong>
+                                        杭州湾开发商对接项目，供客户将智慧工地部分系统功能通过可视化图表方式展示在数据大屏上，功能包括：升降机大屏、安全帽、扬尘设备、工人进出场记录、在场人员统计...等
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <header className="item-hd">
+                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> Toucan-UI · Echart、G2/plot、react、ts、dumi、lerna</h3>
+                                </header>
+                                <div className="item-bd">
+                                    <p className="section-content">
+                                        <strong>Owner</strong><strong>前端开发</strong>
+                                        toucan-UI 属于二期数据大屏的自研产物，弥补了一期数据大屏功能上的不完善与可维护性差的缺陷，有三部分组件：<em>meta 元组件</em>、<em>chart 图表组件</em>、<em>bizs 业务组件</em> 构成
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <header className="item-hd">
+                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> UU中心 · electron、antd、Oss、ts、umi</h3>
+                                </header>
+                                <div className="item-bd">
+                                    <p className="section-content">
+                                        <strong>前端开发</strong>
+                                        基于 <em>electron</em> 的桌面端应用，功能包含各种提升前端效能的应用，包括有：OSS 资源上传平台、物料库、波塞冬集成埋点、uniubi-ui、uniubi-lib...等（部分应用属于推广阶段）
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
                     </section>
                 </div>
                 <div className="content-right">
@@ -117,7 +216,7 @@ export default () => {
                         <div className="section-bd">
                             <ul className="section-list">
                                 <li><p className="section-content"><i className="iconfont icon-dot"></i>
-                                    掌握Web前端开发基本技能，熟悉<strong>W3C标准</strong>、<strong>HTML</strong>、<strong>CSS</strong>、<strong>UI重构</strong>、<strong>页面布局</strong>，重视<strong>页面交互</strong>与<strong>用户体验</strong>。
+                                    熟悉<strong>JavaScript</strong>、<strong>HTML</strong>、<strong>CSS</strong>开发规范、<strong>UI重构</strong>、<strong>页面布局</strong>，重视<strong>页面交互</strong>与<strong>用户体验</strong>。
                                 </p></li>
                                 <li><p className="section-content"><i className="iconfont icon-dot"></i>
                                     对<strong>JavaScript</strong>、各类<strong>UI组件库</strong>、<strong>JS类库</strong>、<strong>模板引擎</strong>、<strong>MV*框架</strong>、<strong>工程化工具</strong>等有着较熟练的实践和较深刻的感悟。
@@ -130,9 +229,6 @@ export default () => {
                                 </p></li>
                                 <li><p className="section-content"><i className="iconfont icon-dot"></i>
                                     熟练使用<strong>Git</strong>进行版本控制和代码托管、<strong>Markdown</strong>进行文档编写，了解项目常规开发流程、<strong>开发调试</strong>技巧、<strong>发布部署</strong>步骤，掌握<strong>类Unix</strong>服务器基本运维能力。
-                                </p></li>
-                                <li><p className="section-content"><i className="iconfont icon-dot"></i>
-                                    以极简主义作为人生信仰，喜欢美好的事物和创造美好的事物，对新潮的事物和技术充满好奇，热爱学习，热爱生活，乐于和他人沟通与交流。
                                 </p></li>
                             </ul>
                         </div>
@@ -151,7 +247,7 @@ export default () => {
                                 </header>
                                 <div className="item-bd">
                                     <p className="section-content">
-                                      作为 nicecoder 项目发起人，该项目包含各个技术栈的工具库，为帮助他人提高工作效率，减少重复工作，目前成熟的工具有：
+                                      nicecoder 项目发起维护人，该项目包含各个技术栈的工具库，内容正在不断完善中，旨在提高工作效率，减少重复工作，目前成熟的工具有：
                                         <em>@nicecode/changelog</em><em>@nicecode/lint</em><em>@nicecode/commit</em><em>@nicecode/tools</em>...等
                                     </p>
                                 </div>
@@ -174,7 +270,7 @@ export default () => {
                                 </header>
                                 <div className="item-bd">
                                     <p className="section-content">
-                                        之前觉得websocket挺有意思，就想试着玩一下，所以就做了这个项目，它前端使用了<em>Vue全家桶</em>开发，<em>muse-Ui</em>作为UI框架，<em>axios</em>作为接口请求工具，后端使用了<em>socket.io</em>库开发。
+                                        <em>Vue全家桶</em>开发，<em>muse-Ui</em>作为UI框架，<em>axios</em>作为接口请求工具，后端使用了<em>socket.io</em>库搭配 express 开发。
                                     </p>
                                 </div>
                             </div>

@@ -91,6 +91,16 @@ learna publish
 |    lerna create     |                        新建 package                        |
 |    lerna publish    |                            发布                            |
 
+### 🌰
+
+```js
+lerna exec [--scope <package包名（package.json中的name）>] -- <command> [..args]
+
+# 举个例子
+lerna exec -- rm -rf node_modules # 删除所有package下的node_modules
+lerna exec --scope @yh-imooc-cli-dev/core -- rm -rf node_modules # 碰到scope，说明定位到@yh-imooc-cli-dev/cor包下(注意：--scope后面写的是包名)，然后删除当前子包下的node_modules
+```
+
 ## 官方文档
 
 [http://www.febeacon.com/lerna-docs-zh-cn/](http://www.febeacon.com/lerna-docs-zh-cn/)
