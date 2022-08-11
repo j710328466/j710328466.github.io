@@ -24,7 +24,7 @@ export default defineConfig({
     {
       title: '其它',
       children: [
-        { title: '买房攻略', path: '/other/house/2017' },
+        { title: '买房攻略', path: '/other/house/2020' },
       ],
     },
     {

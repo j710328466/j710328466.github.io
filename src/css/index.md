@@ -1,14 +1,20 @@
 ---
 nav:
-  title: 前端
-  path: /fea
+  title: FC
+  path: /funny
 group:
-  title: 💊 css
-  order: 2
+  title: css
+  order: 3
   path: /css
 ---
 
-## 效果案例
+# css
+
+
+### 心跳卡片
+
+<a href="https://codepen.io/gayane-gasparyan/pen/jOmaBQK">参考</a>
+<code src="./demos/HeartBeat/index.tsx" />
 
 ### 小球动画
 

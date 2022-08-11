@@ -12,7 +12,7 @@ group:
 
 ## 安装脚本
 
-苹果电脑标准安装脚本：（推荐 优点全面 缺点慢一点）
+苹果电脑标准安装脚本：（**推荐** 优点全面 缺点慢一点）
 ```
 /bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)" 
 ```

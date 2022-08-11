@@ -17,4 +17,4 @@ footer: Open-source MIT Licensed | Copyright © 2019<br />Powered by Dev
 
 ## 更新日志
 
-<embed src="../changelog.md"></embed>
+<embed src="../CHANGELOG.md"></embed>

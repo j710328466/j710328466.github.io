@@ -3,12 +3,16 @@ nav:
   title: 工具
   path: /tools
 group:
-  title: 💊 终端命令
+  title: 💊 终端
   order: 4
   path: /centos
 ---
 
-# 💊 终端命令
+# 💊 终端
+
+## 好用的终端
+
+> [electerm](https://github.com/electerm/electerm)
 
 ## 常用命令
 
