@@ -32,3 +32,15 @@ Linux卸载脚本：
 ```
 rm HomebrewUninstall.sh ; wget https://gitee.com/cunkai/HomebrewCN/raw/master/HomebrewUninstall.sh ; bash HomebrewUninstall.sh 
 ```
+
+## 常用命令
+
+* 搜索包：brew search [package-name]
+* 查看包的信息：brew info [package-name]
+* 安装终端应用\环境：brew install [package-name]
+* 安装GUI应用 brew install --cask [AppName]
+* 更新所有包：brew update
+* 更新某个包：brew upgrade [package-name]
+* 卸载某个包：brew uninstall [package-name]
+* 列出所有安装的包：brew list
+* 清理所有过时软件：brew cleanup

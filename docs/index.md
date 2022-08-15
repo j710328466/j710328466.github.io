@@ -1,7 +1,7 @@
 ---
 hero:
   title: Nice Note
-  desc: 💊 Dev's 学习笔记
+  desc: 💊 Dev's 笔记
   actions:
     - text: 开始学习
       link: /fea/website
