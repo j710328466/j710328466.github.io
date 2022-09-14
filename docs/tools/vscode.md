@@ -10,6 +10,28 @@ group:
 
 # 💊 vscode
 
+## 如何发布 vscode 插件
+
+### 第一步：全局安装 vsce
+
+> npm i vsce -g
+
+### 第二步：打包
+
+> vsce package --no-dependencies
+
+### 第三步：登录
+
+> vsce login {publisher}
+
+记得上[azure](https://devlifestyle.visualstudio.com/_usersSettings/tokens) 生成token，并记住它
+
+### 第四步：发布
+
+> vsce publish --no-dependencies
+会生成一个访问链接，点击进入即可查看
+
+
 ## 插件推荐
 
 ### auto-Open Markdown

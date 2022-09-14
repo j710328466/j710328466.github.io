@@ -1,6 +1,7 @@
 import './index.less';
 
 export default function () {
+
   return (
     <div className='card'>
       <div className="heart">&#x2665;</div>

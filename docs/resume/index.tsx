@@ -23,7 +23,7 @@ export default (props) => {
                 </section>
                 <section className="info">
                     <h2>男 · 本科</h2>
-                    <h3>2018年毕业 · 5年工作经验</h3>
+                    <h3>2018年毕业 · 5年经验</h3>
                     <h3>东华理工大学 · 软件工程</h3>
                 </section>
                 <section className="contact">
@@ -47,12 +47,12 @@ export default (props) => {
                             <div className="item item-main">
                                 <header className="item-hd">
                                     <span className="item-time">2017.10 ~ 2020.03</span>
-                                    <a className="btn item-more" href="http://jimistore.com" target="_blank" title="工作经历">官网</a>
                                     <h3 className="item-name" style={{ float: 'right' }}>早稻科技</h3>
                                 </header>
                             </div>
                             <div className="item">
                                 <header className="item-hd">
+                                    <a className="btn item-more" href="http://jimistore.com" target="_blank" title="工作经历">官网</a>
                                     <h3 className="item-name"><i className="iconfont icon-dot"></i> 官网 · nextJs、reactJs、antd、pm2</h3>
                                 </header>
                                 <div className="item-bd">
@@ -77,6 +77,7 @@ export default (props) => {
                             </div>
                             <div className="item">
                                 <header className="item-hd">
+                                    <a className="btn item-more" href="https://www.npmjs.com/package/jimi-web-public-tools" target="_blank" title="工作经历">jimi-tools</a>
                                     <h3 className="item-name"><i className="iconfont icon-dot"></i> 定制工具库 · webpack、typescript</h3>
                                 </header>
                                 <div className="item-bd">
@@ -96,6 +97,17 @@ export default (props) => {
                                         <strong>前端开发</strong>
                                         负责运营平台商品营销模块、渠道管理模块、会员管理模块、数据配置模块。
                                         基于<em>react</em><em>redux</em><em>antd</em>开发，实现单文件页面组件化开发、依赖处理等能力；封装部分重复<em>组件</em>和<em>函数</em>方法，减少重复工作量。
+                                    </p>
+                                </div>
+                            </div>
+                            <div className="item">
+                                <header className="item-hd">
+                                    <h3 className="item-name"><i className="iconfont icon-dot"></i> BI数据管理平台 · ReactJs、Redux、Dva、Antd</h3>
+                                </header>
+                                <div className="item-bd">
+                                    <p className="section-content">
+                                        <strong>Owner</strong>
+                                        主要用于BI团队，整合用户信息，构建用户画像，从而起到降低风险和降低成本的作用。
                                     </p>
                                 </div>
                             </div>
