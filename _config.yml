@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Jsonskin's Blog
+title: DevSocial
 subtitle:
-keywords: 红色药丸,red pill,nlp,jsonskin
-description: 社会表面是父系男权，实际上是迎合讨好女性的“女本位社会”。服用蓝色药丸继续在梦境，服用红色药丸了解真相。
-author: jsonskin
+keywords: 红色药丸,red pill,nlp,dev
+description: 服用蓝色药丸继续沉睡，还是服用红色药丸和我一起了解真相?
+author: dev
 language: zh-CN
 timezone:
 
@@ -50,9 +50,9 @@ category_map:
 tag_map:
 
 prism_plugin:
-  mode: 'preprocess'    # realtime/preprocess
+  mode: 'preprocess' # realtime/preprocess
   theme: 'default'
-  line_number: false    # default false
+  line_number: false # default false
 
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
@@ -73,7 +73,7 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 plugin:
-- hexo-generator-feed
+  - hexo-generator-feed
 feed:
   type: atom
   path: atom.xml
@@ -89,11 +89,11 @@ theme: material
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
-deploy:  
-- type: git
-  repo: git@gitee.com:kox_baba/kox_baba.git
-  branch: master
-- type: baidu_url_submitter
+deploy:
+  - type: git
+    repo: git@gitee.com:kox_baba/kox_baba.git
+    branch: master
+  - type: baidu_url_submitter
 
 # 百度主动推送
 baidu_url_submit:
@@ -115,4 +115,4 @@ nofollow:
   exclude:
     - www.jzxer.cn
     - blog.jzxer.cn
-    - 友链地址 
+    - 友链地址
