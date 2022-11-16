@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "hexo": {
-    "version": "5.4.0"
+    "version": "5.4.2"
   },
   "scripts": {
     "new": "hexo new ${title}",
@@ -37,11 +37,6 @@
     "hexo-tag-aplayer": "^3.0.4",
     "hexo-tag-dplayer": "^0.3.3"
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/jimi-web-changelog/lib/cz"
-    }
-  },
   "repository": "ssh://git@github.com/nicecoders/nicecoders.github.io.git",
   "license": "MIT",
   "devDependencies": {
@@ -54,8 +49,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-uglify": "^3.0.2",
-    "hexo-generator-baidu-sitemap": "^0.1.9",
-    "jimi-web-changelog": "^0.1.7"
+    "hexo-generator-baidu-sitemap": "^0.1.9"
   },
   "aliyunPipe": "https://rdc.aliyun.com/ec/projects/295984/pipelines"
 }

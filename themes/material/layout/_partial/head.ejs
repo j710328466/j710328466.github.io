@@ -31,8 +31,6 @@
         var title = page.title;
         var description = page.description || config.description
 
-        <!-- {% block title %} {{ config.title }} - {{ theme.description }} {% endblock %} -->
-
         if (is_archive()) {
             title = __('sidebar.archive');
 

@@ -3,10 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
+<<<<<<< HEAD
 title: dev's Blog
 subtitle:
 keywords: 红色药丸,red pill,nlp,dev
 description: 社会表面是父系男权，实际上是迎合讨好女性的“女本位社会”。服用蓝色药丸继续在梦境，服用红色药丸了解真相。
+=======
+title: DevSocial
+subtitle:
+keywords: 红色药丸,red pill,nlp,dev
+description: 服用蓝色药丸继续沉睡，还是服用红色药丸和我一起了解真相?
+>>>>>>> d5a8a2fdcf9921c777116bc2a57b4078e01c2947
 author: dev
 language: zh-CN
 timezone:
@@ -93,9 +100,12 @@ deploy:
   - type: git
     repo: git@gitee.com:kox_baba/kox_baba.git
     branch: master
+<<<<<<< HEAD
   - type: git
     repo: git@github.com:j710328466/j710328466.github.io.git
     branch: master
+=======
+>>>>>>> d5a8a2fdcf9921c777116bc2a57b4078e01c2947
   - type: baidu_url_submitter
 
 # 百度主动推送
