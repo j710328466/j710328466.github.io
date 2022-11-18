@@ -67,7 +67,7 @@ thumbnail:
 #        type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
   purecolor: '#F5F5F5'
-  bgimg: '/img/bg.jpeg'
+  bgimg: '/img/12.png'
   bing:
     enable: false
     parameter:
@@ -173,11 +173,14 @@ toc:
 sns:
   email: jzx710328466@gmail.com
   instagram: 'https://www.instagram.com/jzxer'
+  twitter: https://www.tiktok.com/@dev_life_style
+  facebook:
+  weibo:
   tumblr:
   # github:
   # linkedin:
-  zhihu:
-  bilibili:
+  zhihu: https://www.zhihu.com/people/petterx
+  bilibili: https://space.bilibili.com/73148384
   telegram:
   v2ex:
 

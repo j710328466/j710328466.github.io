@@ -1,7 +1,6 @@
 ---
 title: 关于失眠
 date: 2021-08-29 22:36:40
-top: true
 tags: [失眠, 潜意识]
 categories: 潜意识
 permalink:
