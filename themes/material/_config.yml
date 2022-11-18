@@ -36,7 +36,7 @@ uiux:
   theme_color: '#548687'
   theme_sub_color: '#8FBC94'
   hyperlink_color: '#679cc5'
-  button_color: '#56445D'
+  button_color: '#548687'
   android_chrome_color: '#548687'
   nprogress_color: '#8FBC94'
   nprogress_buffer: '888'
@@ -53,7 +53,7 @@ reading:
 # aplayer
 aplayer:
   enable: true
-  autoplay: false
+  autoplay: true
 
 # Thumbnail Settings
 thumbnail:
@@ -97,7 +97,7 @@ fonts:
   custom_font_host:
 
 # Card Elevation Level
-card_elevation: 6
+card_elevation: 8
 
 # Copyright
 # Specify the date when the site was setup.
@@ -127,7 +127,7 @@ qrcode:
 #        theme: # Available value in /source/css/prettify/[theme].min.css
 prettify:
   enable: false
-  # theme: "hanabi"
+  theme: vibrant-ink
 
 #    Hanabi (https://github.com/egoist/hanabi)
 #        line_number: [true/false] # Show line number for code block
@@ -137,7 +137,7 @@ prettify:
 #                    - If `includeDefaultColors` is false, this will instead default color pool
 hanabi:
   enable: true
-  line_number: false
+  line_number: true
   includeDefaultColors: true
   customColors:
 
@@ -333,14 +333,14 @@ vendors:
   #   For example
   #       jquery: https://cdn.bootcss.com/jquery/2.2.1/jquery.js
   # jQuery 2.2.0
-  jquery:
+  jquery: https://cdn.bootcdn.net/ajax/libs/jquery/3.6.1/jquery.min.js
   # nprogress 0.2.0
-  nprogress:
+  nprogress: https://cdn.bootcdn.net/ajax/libs/nprogress/0.2.0/nprogress.min.js
   # FontAwesome 4.5.0
   fontawesome:
   # MathJax 2.7.0-2.7.1
   mathjax:
   # Prettify r298 (only prettify.js)
-  prettify:
+  prettify: https://cdn.bootcdn.net/ajax/libs/prettify/r298/prettify.min.js
   # Material Icons 3.0.1
   material_icons:
