@@ -17,7 +17,7 @@ excerpt: 假期约会一个女同学，因为怂而导致后续失败的经历..
 
 下面的照片是我在买奶茶的时候她拍的，喝完奶茶，我们就准备去她另外一个朋友那里了。
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2015-07-01.jpeg" width="300" alt="D小姐" align=center />
+<img src="./img/gallery/2015/2015-07-01.jpeg" width="300" alt="D小姐" align=center />
 
 很多女生心里其实虚荣心都很重，拍照其实就是其中一方面，可惜当时我还比较不懂。
 
@@ -32,7 +32,7 @@ excerpt: 假期约会一个女同学，因为怂而导致后续失败的经历..
 3. 我的寡言少语，可能被女生误判为 神秘感（高价值，事实上是腼腆）
 4. 我的眼神交流，事实证明，我的眼神很能传递信息给女生（天生的，原理还在探索中）。另外一点，男生女生交流，语言的部分只占了 7%，38%来自肢体语言，55%来自内核。
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2015-05-01.jpeg" width="300" alt="D小姐" align=center />
+<img src="./img/gallery/2015/2015-05-01.jpeg" width="300" alt="D小姐" align=center />
 
 > 这个女生很漂亮，讲话有一点口吃。
 

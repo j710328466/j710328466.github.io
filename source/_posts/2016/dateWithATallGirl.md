@@ -1,5 +1,5 @@
 ---
-title: 国庆和大长腿女生约会..
+title: 国庆约会大长腿女生
 date: 2016-10-10 15:00:06
 tags: [pickup, dating]
 keywords: 约会,dating,pickup,约会艺术,把妹艺术
@@ -17,8 +17,8 @@ excerpt: 国庆节想出去玩玩，又不想找男生，就找了个对我有�
 
 当天迎着夕阳，她就拍了下面的几张照片留念：
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2016-10-10.png" width="300" alt="D小姐" align=center />
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2016-10-10-2.png" width="300" alt="D小姐" align=center />
+<img src="./img/gallery/2016/2016-10-10.png" width="300" alt="D小姐" align=center />
+<img src="./img/gallery/2016/2016-10-10-2.png" width="300" alt="D小姐" align=center />
 
 拍完照片她回了宿舍，我在附近找了个宾馆住下（忘记当时啥原因没约她一起住下），当天晚上**我提出**第二天去庐山玩，她答应了
 

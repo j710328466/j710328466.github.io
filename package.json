@@ -49,6 +49,7 @@
     "gulp-imagemin": "^7.1.0",
     "gulp-minify-css": "^1.2.4",
     "gulp-uglify": "^3.0.2",
+    "hexo-asset-image": "^1.0.0",
     "hexo-generator-baidu-sitemap": "^0.1.9"
   },
   "aliyunPipe": "https://rdc.aliyun.com/ec/projects/295984/pipelines"

@@ -21,7 +21,7 @@ description: 朋友让我去线下活动凑人头，第一次即时约会并TD�
 
 到了晚上，我们在一辆大型游轮上吃晚宴，晚宴结束后有一个活动，活动是男生去向在座的所有女生自我介绍，如果女生满意就会给男生一张卡片，最后卡片最多的人胜利，并得到奖品。随后大家开始找相对应的目标。下图是游戏中（拍的我是真丑）：
 
-<img src="/img/gallery/20220624-4.jpg" width="300" alt="c小姐" align=center />
+<img src="./img/gallery/2022/20220624-4.jpg" width="300" alt="c小姐" align=center />
 
 我物色目标后开始Game，也是这个时候碰到了当晚的对象--女生A。初步介绍就是普通的：你好，我是dev（伸手握手...后面聊啥我也忘了，只记得女生说那个自我介绍印象很深。)
 
@@ -43,9 +43,9 @@ description: 朋友让我去线下活动凑人头，第一次即时约会并TD�
 
 后续她主动来找我，包括谈话中有潜移默化的告诉我她想和我谈对象，但是我拒绝了...
 
-<img src="/img/gallery/20220624-1.png" width="300" alt="c小姐" align=center />
-<img src="/img/gallery/20220624-2.jpg" width="300" alt="c小姐" align=center />
-<img src="/img/gallery/20220624-3.jpg" width="300" alt="c小姐" align=center />
+<img src="/img/gallery/2022/20220624-1.png" width="300" alt="c小姐" align=center />
+<img src="/img/gallery/2022/20220624-2.jpg" width="300" alt="c小姐" align=center />
+<img src="/img/gallery/2022/20220624-3.jpg" width="300" alt="c小姐" align=center />
 
 ## 总结
 

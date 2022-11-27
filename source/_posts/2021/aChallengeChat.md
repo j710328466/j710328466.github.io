@@ -1,5 +1,5 @@
 ---
-title: 记录一次聊天话术尝试
+title: 聊天话术分享
 date: 2021-08-04 23:57:51
 tags: [pickup, 聊天话术]
 categories: 如何聊天
@@ -26,11 +26,11 @@ description: 想试试自己的聊天话术，本来以为很傻逼，但是当�
 
 ### 女生一
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-04-ll1.png" width="500" alt="莉莉" align=center />
+<img src="./img/gallery/2021/2021-08-04-ll1.png" width="500" alt="莉莉" align=center />
 
 她在和我说之前约剧本杀的感受，我借故说我要去开会了，让后用了一个舌吻的动图，去挑逗她。
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-04-ll2.png" width="500" alt="莉莉" align=center />
+<img src="./img/gallery/2021/2021-08-04-ll2.png" width="500" alt="莉莉" align=center />
 
 她在开会的时候，我说等她，她问我等她干啥，我说聊天难不成做爱啊，因为在之前我就已经有给她释放一些性信号，她提前知道了我是个怎么样的人，所以这个信息我发出去她内心接收度会比较高一点。
 
@@ -40,17 +40,17 @@ description: 想试试自己的聊天话术，本来以为很傻逼，但是当�
 聊天的时候我脑海里想的主要是要带领女生，并且给她一些好的感受，在潜移默化下拉近彼此的距离感。这次聊天持续了将近20分钟，因为她在足浴，如果条件允许的话，我觉得可以聊得更久。
 > 语音聊天的重点是：在微信上是一个什么样的人，现实生活中也要给对方一个就是这样的人的感觉。不然你会失去一致性。女生可能瞬间对你失去兴趣。
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-04-ww2.jpeg" width="500" alt="温温" align=center />
+<img src="./img/gallery/2021/2021-08-04-ww2.jpeg" width="500" alt="温温" align=center />
 
 在电话里一直在查我水表，我一直在努力保持自己的框架（神秘感和高可得性），具体的做法是不要太直接告诉对方想要得到的信息，可以设置一些门槛，让她知道自己是通过对方努力得到的。这里她问完我星座又问我出生日期，我没告诉她。然后她告诉我星座的时候，其实她不管说什么星座，我都会说这句话。保持男女框架，并且适当调侃。
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-04-ww1.jpeg" width="500" alt="温温" align=center />
+<img src="./img/gallery/2021/2021-08-04-ww1.jpeg" width="500" alt="温温" align=center />
 
 这里我是说让她泡好脚叫我，虽然她嘴上说不叫，其实她说出这句话的时候我就感受到了她对我的好感。这里我通过曲解她的话，让她以为我想听她叫床。所以两个人的暧昧程度进一步升高了。
 
 ### 女生三
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-04-apple1.png" width="500" alt="苹果" align=center />
+<img src="./img/gallery/2021/2021-08-04-apple1.png" width="500" alt="苹果" align=center />
 
 这个女生是我在玩剧本时候加的一个好友，当时是为了撮合她和另外一个男生所以对她的好感度一般，属于可有可无的角色。所以试了下我的话术。
 
@@ -58,17 +58,17 @@ description: 想试试自己的聊天话术，本来以为很傻逼，但是当�
 
 ### 女生四
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-04-ym2.jpeg" width="500" alt="杨幂" align=center />
+<img src="./img/gallery/2021/2021-08-04-ym2.jpeg" width="500" alt="杨幂" align=center />
 
 这个女生是一次群里拼密室车随机认识的一个女生，我直接说我想和她约炮。我敢这么说也是因为我在群里说的话都是直接表示我对性观念很开放。所以当你展示出来是什么样子，你一定会吸引一些喜欢这样的你的人。（前提要表现出你的一致性）
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-04-ym.png" width="500" alt="杨幂" align=center />
+<img src="./img/gallery/2021/2021-08-04-ym.png" width="500" alt="杨幂" align=center />
 
 我说我想上她的车，不上也没关系，并且间接告诉她我想上她。
 
 ### 女生五（反例）
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-04-xml.png" width="500" alt="迅猛龙" align=center />
+<img src="./img/gallery/2021/2021-08-04-xml.png" width="500" alt="迅猛龙" align=center />
 
 这个女生可以看出，她希望能够驯化我，让我作为一个供养者的身份去帮她付钱。
 

@@ -1,5 +1,5 @@
 ---
-title: 五一与176长腿妹子洛阳行
+title: 五一与长腿妹子洛阳行
 date: 2021-05-10 14:30:26
 tags: [dating, 约会]
 keywords: 旅游,洛阳,约会
@@ -11,8 +11,8 @@ excerpt: 五一假期，大学认识的妹子约我去洛阳玩，应邀去参�
 
 五一假期，大学认识的一个妹子约我去洛阳玩耍，就去了，下文称为女生A，发生了一系列有趣的事情...
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-05-01.jpeg" width="300" alt="M小姐" align=center />
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-05-01-2.jpeg" width="300" alt="M小姐" align=center />
+<img src="./img/gallery/2021/2021-05-01.jpeg" width="300" alt="M小姐" align=center />
+<img src="./img/gallery/2021/2021-05-01-2.jpeg" width="300" alt="M小姐" align=center />
 
 ## Game 过程
 

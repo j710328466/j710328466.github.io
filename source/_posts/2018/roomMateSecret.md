@@ -1,5 +1,5 @@
 ---
-title: 刚来杭州和一个女室友的小故事
+title: 刚来杭州和女室友的故事
 date: 2018-07-12 14:04:00
 tags:
 keywords:
@@ -20,7 +20,7 @@ description:
 
 突然有一天，她要举办个派对，邀请我参加她们举办的活动，表演一个节目，我弹她唱。
 
-<img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2018-06-01.jpeg" width="300" alt="sandari" align=center />
+<img src="./img/gallery/2018/2018-06-01.jpeg" width="300" alt="sandari" align=center />
 
 问题就在这个邀请我并且说为了这次演出排练的过程。她多次在男朋友不在的情况下，来到我的房间找我，名义上说是排练，但是她有的时候穿着热裤就直接趴在我的床上（因为她平时爱跳舞，所以屁股很翘），但是我当时对有对象的女生比较忌讳，那天就没有什么事情发生。
 
