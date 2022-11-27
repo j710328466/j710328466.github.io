@@ -1006,6 +1006,15 @@ a {
 #scheme-Paradox .sidebar-footer-text-a {
 	text-decoration: none;
 }
+
+#scheme-Paradox .article-headline-p a span {
+	margin-right: 8px;
+	padding: 4px 8px;
+	font-size: 32px;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 8px;
+}
 #scheme-Paradox .post_tag-link,
 #scheme-Paradox .index_category-link {
 	padding: 15px;

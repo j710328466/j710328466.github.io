@@ -1043,6 +1043,14 @@ a {
 #scheme-Paradox .sidebar-footer-text-a {
 	text-decoration: none;
 }
+#scheme-Paradox .article-headline-p a span {
+	margin-right: 8px;
+	padding: 4px 8px;
+	color: #fff;
+	font-size: 32px;
+	border: 1px solid #fff;
+	border-radius: 8px;
+}
 #scheme-Paradox .post_tag-link,
 #scheme-Paradox .index_category-link {
 	padding: 15px;
@@ -1438,6 +1446,13 @@ a {
 #scheme-Isolation .post_entry-title a {
 	text-decoration: none;
 	color: #333;
+}
+#scheme-Isolation .post_entry-title a span {
+	margin-right: 8px;
+	padding: 4px 8px;
+	color: #fff;
+	border: 1px solid #fff;
+	border-radius: 8px;
 }
 #scheme-Isolation .post_entry-tags-list {
 	padding: 0;

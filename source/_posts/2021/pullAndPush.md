@@ -1,7 +1,10 @@
 ---
-title: 神经语言两个关键知识点
+title: nlp的两个关键知识点
 date: 2021-06-17 17:24:01
-tags: [神经语言]
+tags: [nlp]
+excerpt: nlp的两个非常重要的知识点...
+keywords: nlp,神经语言程序
+description: nlp的两个非常重要的知识点...
 ---
 
 ## 抽离

@@ -1,12 +1,12 @@
 ---
-title: 一次酒后强吻女生
+title: 一次KTV强吻女生
 date: 2021-01-31 23:04:10
 tags: [雄性魅力, pickup]
-keywords: 强吻,红色药丸,redpill,雄性极性
-categories: 雄性魅力
+keywords: 红色药丸,redpill,雄性极性,把妹艺术
+categories: pickup
 permalink:
-password: 
-description: 参加朋友的K歌局，强吻了一个女生
+description: 故事发生在参加一个女性朋友的K歌局，强吻了一个女生带回家
+excerpt: 故事发生在参加一个女性朋友的K歌局，强吻了一个女生带回家...
 ---
 
 我真的不能喝酒...
@@ -44,7 +44,7 @@ description: 参加朋友的K歌局，强吻了一个女生
 
 ## 总结
 
-这次经历，我总体来说就是很大程度上激发了我自己的雄性极性，让一些行为变得更有男人味，去超过大部分不敢作或想都不敢想的男人。也发现了一个能够很大程度上征服女生的一种方式。释放自己的DHV，并在一定程度上降低自己的需求感。
+这次经历，总体来说就是很大程度上激发了我的雄性极性，让一些行为变得更有男人味，去超过大部分不敢作或想都不敢想的男人。也发现了一个能够很大程度上征服女生的一种方式。释放自己的DHV，并在一定程度上降低自己的需求感，保持一致性。
 
 <img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-01-31-2.jpeg" width="300" alt="S小姐" align=center />
 

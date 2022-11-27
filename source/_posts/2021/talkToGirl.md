@@ -1,9 +1,10 @@
 ---
-title: A型男生和女生聊天
+title: 和女生聊天过程中的一致性
 date: 2021-08-15 14:33:28
-tags: [雄性魅力, 聊天话术]
-keywords: 雄性魅力,极度自我,红色药丸,redpill,聊天话术,把妹话术
+tags: [pickup, 聊天话术]
+keywords: 雄性魅力,一致性,红色药丸,redpill,聊天话术,把妹艺术
 description: 一次使用自我框架和女生聊天
+excerpt: 一次尝试使用强框架和女生聊骚，得到的结果非常出乎意料...
 ---
 
 ## 背景
@@ -12,10 +13,10 @@ description: 一次使用自我框架和女生聊天
 
 所以又做了第二次尝试，这次尝试的对象有以下三个：
 
-1. 女生A：玩剧本杀认识的，一个会跳舞的妹子。（暂无照片，朋友圈很少发）
+1. 女生A：玩剧本杀认识的，一个会跳舞的妹子。（暂无照片，朋友圈很少发自拍）
 > 暂无图片，后续补上
 
-2. 女生B：一个小网红，整过容，据她说胸就花了几十万...
+2. 女生B：一个抖音小网红，整过容，据她说胸就花了几十万...
 <img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-kk2.jpeg" width="300" alt="珂珂" align=center />
 <img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-kk-3.jpeg" width="300" alt="珂珂" align=center />
 
@@ -73,5 +74,5 @@ description: 一次使用自我框架和女生聊天
 <img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-rain.jpeg" width="200" alt="小雨" align=center />
 <img src="http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/blog/img/gallery/2021-08-08-rain-2.jpeg" width="200" alt="小雨" align=center />
 
-这里聊天的性张力，是通过之前和女生相处给女生留下的印象产生的。但是由于后续需求感暴露的太强，需要再观望一段时间。
+这里聊天的性张力，是通过之前和女生相处给女生留下的印象产生的。但是由于后续需求感暴露的太强，能不能有结果，只能看我在女生那的容错率，和后续我的操作了。
 

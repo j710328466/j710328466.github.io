@@ -65,7 +65,7 @@
     <script>
       const ap = new APlayer({
         container: document.getElementById('aplayer'),
-        autoplay: false,
+        autoplay: true,
         listFolded: true, //播放列表默认折叠
         listMaxHeight: 90, //播放列表最大高度
         order: 'list', //音频循环顺序, 可选值: 'list', 'random'
@@ -77,15 +77,11 @@
         volume: 0.7, //默认音量，请注意播放器会记忆用户设置，用户手动设置音量后默认音量即失效
         mini: true, //吸底模式（fixed:true），迷你模式（mini:true），普通模式（注释此行或者设置fixed:false）
         audio: [{
-            name: 'you just like a shit',
-            artist: 'red pill',
-<<<<<<< HEAD
-            lrc: '[00:00.00]dev\n[00:04.01]is\n[00:08.02]red pill',
-=======
-            lrc: '[00:00.00]jsonSkin\n[00:04.01]is\n[00:08.02]red pill',
->>>>>>> d5a8a2fdcf9921c777116bc2a57b4078e01c2947
+            name: 'you just like a dog',
+            artist: 'dev',
+            lrc: '[00:00.00]dev\n[00:04.01]is\n[00:08.02]dog',
             cover: '/img/logo.jpg',
-            url: 'http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/This%20Is%20The%20New%20Shit.mp3'
+            url: 'https://jzx-h5.oss-cn-hangzhou.aliyuncs.com/static/dogs.mp3'
             },
         ]
       });

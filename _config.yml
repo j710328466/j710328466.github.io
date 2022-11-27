@@ -7,7 +7,7 @@ title: DevSocial
 subtitle:
 keywords: 红色药丸,red pill,nlp,dev
 description: 红色药丸|搭讪艺术|社交艺术|NLP|真实世界
-author: dev
+author: dev·得温
 language: zh-CN
 timezone:
 
@@ -29,7 +29,7 @@ i18n_dir: :lang
 skip_render:
 
 # Writing
-new_post_name: :title.md # File name of new posts
+new_post_name: :year/:title.md # File name of new posts
 default_layout: post
 titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
@@ -39,7 +39,7 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false
   line_number: true
   auto_detect: true
   tab_replace:
@@ -91,7 +91,7 @@ theme: material
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   - type: git
-    repo: git@gitee.com:kox_baba/kox_baba.git
+    repo: git@gitee.com:kox_baba/redpill.git
     branch: master
   - type: git
     repo: git@github.com:j710328466/j710328466.github.io.git
