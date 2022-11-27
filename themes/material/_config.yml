@@ -7,11 +7,7 @@ head:
   favicon: '/img/favicon.png'
   high_res_favicon: '/img/favicon.png'
   apple_touch_icon: '/img/favicon.png'
-<<<<<<< HEAD
   keywords: '红色药丸,red pill,nlp,dev'
-=======
-  keywords: '红色药丸,red pill,nlp,jsonskin'
->>>>>>> d5a8a2fdcf9921c777116bc2a57b4078e01c2947
   site_verification:
     google: google-site-verification=YHgG1NlKmVKfNyXAe36GYpGuVmbxOspxFVF_yNLyab0
     baidu: SSFG70EWxRbTjmuY
@@ -36,11 +32,7 @@ scheme: Paradox
 
 # UI & UX: slogan, color, effect
 uiux:
-<<<<<<< HEAD
-  slogan: '服下红色药丸，发现这个世界残酷的真相'
-=======
   slogan: '服用蓝色药丸继续沉睡，还是服用红色药丸和我一起了解真相？'
->>>>>>> d5a8a2fdcf9921c777116bc2a57b4078e01c2947
   theme_color: '#548687'
   theme_sub_color: '#8FBC94'
   hyperlink_color: '#679cc5'
