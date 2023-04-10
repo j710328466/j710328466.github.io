@@ -73,23 +73,20 @@ group:
 
 ## 一个页面从输入 url 到页面显示完成，中间发生了什么？
 
-
 - 查找浏览器缓存
-- DNS 解析，查找该域名对应的IP，重定向（301），发出第二个 get 请求
+- DNS 解析，查找该域名对应的IP，重定向（301），这里如果做了nginx配置的话，会有一个负载均衡的发放，一般在有大型IO的项目会处理，发出第二个 get 请求
 - 进行HTTP 协议对话
-- 客户端发送报头
-- 文档开始下载
+- 客户端发送报头，我需要什么类型的文档
+- 如果是html文档，开始下载
 - 文档树建立，根据标记请求所需指定mime类型的文件
 - 文件显示
 - 浏览器这边做的工作大致分为以下几步：
-
-
 
 > 加载：根据请求的url进行域名解析，向服务器发起请求，接受文件（html，js，css，图像等）
 > 解析：对加载到的资源（html，js，css）进行语法解析，建议相应的内部数据结构（比如html的dom树，js的属性表，css的样式表规则等等）
 
 ## 浏览器的渲染原理
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/195884/1612683125844-93e55bd2-58ba-4528-a47e-711c5659ad0b.png#height=129&id=EERpc&margin=%5Bobject%20Object%5D&name=image.png&originHeight=257&originWidth=791&originalType=binary&ratio=1&size=171550&status=done&style=none&width=395.5)
+![image.png](./img/htmlRender.png)
 
 1）浏览器会解析三个东西：
 

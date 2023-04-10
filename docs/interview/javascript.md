@@ -10,28 +10,23 @@ group:
 ## JavaScript
 
 ### `new` 操作符做了啥？
+
 ```html
 创建一个空对象，并且this变量引用该对象，同时还继承了 该函数的原型
 属性和方法被加入到this引用的对象中
 新创建的对象由this所引用，并且最后隐式的返回this
 ```
 
-
-
 ### typeof 返回哪些数据类型
-
 
 - obj num fun bool undefined
 
-
+> typeof null 返回的是object，这个是个历史遗留问题
 
 ### 3种强制类型转换两种隐式类型转换
 
-
 - parseInt parseFloat number
 - == - ===
-
-
 
 ### 数组方法pop() push() unshift() shift()
 
@@ -39,17 +34,14 @@ group:
 - push() 尾部添加 pop() 尾部删除
 - unshift() 头部添加 shift() 头部删除
 
-
-
 ### ajax请求 get 和 post 的区别
 
+```text
+post: 1. 传参不同，请求参数放在虚拟载体里面（data对象）、2. 如果服务器端不介入干预，大小没有限制。3. 参数不会暴露在链接上，所以安全性更强，并且post的内容不会被缓存。4. 传参类型不做限制。
 
-- 一个在 url 后面，一个放在虚拟载体里面
-- 有大小限制
-- 安全问题
-- 应用不同
+get: 1. 参数在链接上。2、url链接长度有限制，所以大小有限制。3、传参在链接上，安全系数低。并且有缓存。4. 传参只能是ascll码类型
 
-
+```
 
 ### call 和 apply 的区别
 
@@ -57,22 +49,11 @@ group:
 - object.call(this, obj1,obj2,obj3)
 - object.apply(this, argument)
 
-
-
 ### ajax 请求时，如何解析 json 数据
 
 
 - 使用eval parse，介于安全性考虑 使用parse 更靠谱
 - eval 可以解析任何字符串，parse只解析json格式的字符串
-
-
-
-### 闭包是什么？
-
-
-- 闭包就是能够读取其他函数内部变量的函数
-
-
 
 ### 添加 删除 替换 插入到某个节点的方法
 
@@ -86,10 +67,7 @@ group:
 
 ### javascript 同源策略
 
-
 - 一段脚本只能读取来自同一来源的穿考核文档的属性，同源：指主机名，协议和端口号的组合
-
-
 
 ### 编写一个 b 继承 a 的方法
 
@@ -127,10 +105,15 @@ group:
 
 ### 谈谈this对象的理解
 
-
-- this 是 js 的一个关键字， 随着函数使用场合不同，this的值会发生变化
-- 但是有一个原则，this 指向的就是调用函数的那个对象
+- this只在调用的时候发生指向确认，它指向什么取决于在什么地方调用。this 指向的就是调用函数的那个对象。
 - this 一般情况下： 是指全局对象global， 如果作为方法调用，就指向这个对象
+- 对于直接调用 foo 来说，不管 foo 函数被放在了什么地方，this 一定是 window
+- 对于 obj.foo() 来说，我们只需要记住，谁调用了函数，谁就是 this，所以在这个场景下 foo 函数中的 this 就是 obj 对象
+- 对于 new 的方式来说，this 被永远绑定在了 c 上面，不会被任何方式改变 this
+
+```js
+console.log(this)
+```
 
 
 
@@ -331,9 +314,9 @@ new Foo().getName();
 new new Foo().getName();
 ```
 
-
 ### JS数组深浅拷贝
 #### 浅拷贝
+
 ```javascript
 // slice 实现
 var arr = ['old', 1, true, null, undefined];
@@ -384,8 +367,9 @@ var deepCopy = function (obj) {
     return newObj
 }
 ```
-### 
+
 ### 数组去重
+
 ```javascript
 // filter + indexOf
 function unique (arr) {
@@ -523,23 +507,12 @@ var debounce = function (func, wait, immediate) {
 - 运算中其中一方为字符串，那么就会把另一方也转换为字符串
 - 如果一方不是字符串或者数字，那么会将它转换为数字或者字符串
 
-
-
-### this
-
-1. 对于直接调用 foo 来说，不管 foo 函数被放在了什么地方，this 一定是 window
-1. 对于 obj.foo() 来说，我们只需要记住，谁调用了函数，谁就是 this，所以在这个场景下 foo 函数中的 this 就是 obj 对象
-1. 对于 new 的方式来说，this 被永远绑定在了 c 上面，不会被任何方式改变 this
-
-
-
 #### 箭头函数
 
 1. this 指向只取决于包裹箭头函数的第一个普通函数的 this
 1. 无法改变箭头函数的指向
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/195884/1614671081418-6763bc83-d880-4fd8-bc4a-9a0fd7c9b37a.png#height=266&id=wUqbd&margin=%5Bobject%20Object%5D&name=image.png&originHeight=531&originWidth=744&originalType=binary&ratio=1&size=52754&status=done&style=none&width=372)
-
+![image.png](./img/this.png)
 
 
 ### ‘==’ 和 ‘===’ 有什么区别
@@ -548,12 +521,14 @@ var debounce = function (func, wait, immediate) {
 == 对比类型不一样会进行类型转换，而 ’===‘ 不会，下图为 ’==‘ 的判断步骤：
 
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/195884/1614671598823-453786ce-91c2-49b5-b163-54a48d04cba3.png#height=213&id=M1Zdy&margin=%5Bobject%20Object%5D&name=image.png&originHeight=426&originWidth=1005&originalType=binary&ratio=1&size=139062&status=done&style=none&width=502.5)
+![image.png](./img/equal.png)
 
 
 ### 什么是闭包？
+
 定义：函数 A 中有一个函数 B，函数 B 可以访问 A 的变量，那么函数 B 就是闭包。
 
+- 闭包就是能够读取其他函数内部变量的函数
 
 #### 循环中使用闭包解决 `var` 定义函数的问题
 ```javascript
@@ -583,13 +558,143 @@ for (var i = 1; i <= 5; i++) {
 
 ### 如何理解原型？如何理解原型链？
 
-1. 每一个对象都有__proto__这是浏览器早期为了让我们能访问 prototype。
-1. _ _proto__ 的 constructor（构造函数）里面有 prototype。
-1. _ _proto__ 下面有几个方法：hasOwnProperty 、toString、toLocalString、valueOf、isPrototypeOf
-1. 原型的 `constructor` 属性指向构造函数，构造函数又通过 `prototype` 属性指回原型，但是并不是所有函数都具有这个属性，`Function.prototype.bind()` 就没有这个属性。
+1. 每一个对象都有**__proto__**这是浏览器早期为了让我们能访问 prototype。
+2. _ _proto__ 的 constructor（构造函数）里面有 prototype。
+3. _ _proto__ 下面有几个方法：hasOwnProperty 、toString、toLocalString、valueOf、isPrototypeOf
+4. 原型的 `constructor` 属性指向构造函数，构造函数又通过 `prototype` 属性指回原型，但是并不是所有函数都具有这个属性，`Function.prototype.bind()` 就没有这个属性。
 
-![image.png](https://cdn.nlark.com/yuque/0/2021/png/195884/1614672195095-a2925383-5cea-4442-ab8f-9da417245a88.png#height=202&id=YndLA&margin=%5Bobject%20Object%5D&name=image.png&originHeight=404&originWidth=581&originalType=binary&ratio=1&size=130211&status=done&style=none&width=290.5)
+![image.png](./img/prototype.png)
 
+## 理解 promise
+
+promise 的出现是为了解决回调地狱（callback hell），它的其他API有：
+
+1. all（处理所有promise事件回调的合集）
+
+
+```js
+let p1 = new Promise(function(resolve, reject) { resolve('ok1') })
+let p2 = new Promise(function(resolve, reject) { resolve('ok2') })
+let p3 = Promise.reject('err')
+
+let res = Promise.all([p1,p2]).then(res => console.log(res))
+// ['ok1', 'ok2']
+
+let res2 = Promise.all([p1,p2,p3]).then(res => console.log(res)).catch(err => console.error(err))
+// err
+```
+
+2. race（获取最快的返回结果）
+
+```js
+let p1 = new Promise(function(resolve, reject) { setTimeout(() => resolve('ok1'), 500) })
+let p2 = new Promise(function(resolve, reject) { setTimeout(() => resolve('ok2'), 1500) })
+
+let res = Promise.race([p1,p2]).then(res => console.log(res)) // ok1
+```
+
+3. allSettled（忽视reject）
+
+避免promise队列中有 reject 忽视。
+
+### 手写一个 promise
+
+```jsx
+import React, { useEffect } from 'react';
+
+const PENDING = 'PENDING';      // 处理中
+const FULFILLED = 'FULFILLED';  // 已完成
+const REJECTED = 'REJECTED';    // 已拒绝
+
+class Prom {
+  constructor(executor) {
+    // 默认状态为 PENDING
+    this.status = PENDING;
+    // 存放成功状态的值，默认为 undefined
+    this.value = undefined;
+    // 存放失败状态的值，默认为 undefined
+    this.reason = undefined;
+
+    let resolve = (val) => {
+      if (this.status === PENDING) {
+        this.status = FULFILLED
+        this.value = val
+      }
+    }
+
+    let reject = (err) => {
+      if (this.status === PENDING) {
+        this.status = REJECTED
+        this.reason = err
+      }
+    }
+
+    try {
+        // 立即执行，将 resolve 和 reject 函数传给使用者  
+        executor(resolve,reject)
+      } catch (error) {
+        // 发生异常时执行失败逻辑
+        reject(error)
+      }
+  }
+
+  then(onFulfilled, onReject) {
+    if (this.status === FULFILLED) {
+      onFulfilled(this.value)
+    }
+
+    if (this.status === REJECTED) {
+      onReject(this.reason)
+    }
+  }
+}
+
+export default() => {
+
+  useEffect(() => {
+    const promise = new Prom((resolve, reject) => {
+      resolve('成功');
+    }).then(
+      (data) => {
+        console.log('success', data)
+      },
+      (err) => {
+        console.log('faild', err)
+      }
+    )
+  }, [])
+
+  return (
+    <div>Promise</div>
+  )
+}
+
+```
+
+## async 和 await
+
+基于 promise 的封装，如果对于不相互关联的 api 事件，则可以使用 promise.all
+
+## 柯里化
+
+```jsx
+import React, { useEffect } from 'react';
+
+function curry(val) {
+  return function() {
+    
+  }
+}
+
+export default () => {
+
+  curry(1)()
+
+  return (
+    <div>柯里化函数</div>
+  )
+}
+```
 
 ## 十大错误
 ### 1. Uncaught TypeError: Cannot read property

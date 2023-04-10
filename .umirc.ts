@@ -22,12 +22,6 @@ export default defineConfig({
   navs: [
     null,
     {
-      title: '其它',
-      children: [
-        { title: '买房攻略', path: '/other/house/2020' },
-      ],
-    },
-    {
       title: 'GitHub',
       path: 'git@github.com:j710328466/learn-note.git',
     },

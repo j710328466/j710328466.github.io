@@ -7,9 +7,9 @@ group:
   order: 2
 ---
 
-## CSS
+# CSS
 
-### 清除浮动
+## 清除浮动
 
 
 - 使用clear
@@ -18,50 +18,33 @@ group:
 
 
 
-### 居中设置
+## 居中设置
 
 
-#### 1· 水平居中
-
+### 1· 水平居中
 
 - flex布局
 
-
-
 > 设置justify-content：center；
 
-
-
-#### 2· 垂直居中
-
+### 2· 垂直居中
 
 - 多行文本（内联元素）
-
-
 
 > a: 插入 table ，再设置vertical-align: middle;
 > b: 先设置display： table-cell；再设置vertical-align: middle;
 
-
-
-### link 和 @import的区别
-
+## link 和 @import的区别
 
 - link除了加载css，还能用于定义RSS，定义rel链接属性，import只能引入css
 - 页面加载时，link同时加载，而@import引用的css会等到页面被加载完之后再加载
 - import 只在 ie5 以上被识别
 
-
-
-### css 盒子模型
-
+## css 盒子模型
 
 - content，padding，margin，border
 
-
-
-### css 选择符号
-
+## css 选择符号
 
 - id选择器
 - 类选择器
@@ -74,11 +57,10 @@ group:
 - 伪类选择器 hover nth-child
 - 优先级
 
-
-
 > !important > id > class > tag
 
-### 列举不同的清除浮动的技巧
+## 列举不同的清除浮动的技巧
+
 ```javascript
 /* 1.添加新元素 */
 <div class="outer">
@@ -87,6 +69,7 @@ group:
   <div class="div3"></div>
   <div class="clearfix"></div>
 </div>
+
 .clearfix {
   clear: both;
 }
@@ -110,8 +93,8 @@ group:
 }
 ```
 
+## 1px边框
 
-### 一像素边框
 ```javascript
 /* 定义 */
 @mixin border-1px ($color) {
@@ -148,20 +131,20 @@ group:
 /* 使用方式 */
 @include border-1px(rgba(7, 17, 27, .1));
 ```
-### 
-### 形成**BFC**(Block Formatting Context)的几种方式
+ 
+## 形成**BFC**(Block Formatting Context)的几种方式
+
 ```javascript
-float为 left|right
-overflow为 hidden|auto|scroll
-display为 table-cell|table-caption|inline-block
-position为 absolute|fixed
+float为 left | right
+overflow为 hidden | auto | scroll
+display为 table-cell | table-caption | inline-block
+position为 absolute | fixed
 ```
 
+## 布局
 
-### 布局
+### 圣杯布局：中间 padding、左右 margin
 
-
-#### 圣杯布局：中间 padding、左右 margin
 ```javascript
 body {
   min-width: 600px;
@@ -200,8 +183,7 @@ body {
 }
 ```
 
-
-#### 双飞翼布局
+### 双飞翼布局
 
 
 ```html
@@ -245,7 +227,3 @@ body {
 }
 </style>
 ```
-
-
-
-
