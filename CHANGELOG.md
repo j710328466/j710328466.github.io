@@ -1,4 +1,4 @@
-# 1.0.0 (2023-04-10)
+# 1.0.0 (2023-04-14)
 
 ### 🌟 新功能
 
@@ -6,6 +6,7 @@
 * 新增模块 ([9e0b3a9](https://github.com/j710328466/j710328466.github.io/commit/9e0b3a9))
 * 新增心跳组件 ([82a59b4](https://github.com/j710328466/j710328466.github.io/commit/82a59b4))
 * **docs：** 新增文章 ([f659605](https://github.com/j710328466/j710328466.github.io/commit/f659605))
+* **fea/vue：** 新增vue教程文档 ([d150264](https://github.com/j710328466/j710328466.github.io/commit/d150264))
 * **fea：** typescript ([abb3cfe](https://github.com/j710328466/j710328466.github.io/commit/abb3cfe))
 * **md：** 新文章 ([41459c4](https://github.com/j710328466/j710328466.github.io/commit/41459c4))
 * **package.json：** 添加husky ([95a0051](https://github.com/j710328466/j710328466.github.io/commit/95a0051))
