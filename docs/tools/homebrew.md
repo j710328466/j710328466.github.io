@@ -44,3 +44,11 @@ rm HomebrewUninstall.sh ; wget https://gitee.com/cunkai/HomebrewCN/raw/master/Ho
 * 卸载某个包：brew uninstall [package-name]
 * 列出所有安装的包：brew list
 * 清理所有过时软件：brew cleanup
+
+## 常见问题
+
+### 1. 如果报错 command not found : brew
+
+先运行此命令/usr/local/Homebrew/bin/brew -v ，如果是ARM架构的芯片运行/opt/homebrew/bin/brew -v 看是否能出来Homebrew的版本号。如果有版本号。
+
+那就是path没有配置成功，可以在 etc/paths 添加一下一个全局路径： /opt/homebrew/bin（看下自己是x86还是arm架构）
