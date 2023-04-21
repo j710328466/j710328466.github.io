@@ -1,11 +1,9 @@
 ---
-nav:
-  title: 前端
-  path: /fea
+toc: content
+title: css 之 sass
+order: 0
 group:
-  title: 💊 css
-  order: 3
-  path: /css
+  title: css
 ---
 
 ## SASS 语法

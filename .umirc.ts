@@ -18,6 +18,7 @@ export default defineConfig({
       'src'
     ],
   },
+  importScripts: ['https://cdn.jsdelivr.net/npm/pixi.js@7.x/dist/pixi.min.js'],
   locales: [['zh-CN', '中文']],
   navs: [
     null,

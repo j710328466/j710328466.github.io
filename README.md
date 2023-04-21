@@ -1,27 +1,40 @@
-# learn-note
+# nicecode
 
-## Getting Started
+[![NPM version](https://img.shields.io/npm/v/nicecode.svg?style=flat)](https://npmjs.org/package/nicecode)
+[![NPM downloads](http://img.shields.io/npm/dm/nicecode.svg?style=flat)](https://npmjs.org/package/nicecode)
 
-Install dependencies,
+my note
 
-```bash
-$ npm i
-```
+## Usage
 
-Start the dev server,
+TODO
 
-```bash
-$ npm start
-```
+## Options
 
-Build documentation,
+TODO
 
-```bash
-$ npm run docs:build
-```
-
-Build library via `father-build`,
+## Development
 
 ```bash
-$ npm run build
+# install dependencies
+$ yarn install
+
+# develop library by docs demo
+$ yarn start
+
+# build library source code
+$ yarn run build
+
+# build library source code in watch mode
+$ yarn run build:watch
+
+# build docs
+$ yarn run docs:build
+
+# check your project for potential problems
+$ yarn run doctor
 ```
+
+## LICENSE
+
+MIT

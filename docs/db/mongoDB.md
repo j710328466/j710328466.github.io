@@ -1,13 +1,9 @@
 ---
-nav:
-  title: 数据库
-  path: /db
-group:
-  title: 💊 mongoDB
-  order: 1
+nav: 数据库
+toc: content
 ---
 
-# 💊 mongoDB
+# MongoDB 入门
 
 ## mac 安装
 ### 1.1 到官网下载指定版本的安装包

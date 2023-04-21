@@ -1,10 +1,10 @@
 ---
-nav:
-  title: 前端
-  path: /fea
+toc: content
+nav: 前端
+title: canvas 文字
+order: 2
 group:
-  title: 💊 canvas
-  order: 4
+  title: canvas
 ---
 
 ## 文字

@@ -1,11 +1,9 @@
 ---
-nav:
-  title: 前端
-  path: /fea
+toc: content
+title: css 基础
+order: 0
 group:
-  title: 💊 css
-  order: 1
-  path: /css
+  title: css
 ---
 
 ## 基础介绍

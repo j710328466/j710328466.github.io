@@ -1,10 +1,10 @@
 ---
-nav:
-  title: 前端
-  path: /fea
+toc: content
+title: canvas 基础
+nav: 前端
+order: 0
 group:
-  title: 💊 canvas
-  order: 2
+  title: canvas
 ---
 
 ## 基础入门

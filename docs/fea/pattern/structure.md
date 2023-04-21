@@ -136,7 +136,6 @@ Ajax('get', 'https://nicecoders.github.io', data, function(res){
 
 ```jsx
 import React, { useRef, useState, useEffect } from 'react';
-import '@nicecode/css'
 
 class Modal {
   constructor(opt = {}) {
@@ -259,7 +258,7 @@ class Button {
     console.log('大卫的思想空间')
   }
 
-  @funcDecorator('function')
+  // @funcDecorator('function')
   mb() {
     console.log('我是sb')
   }

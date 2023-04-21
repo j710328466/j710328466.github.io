@@ -1,10 +1,10 @@
 ---
-nav:
-  title: 后端
-  path: /bed
+nav: 后端
+toc: content
 group:
-  title: Go
-  order: 4
+  title: Go 入门
+title: 第三章
+order: 5
 ---
 
 ## 第三章

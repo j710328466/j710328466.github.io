@@ -12,7 +12,7 @@ group:
 
 ## 介绍
 
-lerna 是一个包管理工具，方便在大型开源项目中不需要手动开启多个仓库
+lerna 是一个包管理工具，社区比较成熟的monorepo方案，目的是方便在大型开源项目中不需要手动开启多个仓库,并且一键实现多个包link.
 
 ## 使用方法
 
@@ -73,6 +73,16 @@ learna publish
 > 建议使用 independent 模式，独立对每个依赖包做管理
 > `--npm-client=cnpm 指定源`
 
+也可以创建一个lerna.json 来配置参数，具体方案如下：
+
+```js
+{
+  ...
+  "npmClient": "yarn",
+  "npmClientArgs": ["--production", "--no-optional"]
+}
+```
+
 ## 常见命令
 
 |        命令         |                            说明                            |
@@ -91,7 +101,7 @@ learna publish
 |    lerna create     |                        新建 package                        |
 |    lerna publish    |                            发布                            |
 
-### 🌰
+### 🌰 举个例子
 
 ```js
 lerna exec [--scope <package包名（package.json中的name）>] -- <command> [..args]
@@ -142,3 +152,7 @@ lerna exec --scope @yh-imooc-cli-dev/core -- rm -rf node_modules # 碰到scope�
   }
 }
 ```
+
+## 参考
+
+> lerna中文：https://gitcode.gitcode.host/docs-cn/lerna-docs-cn/index.html

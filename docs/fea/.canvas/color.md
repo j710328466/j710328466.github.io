@@ -1,10 +1,10 @@
 ---
-nav:
-  title: 前端
-  path: /fea
+toc: content
+title: canvas 颜色
+nav: 前端
+order: 1
 group:
-  title: 💊 canvas
-  order: 2
+  title: canvas
 ---
 
 ## 颜色
