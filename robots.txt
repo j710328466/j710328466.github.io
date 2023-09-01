@@ -1,0 +1,13 @@
+User-agent: *
+
+Allow: /
+Allow: /archives/
+Allow: /categories/
+Allow: /tags/ 
+Allow: /resources/ 
+
+Disallow: /vendors/
+
+Sitemap: https://blog.jzxer.cn/search.xml
+Sitemap: https://blog.jzxer.cn/sitemap.xml
+Sitemap: https://blog.jzxer.cn/baidusitemap.xml
