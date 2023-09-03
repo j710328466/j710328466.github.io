@@ -16,10 +16,7 @@ group:
 
 #### 确认网络
 
-    - ping [www.baidu.com](http://www.baidu.com)
-#### 确认 yum 源是否可用
-
-    - yun list|grep gcc
+    - ping [j710328466.github.io](j710328466.github.io)
 #### 关闭 iptables 规则
 
     - iptables -L 查看
@@ -47,25 +44,34 @@ wget [http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz](
 // 2
 yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 ```
-​
+
+#### 确认 yum 源并更新源
+
+    - yum list|grep gcc
+    - yum install -y epel-release
+    - yum -y update​
+
 ### centos 快速安装
     - yum install nginx -y
+
 
 ## 常用命令
 
 ### 查看 nginx 配置文件路径和安装路径
 > nginx -t
 
+### 开始
+
+systemctl start nginx
 
 ### 重启
+
 > nginx -s reload
-
-
+> systemctl restart nginx
 
 ### 杀掉
+
 > killall -9 nginx​
-
-
 
 ### 初始目录
 > /usr/share/nginx/html
