@@ -46,3 +46,4 @@ group:
 1. [pixi中文](http://pixijs.huashengweilai.com/guide/start/9.make-sprite-from-texture-atlas.html#%E9%80%9A%E8%BF%87%E7%BA%B9%E7%90%86%E8%B4%B4%E5%9B%BE%E9%9B%86%E5%88%9B%E5%BB%BA%E7%B2%BE%E7%81%B5)
 2. [PIXI API大全](https://pixijs.download/release/docs/index.html)
 3. [bit 贴图大全](https://opengameart.org/)
+4. [threeJs](https://techbrood.com/threejs/examples/#webgl_shadowmap_pointlight)
