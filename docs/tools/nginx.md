@@ -54,7 +54,6 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 ### centos 快速安装
     - yum install nginx -y
 
-
 ## 常用命令
 
 ### 查看 nginx 配置文件路径和安装路径

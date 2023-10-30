@@ -25,7 +25,7 @@ group:
 
 - flex布局
 
-> 设置justify-content：center；
+> 设置justify-content：center；items-align: center;
 
 ### 2· 垂直居中
 

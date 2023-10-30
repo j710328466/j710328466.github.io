@@ -19,9 +19,17 @@ group:
 
 ### typeof 返回哪些数据类型
 
-- obj num fun bool undefined
+- object number function boolean undefined
 
-> typeof null 返回的是object，这个是个历史遗留问题
+> typeof null 返回的是 object，这个是个历史遗留问题
+
+### typeof 和 instanceof 的区别？
+
+1. typeof 返回的是数据类型，instanceof 返回的是布尔值
+2. instanceof 可以判断复杂引用数据类型，但是不能判断基本数据类型
+3. typeof 能判断基本数据类型，在引用类型中只能判断 function
+
+> 通用检测数据类型，可以采用Object.prototype.toString.call()，调用该方法，统一返回格式“[object Xxx]” 的字符串
 
 ### 3种强制类型转换两种隐式类型转换
 
@@ -45,6 +53,7 @@ get: 1. 参数在链接上。2、url链接长度有限制，所以大小有限�
 
 ### call 和 apply 的区别
 
+call可以允许多个参数入参，而apply只允许一个参数
 
 - object.call(this, obj1,obj2,obj3)
 - object.apply(this, argument)
@@ -56,7 +65,6 @@ get: 1. 参数在链接上。2、url链接长度有限制，所以大小有限�
 - eval 可以解析任何字符串，parse只解析json格式的字符串
 
 ### 添加 删除 替换 插入到某个节点的方法
-
 
 - obj.appendChild()
 - obj.innersetBefore()
@@ -73,18 +81,20 @@ get: 1. 参数在链接上。2、url链接长度有限制，所以大小有限�
 
 
 ```javascript
-  function A(name) {
-      this.name = name;
-      this.sayHello = function(){alert(this.name+ "say hello!")}
+function A(name) {
+  this.name = name;
+  this.sayHello = function() {
+    alert(this.name+ "say hello!")
   }
+}
 
-  function B(name, id) {
-      this.temp = A
-      this.temp(name)
-      delete this.temp
-      this.id = id
-      this.checkId = function(ID) {alert(this.id == ID)}
-  }
+function B(name, id) {
+  this.temp = A
+  this.temp(name)
+  delete this.temp
+  this.id = id
+  this.checkId = function(ID) {alert(this.id == ID)}
+}
 ```
 
 
@@ -92,125 +102,45 @@ get: 1. 参数在链接上。2、url链接长度有限制，所以大小有限�
 
 
 ```javascript
-  function stopBubble(e) {
-      if (e && e.stopPropagation) {
-          e.stopPropgation ()
-      } else {
-          window.event.cancelBubble = true
-      }
-      return false
-  }
+function stopBubble(e) {
+    if (e && e.stopPropagation) {
+      e.stopPropgation ()
+    } else {
+      window.event.cancelBubble = true
+    }
+    return false
+}
 ```
 
 
-### 谈谈this对象的理解
+### 谈谈 this 对象的理解
 
 - this只在调用的时候发生指向确认，它指向什么取决于在什么地方调用。this 指向的就是调用函数的那个对象。
 - this 一般情况下： 是指全局对象global， 如果作为方法调用，就指向这个对象
 - 对于直接调用 foo 来说，不管 foo 函数被放在了什么地方，this 一定是 window
-- 对于 obj.foo() 来说，我们只需要记住，谁调用了函数，谁就是 this，所以在这个场景下 foo 函数中的 this 就是 obj 对象
-- 对于 new 的方式来说，this 被永远绑定在了 c 上面，不会被任何方式改变 this
+- 对于 obj.foo() 来说，我们只需要记住，谁调用了函数，谁就是 this，所以在这个场景下 foo 函数中的 this 就是 obj 对象(箭头函数则指向window)
+- 对于 new 的方式来说，this 被永远绑定在构造函数上面，不会被任何方式改变 this
 
 ```js
-console.log(this)
+class Test {
+  constructor() {
+    console.log(this)
+  }
+}
+export default () => {
+  let demo = new Test()
+}
 ```
 
-
-
-### 简单讲下 node 的使用场景
-
-
-- 高并发，聊天，实时消息推送
-
-
-
-### node 的优点和缺点提出自己的看法
-
-
-- 优点： node是基于时间驱动和无阻塞的，所以非常适合处理并发请求，因此构建在node上的代理服务器相比其他技术实现的服务器表现要好的多，与node代理服务器交互的客户端代码也是用js写的，用的相同的语言，这感觉前后端非常亲切和美妙
-- 缺点： node是一个相对比较新的开源项目，所以不太稳定，它总是在变，而且缺少足够多的第三方库的支持
-
-
 ### `location.replace()`与`location.assign()`区别
+
 ```html
 location.replace() 的 url 不会出现在 history 中
 ```
 
 
-### AMD CMD CommonJS
+### DOM 操作
 
-
-#### Common.js
-```html
-主要是服务端，前期的nodejs采用了这种规范。module.exports或exports负责对外暴漏数据，require来引入
-
-<!--a.js-->
-module.exports = {
-    name: '四大名将'
-}
-<!--也可以用exports导出-->
-<!--export.name = '四大名将'-->
-
-<!--b.js-->
-const res = require('./a.js')
-console.log(res.name) // 四大名将
-```
-
-
-#### AMD: 加载完成后执行
-```html
-客户端加载时需要等待，可能存在假死情况，鉴于浏览器的特殊情况，AMD规范出来了，
-它采用异步方式加载模块定义的所有依赖，在依赖加载完成后再执行回调函数。
-
-<!-- 定义模块 -->
-<!-- AMD中require的模块会先加载完成 依赖前置 提前执行 -->
-define('module', ['dep1', 'dep2'], function(dep1, dep2){
-　　function foo(){
-      dep1.doSomething();
-      dep2.doSomething();
-　　}
-　　return {
-　　　　foo : foo
-　　};
-})
-
-<!-- 数组中声明需要加载的模块，可以是模块名、js文件路径 -->
-<!-- 两个参数：加载的模块，加载成功后的回调函数 -->
-require(['module'], function(module){
-    module.foo()
-});
-```
-
-
-#### CMD：require 到依赖才执行
-```html
-CMD规范在2011年由seaJS提出，CMD规范和AMD规范类似，主要区别是CMD规范是就近加载依赖，
-延迟执行，只有到require时依赖才执行。
-
-<!-- a.js -->
-define(function(require, exports, module) {
-  function foo(){
-    <!-- require的模块此时才会执行 依赖就近 延迟执行 而AMD中依赖是前置的 一开始就全都执行完毕了  -->
-    var dep1 = require('dep1') 
-    dep1.doSomething();
-　}
-　<!--暴漏给外部调用-->
-　exports.foo = foo
-　
-　/** return或者exports都行
-　return {
-　  foo : foo
-　};
-　**/
-});
-<!-- b.js -->
-seajs.use("./a", function(a){
-  a.foo()
-});
-```
-
-
-#### DOM 操作
 ```html
 // 创建节点
 createDocumentFragment()
@@ -232,8 +162,8 @@ querySelector()
 querySelectorAll()
 ```
 
-
 ### JS设置css样式的几种方式
+
 ```html
 /* 1.直接设置style属性 */
 element.style.height = '100px';
@@ -253,6 +183,7 @@ element.style.cssText += 'height: 100px !important';
 
 
 ### 阻止默认行为
+
 ```html
 function stopDefault( e ) {
     // 阻止默认浏览器动作(W3C)
@@ -266,8 +197,8 @@ function stopDefault( e ) {
 }
 ```
 
-
 ### 阻止冒泡
+
 ```html
 function stopBubble(e) {
     // 如果提供了事件对象，则这是一个非IE浏览器
@@ -281,8 +212,8 @@ function stopBubble(e) {
 }
 ```
 
-
 ### Ajax交互过程
+
 ```html
 创建XMLHttpRequest对象,也就是创建一个异步调用对象.
 创建一个新的HTTP请求,并指定该HTTP请求的方法、URL及验证信息.
@@ -291,8 +222,11 @@ function stopBubble(e) {
 获取异步调用返回的数据.
 使用JavaScript和DOM实现局部刷新.
 ```
+
 ### 考察知识点最广的JS面试题
+
 [https://www.cnblogs.com/xxcanghai/p/5189353.html](https://www.cnblogs.com/xxcanghai/p/5189353.html)
+
 ```html
 function Foo() {
     getName = function () { alert(1); }
@@ -314,8 +248,21 @@ new Foo().getName();
 new new Foo().getName();
 ```
 
+### splice和slice你能说说有啥用和区别吗
+
+1. splice：是可以实现数组的增删改查、只对数组生效，会改变原数组
+2. slice：不光可以截取数组，也可以截取字符串，不会改变原数组
+
+### 类数组和数组的区别
+
+1. 类数组不具备数组的方法（slice、splice、filter）
+2. 类数组是一个普通对象，数组类型是 Array
+
+
 ### JS数组深浅拷贝
 #### 浅拷贝
+
+把一个对象的第一层拷贝到新的对象上去，只拷贝基本数据类型
 
 ```javascript
 // slice 实现
@@ -339,8 +286,10 @@ console.log(arr) // ["old", 1, true, null, undefined]
 console.log(new_arr) // ["new", 1, true, null, undefined]
 ```
 
-
 #### 深拷贝
+
+拷贝所有类型的数据类型，不同的方法会有不同的克隆效果
+
 ```javascript
 // 简单版：不能拷贝 函数、undefined、symbol 、循环引用的对象
 var arr = ['old', 1, true, ['old1', 'old2'], {old: 1}];
@@ -458,15 +407,6 @@ function type (obj) {
 }
 ```
 
-
-### typeof 和 instanceof 的区别？
-```javascript
-typeof 在原始类型中无法判断 null，在对象类型中只能判断 object 和function
-
-instanceof 可以判断对象类型的
-```
-
-
 ### 防抖
 ```javascript
 /*
@@ -528,9 +468,9 @@ var debounce = function (func, wait, immediate) {
 
 定义：函数 A 中有一个函数 B，函数 B 可以访问 A 的变量，那么函数 B 就是闭包。
 
-- 闭包就是能够读取其他函数内部变量的函数
+- 闭包就是引用其他函数内部变量的函数
 
-#### 循环中使用闭包解决 `var` 定义函数的问题
+1. 循环中使用闭包解决 `var` 定义函数的问题
 ```javascript
 方法1
 for (var i = 1; i <= 5; i++) {
@@ -553,10 +493,55 @@ for (var i = 1; i <= 5; i++) {
 }
 
 方法3：使用 let
+for (let i = 1; i <= 5; i++) {
+  setTimeout(
+    function timer(j) {
+      console.log(j)
+    },
+    i * 1000,
+    i
+  )
+}
 ```
 
+2. react 自定义 hooks 也属于闭包
+
+```js
+const useCount  = ()  = {
+  let count = 0
+  
+  const getCount = () => {
+    return count
+  }
+
+  const setCount = (num: number) => {
+    count = num
+  }
+
+  return {
+    getCount,
+    setCount
+  }
+}
+
+```
+
+3. 函数的柯里化
+
+4. 回调函数
+
+```js
+const fn  = (cb: (name: string) => void) => {
+  let name = 'nicecode'
+  cb(name)
+}
+```
 
 ### 如何理解原型？如何理解原型链？
+
+原型的本质就是一个对象，我们创建一个构造函数的时候，它自动会带上一个prototype属性，这个属性就指向原型对象。它的作用就是用来提供基于函数原型继承的共享属性
+
+当读取实例的属性获取不到时，如果找不到，就会查找与对象关联的原型中的属性，还找不到就会去找原型的原型，一直到顶层，这样的一层层的关系嵌套称为**原型链**
 
 1. 每一个对象都有**__proto__**这是浏览器早期为了让我们能访问 prototype。
 2. _ _proto__ 的 constructor（构造函数）里面有 prototype。
@@ -570,7 +555,6 @@ for (var i = 1; i <= 5; i++) {
 promise 的出现是为了解决回调地狱（callback hell），它的其他API有：
 
 1. all（处理所有promise事件回调的合集）
-
 
 ```js
 let p1 = new Promise(function(resolve, reject) { resolve('ok1') })
@@ -600,11 +584,12 @@ let res = Promise.race([p1,p2]).then(res => console.log(res)) // ok1
 ### 手写一个 promise
 
 ```jsx
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 
 const PENDING = 'PENDING';      // 处理中
 const FULFILLED = 'FULFILLED';  // 已完成
 const REJECTED = 'REJECTED';    // 已拒绝
+
 
 class Prom {
   constructor(executor) {
@@ -613,7 +598,7 @@ class Prom {
     // 存放成功状态的值，默认为 undefined
     this.value = undefined;
     // 存放失败状态的值，默认为 undefined
-    this.reason = undefined;
+    this.error = undefined;
 
     let resolve = (val) => {
       if (this.status === PENDING) {
@@ -625,13 +610,13 @@ class Prom {
     let reject = (err) => {
       if (this.status === PENDING) {
         this.status = REJECTED
-        this.reason = err
+        this.error = err
       }
     }
 
     try {
         // 立即执行，将 resolve 和 reject 函数传给使用者  
-        executor(resolve,reject)
+        executor(resolve, reject)
       } catch (error) {
         // 发生异常时执行失败逻辑
         reject(error)
@@ -650,22 +635,25 @@ class Prom {
 }
 
 export default() => {
+  const [text, setText] = useState(PENDING)
 
   useEffect(() => {
     const promise = new Prom((resolve, reject) => {
       resolve('成功');
     }).then(
       (data) => {
-        console.log('success', data)
+        setText(data)
+        console.log('手写promise', data)
       },
       (err) => {
+        setText(err)
         console.log('faild', err)
       }
     )
   }, [])
 
   return (
-    <div>Promise</div>
+    <div>{text}</div>
   )
 }
 
@@ -677,18 +665,24 @@ export default() => {
 
 ## 柯里化
 
-```jsx
+特点：
+1. 组合函数：可以将函数的逻辑简单化，并且达到更细粒度的代码拆分和复用
+2. 延迟执行：可以延迟执行最后一个参数执行的时间，在期间做一些其他逻辑的执行，剩余的到后面再决定
+3. 简单化函数：将参数从多参数拆为单参数，让接口简洁，更容易使用
+
+```js
 import React, { useEffect } from 'react';
 
-function curry(val) {
-  return function() {
-    
+function curry(a: number) {
+  return function(b: number) {
+    return function(offset: number) {
+      return a + b + offset
+    }
   }
 }
 
 export default () => {
-
-  curry(1)()
+  curry(1)(2)(3)
 
   return (
     <div>柯里化函数</div>
@@ -696,66 +690,72 @@ export default () => {
 }
 ```
 
-## 十大错误
-### 1. Uncaught TypeError: Cannot read property
+## event loop
 
+js 执行的过程中，会创建对应的执行上下文放入栈中，我们称之为执行栈，其中执行栈中的任务又会分为宏任务和微任务。按照流程执行就是一次宏任务的进行结束之后，查看是否有微任务，执行微任务，微任务执行完毕，再一次执行宏任务，就是所谓的 event loop
+
+宏任务大概有：setTimeout()、setInterval()、setImmediate()、I/O、用户交互操作，UI渲染
+
+微任务则有：promise.then()、promise.catch()、new MutationObserver、process.nextTick()
+
+## 堆、栈的区别
+
+1. 基本数据类型一般内存小，放在栈中；引用数据类型一般内存大，放在堆中
+2. 栈的垃圾回收是执行环境结束立即释放，而堆需要所有引用结束才会释放
+3. 一般来说栈的效率要高于堆
+
+## v8的垃圾回收机制
+
+执行js的过程中，根据对象的存活时间进行不同的分代，然后根据不同的分代采用不同的回收算法
+
+新生代的空间换时间 scavenge 算法是：1. 执行的过程中将空间分为 From 和 To 两块，2. 判断是否满足存活条件，存活的将变量复制到另一个空间，3.  不存活的直接清理。4. 将From 和 To 空间交换，如此循环往复
+
+老生代的标记清除和整理，运行的时候将活跃的变量标记，并进行整理到内存的一端，移除那些不活跃的空间进行释放回收
+
+## 十大错误
+
+### 1. Uncaught TypeError: Cannot read property
 
 发生这种情况的原因很多，但常见的一种是在渲染 UI 组件时对于状态的初始化操作不当。
 
-
 ### 2. TypeError: ‘undefined’ is not an object
-
 
 这是在 Safari 中读取属性或调用未定义对象上的方法时发生的错误。这与 1 中提到的 Chrome 的错误基本相同，但 Safari 使用了不同的错误消息提示语。
 
-
 ### 3. TypeError: null is not an object
-
 
 这是在 Safari 中读取属性或调用空对象上的方法时发生的错误。
 
-
 > 在 JavaScript 中，null 和 undefined 是不一样的，这就是为什么我们看到两个不同的错误信息。undefined 通常是一个尚未分配的变量，而 null 表示该值为空。 要验证它们不相等，请尝试使用严格的相等运算符 ===
-
-
 
 ### 4. (unknown): Script error
 
-
 当未捕获的 JavaScript 错误（通过window.onerror处理程序引发的错误，而不是捕获在try-catch中）被浏览器的跨域策略限制时，会产生这类的脚本错误。这是一种浏览器安全措施，旨在防止跨域传递数据，否则将不允许进行通信。
-
 
 ### 5. TypeError: Object doesn’t support property
 
-
 这是您在调用未定义的方法时发生在 IE 中的错误。 您可以在 IE 开发者控制台中进行测试。
-
 
 ### 6. TypeError: ‘undefined’ is not a function
 
-
 当您调用未定义的函数时，这是 Chrome 中产生的错误。
-
 
 ### 7. Uncaught RangeError: Maximum call stack
 
-
 这是 Chrome 在一些情况下会发生的错误。 一个是当你调用一个不终止的递归函数。
-
 
 ### 8. TypeError: Cannot read property ‘length’
 
-
 这是 Chrome 中发生的错误，因为读取未定义变量的长度属性。
-
 
 ### 9. Uncaught TypeError: Cannot set property
 
-
 当我们尝试访问一个未定义的变量时，它总是返回 undefined，我们不能获取或设置任何未定义的属性。 在这种情况下，应用程序将抛出 “Uncaught TypeError: Cannot set property”。
-
 
 ### 10. ReferenceError: event is not defined
 
-
 当您尝试访问未定义的变量或超出当前范围的变量时，会引发此错误。
+
+##  参考文章
+
+<https://github.com/CavsZhouyou/Front-End-Interview-Notebook>
