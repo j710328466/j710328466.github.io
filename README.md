@@ -1,27 +1,20 @@
-# learn-note
+# nicenote
 
-## Getting Started
+A static site base on [dumi](https://d.umijs.org).
 
-Install dependencies,
-
-```bash
-$ npm i
-```
-
-Start the dev server,
+## Development
 
 ```bash
-$ npm start
+# install dependencies
+$ cnpm install
+
+# start dev server
+$ cnpm start
+
+# build docs
+$ cnpm run build
 ```
 
-Build documentation,
+## LICENSE
 
-```bash
-$ npm run docs:build
-```
-
-Build library via `father-build`,
-
-```bash
-$ npm run build
-```
+MIT

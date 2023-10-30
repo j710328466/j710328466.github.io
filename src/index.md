@@ -4,7 +4,7 @@ nav:
   path: /funny
 group:
   title: 说明
-  order: 3
+  order: 4
   path: /code
 ---
 

@@ -12,19 +12,19 @@ group:
 
 ### 粒子背景
 
-<code src="./demos/ParticleBG/index.jsx" />
+<code src="./demos/ParticleBG/index.jsx" ></code>
 
 ### 粒子图片
 
-<code src="./demos/ParticleIMG/index.jsx" />
+<code src="./demos/ParticleIMG/index.jsx" ></code>
 
 ### 贪吃蛇
 
-<code src="./demos/Snake/index.jsx" />
+<code src="./demos/Snake/index.jsx" ></code>
 
 ### 液体海报
 
-<code src="./demos/LiquidPost/index.jsx" />
+<code src="./demos/LiquidPost/index.jsx" ></code>
 
 ### 大转盘（doing）
 
@@ -228,7 +228,7 @@ export default () => {
 
     return (
         <div>
-            <canvas ref={canvasRef} width="200" height="200" />
+            <canvas ref={canvasRef} width="200" height="200" ></code>
         </div>
     )
 }
@@ -236,7 +236,7 @@ export default () => {
 
 ### 火焰
 
-<code src="./demos/Fire/index.jsx" />
+<code src="./demos/Fire/index.jsx" ></code>
 
 ### 星空
 
@@ -351,7 +351,7 @@ export default () => {
 
     return (
         <div>
-            <canvas ref={canvasRef} width="200" height="200" />
+            <canvas ref={canvasRef} width="200" height="200" ></code>
         </div>
     )
 }
@@ -461,7 +461,7 @@ export default () => {
 
     return (
         <div>
-            <canvas ref={canvasRef} width="200" height="200" />
+            <canvas ref={canvasRef} width="200" height="200" ></code>
         </div>
     )
 }
@@ -551,7 +551,7 @@ export default () => {
 
     return (
         <div>
-            <canvas ref={canvasRef} width="200" height="200" />
+            <canvas ref={canvasRef} width="200" height="200" ></code>
         </div>
     )
 }
@@ -559,4 +559,4 @@ export default () => {
 
 ### 时钟
 
-<code src="./demos/Clock/index.jsx" />
+<code src="./demos/Clock/index.jsx" ></code>

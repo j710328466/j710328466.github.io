@@ -4,7 +4,7 @@ nav:
   path: /fea
 group:
   title: 💊 SVG
-  order: 3
+  order: 1
   path: /svg
 ---
 
@@ -33,4 +33,4 @@ export default () => {
 
 ## 基础动画案例
 
-<code src="./demos/ok.tsx" />
+<!-- <code src="./demos/ok.tsx" ></code> -->
