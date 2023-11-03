@@ -2,17 +2,14 @@
   "name": "nicenote",
   "version": "0.0.1",
   "description": "nicenote,nicecode,学习,总结",
+  "license": "MIT",
   "scripts": {
-    "start": "npm run dev",
-    "dev": "dumi dev",
     "build": "dumi build",
     "deploy": "npm run build && gh-pages -d docs-dist",
-    "prepare": "husky install && dumi setup"
+    "dev": "dumi dev",
+    "prepare": "husky install && dumi setup",
+    "start": "npm run dev"
   },
-  "authors": [
-    "71032866@qq.com"
-  ],
-  "license": "MIT",
   "commitlint": {
     "extends": [
       "@commitlint/config-conventional"
@@ -23,6 +20,9 @@
       "prettier --write --no-error-on-unmatched-pattern"
     ]
   },
+  "dependencies": {
+    "three": "^0.158.0"
+  },
   "devDependencies": {
     "@commitlint/cli": "^17.1.2",
     "@commitlint/config-conventional": "^17.1.0",
@@ -30,5 +30,8 @@
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
     "prettier": "^2.7.1"
-  }
+  },
+  "authors": [
+    "71032866@qq.com"
+  ]
 }
