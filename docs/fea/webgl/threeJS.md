@@ -5,6 +5,7 @@ nav:
 group:
   title: 💊 webGL
   order: 3
+  path: /webgl
 ---
 
 # threeJS 入门

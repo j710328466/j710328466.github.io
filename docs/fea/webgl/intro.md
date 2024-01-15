@@ -5,6 +5,7 @@ nav:
 group:
   title: 💊 webGL
   order: 1
+  path: /webgl
 ---
 
 # 基础

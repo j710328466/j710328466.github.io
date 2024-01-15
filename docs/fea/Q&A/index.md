@@ -5,6 +5,7 @@ nav:
 group:
   title: 💊 Q&A
   order: 100
+  path: /qa
 ---
 
 # 💊 Q&A

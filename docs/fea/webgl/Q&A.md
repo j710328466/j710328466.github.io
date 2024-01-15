@@ -5,6 +5,7 @@ nav:
 group:
   title: 💊 webGL
   order: 100
+  path: /webgl
 ---
 
 # 常见问题

@@ -5,6 +5,7 @@ nav:
 group:
   title: 💊 设计模式
   order: 2
+  path: /pattern
 ---
 
 ## 创建型
