@@ -1,8 +1,8 @@
 ---
-title: A static site based on dumi
+title: Nice Note
 hero:
-  title: NiceNote
-  description: dev 的学习博客
+  title: Nice Note
+  description: dev 的博客
   actions:
     - text: 开始学习
       link: /fea/website
@@ -12,6 +12,8 @@ features:
     description: <a href="https://nicecoders.github.io">前端工具合集</a>
 ---
 
-这是我用来记录我的职业生涯总结的各种乱七八糟的知识点，希望能对你有帮助
+这里记录了我所有工作中和非工作中的思考和总结
+
+思维比较发散，想到哪写到哪
 
 <embed src="../CHANGELOG.md"></embed>

@@ -1,8 +1,8 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
+  title: 'Nice Note',
   themeConfig: {
-    name: 'nicenote',
     navs: [
       null,
       {
@@ -11,8 +11,8 @@ export default defineConfig({
       },
     ]
   },
-  favicons: ['https://jzx-h5.oss-cn-hangzhou.aliyuncs.com/logo.ico'],
-  // logo: 'http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/logo.png',
+  logo: 'https://i.niupic.com/images/2021/06/07/9krN.png',
+  favicons: ['https://i.niupic.com/images/2021/06/07/9krN.png'],
   outputPath: 'docs-dist',
   hash: true,
   history: {
