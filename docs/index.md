@@ -1,20 +1,19 @@
 ---
+title: Nice Note
 hero:
   title: Nice Note
-  desc: 💊 Dev's 笔记
+  description: dev 的博客
   actions:
     - text: 开始学习
       link: /fea/website
 features:
-  - icon: http://jzx-h5.oss-cn-hangzhou.aliyuncs.com/logo.png
-    title: NiceCode
-    desc: <a href="https://nicecoders.github.io">前端工具合集</a>
-
-footer: Open-source MIT Licensed | Copyright © 2019<br />Powered by Dev
+  - emoji: 🍍
+    title: nicecode
+    description: <a href="https://nicecoders.github.io">前端工具合集</a>
 ---
 
-嗨，我是 dev，这是我用来记录我的职业生涯总结的各种乱七八糟的知识点，希望能对你有帮助
+这里记录了我所有工作中和非工作中的思考和总结
 
-## 更新日志
+思维比较发散，想到哪写到哪
 
 <embed src="../CHANGELOG.md"></embed>

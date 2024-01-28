@@ -17,11 +17,13 @@ group:
 #### 确认网络
 
     - ping [j710328466.github.io](j710328466.github.io)
+
 #### 关闭 iptables 规则
 
     - iptables -L 查看
     - iptables -F 关闭
     - iptables -t nat -L
+
 #### 关闭 getenforce
 
     - setenforce 0
@@ -37,6 +39,9 @@ group:
 ```
 
 ### 安装编译工具和库
+
+如果没有再安装
+
 ```js
 // 1
 wget [http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz](http://downloads.sourceforge.net/project/pcre/pcre/8.35/pcre-8.35.tar.gz)
@@ -52,16 +57,30 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
     - yum -y update​
 
 ### centos 快速安装
+
     - yum install nginx -y
+
+## 默认文件位置
+
+```js
+/etc/nginx/nginx.conf  //yum方式安装后默认配置文件的路径
+
+/usr/share/nginx/html  //nginx网站默认存放目录
+
+/usr/share/nginx/html/index.html //网站默认主页路径
+```
 
 ## 常用命令
 
 ### 查看 nginx 配置文件路径和安装路径
+
 > nginx -t
 
 ### 开始
 
-systemctl start nginx
+方法 1. systemctl start nginx
+
+方法 2. systemctl enable --now nginx
 
 ### 重启
 
@@ -73,9 +92,8 @@ systemctl start nginx
 > killall -9 nginx​
 
 ### 初始目录
+
 > /usr/share/nginx/html
-
-
 
 ### 配置文件
 
@@ -185,6 +203,7 @@ http {
 ## Q&A
 
 ### 1. forbedden 403
+
 > chmod -R 777 /data
 > chmod -R 777 /data/www
 
@@ -195,5 +214,3 @@ vi /etc/selinux/config
  #SELINUX=enforcing
  SELINUX=disabled
 ```
-
-

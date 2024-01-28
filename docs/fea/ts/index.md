@@ -159,3 +159,4 @@ class Car implements Alarm, Light {
 1. [Type Search](https://www.typescriptlang.org/dt/search?search=)
 2. [quick Type：自动生成 Type](https://app.quicktype.io)
 3. [ts playground: 线上编写测试代码](https://www.typescriptlang.org/zh/play)
+4. [tsconfig 参数解释](https://segmentfault.com/a/1190000021749847)

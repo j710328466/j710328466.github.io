@@ -5,6 +5,7 @@ nav:
 group:
   title: 💊 设计模式
   order: 6
+  path: /pattern
 ---
 
 ## 行为型
