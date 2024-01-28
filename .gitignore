@@ -20,6 +20,10 @@
 .umi-test
 .env.local
 
+.dumi/tmp
+.dumi/tmp-test
+.dumi/tmp-production
+
 # ide
 /.vscode
 /.idea
