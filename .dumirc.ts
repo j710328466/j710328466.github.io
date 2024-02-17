@@ -3,6 +3,7 @@ import { defineConfig } from 'dumi';
 export default defineConfig({
   title: 'Nice Note',
   themeConfig: {
+    title: 'Nice Note',
     navs: [
       null,
       {
