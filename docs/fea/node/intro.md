@@ -24,9 +24,9 @@ group:
 
 <!-- 版本好可以根据需求来变更 14.X 16.X -->
 
-      - curl -fsSL https://rpm.nodesource.com/setup_16.x | sudo bash -
+- curl -fsSL https://rpm.nodesource.com/setup_18.x | bash -
 
-      - sudo yum install -y nodejs
+- sudo yum install -y nodejs
 
 #### 安装 nvm
 
@@ -39,16 +39,16 @@ export NODE_HOME=/usr/local/tool/nodejs/node
 export PATH=$NODE_HOME/bin:$PATH
 ```
 
-      - nvm install node（版本号）or nvm install stable
-      - 方案2
-      - curl --silent --location [https://rpm.nodesource.com/setup_11.x](https://rpm.nodesource.com/setup_11.x)| sudo bash -
+- nvm install node（版本号）or nvm install stable
+- 方案 2
+- curl --silent --location [https://rpm.nodesource.com/setup_11.x](https://rpm.nodesource.com/setup_11.x)| sudo bash -
 
 ### 方法 2
 
 1. 第一步
 
 ```js
-wget https://npm.taobao.org/mirrors/node/v12.16.1/node-v12.16.1-linux-x64.tar.gz
+wget https://nodejs.org/dist/v16.13.2/node-v16.13.2-linux-x64.tar.xz
 ```
 
 2. 第二步
@@ -85,3 +85,14 @@ ln -s /usr/local/bin/node/bin/npx /usr/bin/npx
 1. cjs 即为 CommonJs, 属于早期的 node 规范，可以使用 require 进行引用，module.exports 导出。
 2. esm 即为 Es module，属于 es6 提出之后版本的新的规范，语法是可以用 import 引用，export default 导出。
 3. umd 即为 Universal Module Definition（通用模块定义），也就是最基本的可在浏览器和 node 端执行的 js 代码。
+
+## Q&A
+
+### Error: Package: 2:nodejs-18.19.1-1nodesource.x86_64 (nodesource-nodejs)
+
+你可以尝试下面的命令
+
+```
+curl -fsSL https://rpm.nodesource.com/setup_18.x | sudo bash -
+curl -sL https://dl.yarnpkg.com/rpm/yarn.repo | sudo tee /etc/yum.repos.d/yarn.repo
+```

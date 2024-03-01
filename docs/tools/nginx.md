@@ -202,15 +202,50 @@ http {
 
 ## Q&A
 
-### 1. forbedden 403
+### forbedden 403
 
-> chmod -R 777 /data
-> chmod -R 777 /data/www
+第一种方法给文件夹加上权限，第二种方法切换一个更高级别的账号
+
+当然我更建议使用第一种
+
+```js
+chmod -R 777 /data
+chmod -R 777 /data/www
+```
+
+还不行的话尝试关闭 selinux，具体操作如下：
 
 ```javascript
-还不行的话尝试关闭 selinux：
 vi /etc/selinux/config
 
  #SELINUX=enforcing
  SELINUX=disabled
 ```
+
+### Could not resolve host: mirrorlist.centos.org Centos 7
+
+#### 第一步：进入 /etc/resolv.conf
+
+加入文件配置内容如下：
+
+```json
+nameserver 9.9.9.9
+```
+
+### loaded plugins: fastestmirror, langpacks loading mirror speeds from cached hostfile
+
+1.修改插件的配置文件
+
+```
+# vi /etc/yum/pluginconf.d/fastestmirror.conf
+```
+
+将 enabled=1 改为 enabled=0
+
+2.修改 yum 的配置文件
+
+```
+# vi /etc/yum.conf
+```
+
+将 plugins=1 改为 plugins=0
