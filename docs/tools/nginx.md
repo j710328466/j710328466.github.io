@@ -95,10 +95,10 @@ yum -y install make zlib zlib-devel gcc-c++ libtool  openssl openssl-devel
 
 > /usr/share/nginx/html
 
-### 配置文件
+## 配置文件
 
-```
-// /etc/nginx/nginx.conf
+```json
+//  默认配置文件 /etc/nginx/nginx.conf
 user nginx;
 worker_processes auto;
 error_log /var/log/nginx/error.log;
@@ -198,6 +198,25 @@ http {
     }
 
 }
+```
+
+### 参数介绍
+
+1. alias: 覆盖式定义文件路径
+2. root: 增量式定义文件路径
+
+举个例子:
+
+```js
+location /t/ {
+  root /www/root/html/;
+}
+// 访问路径: /t/test.png   ---> /www/root/html/t/test.png
+
+location /t/ {
+  alias /www/root/html/;
+}
+// 访问路径: /t/test.png   ---> /www/root/html/test.png
 ```
 
 ## Q&A
