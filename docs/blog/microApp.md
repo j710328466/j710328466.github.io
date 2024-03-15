@@ -18,24 +18,111 @@ group: 2024年
 
 ## 多种配置方案
 
-## 主应用配置
+## 主应用
 
-## 子应用配置
+顾名思义，就是应用的外框，所有的子应用都是嵌入在主应用中的存在，它可以给子应用赋能一些通用的功能，比如说：
+
+1. 聚合登录
+2. 权限验证
+3. 共有的功能性 sdk
+   ...
+
+主应用没有一个固定的形式，它可以是内容为空，也可以提供相应的布局。这个比较灵活，可以自由定制。
+
+### app.ts 配置
+
+如果是在 umi 应用下，可以在 app.ts 中向外暴露一个 qiankun 的对象，内容主要是一些集成的配置。参考如下
+
+```js
+export const qiankun = {
+  apps: [
+    {
+      name: 'app1', // 子应用
+      entry: '//localhost:30068/app1/',
+      // entry: `//${location.hostname}:30068/app1/`,  建议写成这样
+      props: {
+        accountInfo: {
+          username: 'admin',
+          password: 'test123',
+        },
+      },
+    },
+  ],
+  lifeCycles: {
+    // 所有子应用在挂载完成时，打印 props 信息
+    async afterMount(props: any) {
+      console.log('主应用:', props);
+    },
+  },
+};
+```
+
+### .umirc.ts 配置
+
+这个文件中需要对三个模块进行配置，一个是打开 qiankun 插件这个功能，一个是应用绑定的路由 用 microApp 来作为映射，最后就是在发布 nginx 的时候的访问路径配置，如下作为参考：
+
+```js
+{
+  qiankun: {
+    master: {
+      prefetch: false,    // 关闭子应用预加载，不然控制台会报错
+    },
+  },
+  routes: [              // 子应用路由配置
+    {
+      name: 'app1',
+      path: '/app1/*',
+      microApp: 'app1',
+    },
+  ],
+  publicPath: `/${pkg.name}/`
+  ...
+}
+```
+
+## 子应用
+
+相对的子应用需要修改的地方不多，它存在的意义主要是，当项目变得非常巨大，很笨重的时候，我们希望能够将它拆分模块化，分散到各个小的仓库中去，让每个人各司其职，负责独立的模块，这样的好处是：
+
+1. 项目更加垂直，一个模块，负责一个模块的业务。
+2. 拆分的更小也就以为着能够按模块打包，一定程度上能提升效率。
+
+### app.ts
+
+```js
+export const qiankun = {
+  async bootstrap() {
+    console.log('app1 bootstraped');
+  },
+
+  /**
+   * 应用每次进入都会调用 mount 方法，通常我们在这里触发应用的渲染方法
+   */
+  async mount(props: any) {
+    console.log('app1 mount', props);
+  },
+
+  /**
+   * 应用每次 切出/卸载 会调用的方法，通常在这里我们会卸载微应用的应用实例
+   */
+  async unmount(props: any) {
+    console.log('app1 unmount', props);
+  },
+};
+```
 
 ## nginx 配置
 
-具体配置参考
+具体配置参考（这个配置是在 windows 环境下，如果是 linux 环境需要适当的变更配置的 root 文件路径）
+
+需要注意的几个点：
+
+1. 关于跨域的配置，主子应用都需要配置跨域
+2. 不建议用 root 去映射路径，用 alias（这个我之前踩过坑，详情可以去搜索 alias 和 root 的区别）
+3. 另外一定要注意后缀加不加 / 的区别，他们命中的规则是不一样的，切记！
 
 ```json
-#user  nobody;
 worker_processes  1;
-
-#error_log  logs/error.log;
-#error_log  logs/error.log  notice;
-#error_log  logs/error.log  info;
-
-#pid        logs/nginx.pid;
-
 
 events {
     worker_connections  1024;
@@ -45,24 +132,16 @@ http {
     include       mime.types;
     default_type  application/octet-stream;
 
-    #log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
-    #                  '$status $body_bytes_sent "$http_referer" '
-    #                  '"$http_user_agent" "$http_x_forwarded_for"';
-
-    #access_log  logs/access.log  main;
-
     sendfile        on;
-    #tcp_nopush     on;
 
-    #keepalive_timeout  0;
     keepalive_timeout  65;
 
-    #gzip  on;
+    gzip  on;
 
     server {
         listen         30058;
         server_name   localhost;
-        root      E:\work\aircraft-carrier-fleet\dist;
+        root      E:\work\main\dist;
         index   index.html;
 
         location / {
@@ -83,32 +162,13 @@ http {
     server {
         listen       30078;
 
-        location /algorithm-warehouse {
+        location /app1 {
             add_header Access-Control-Allow-Origin *;
             add_header Access-Control-Allow-Methods 'GET, POST, OPTIONS';
             add_header Access-Control-Allow-Headers 'DNT,X-Mx-ReqToken,Keep-Alive,User-Agent,X-Requested-With,If-Modified-Since,Cache-Control,Content-Type,Authorization';
 
-            try_files   $uri $uri/ /algorithm-warehouse/index.html;
-            alias    E:\work\algorithm-warehouse\dist;
-            index    index.html index.htm;
-        }
-
-        error_page   500 502 503 504  /50x.html;
-        location = /50x.html {
-            root   html;
-        }
-    }
-
-    server {
-        listen       30068;
-
-        location /Intelligent-file-cabinet {
-            add_header 'Access-Control-Allow-Origin' '*';
-            add_header 'Access-Control-Allow-Methods' '*';
-            add_header 'Access-Control-Allow-Headers' '*';
-
-            try_files   $uri $uri/ /index.html;
-            alias    E:\work\Intelligent-file-cabinet\dist;
+            try_files   $uri $uri/ /app1/index.html;
+            alias    E:\work\app1\dist;
             index    index.html index.htm;
         }
 
@@ -125,3 +185,25 @@ http {
 <https://juejin.cn/post/7113871265848360997?searchId=20240308152253A3CC20142A59F31D97E3#heading-8>
 
 ## Q&A
+
+### localhost:XXXX err_connection_refused
+
+我这里主要的原因是使用了 node 环境的环境变量去判断正式还是生产环境, like this：
+
+```js
+const pro = process.env - NODE_ENV;
+```
+
+千万不要用这个！打包虽然成功，但是里面逻辑判断是有问题的，绝了，卡了我一上午...
+
+### 控制台报错提示，找不到其他应用 not fetch
+
+这个是因为，qiankun 默认开启了预加载功能，在主应用中把这个功能关掉就好了。
+
+```js
+{
+  master: {
+    prefetch: false;
+  }
+}
+```

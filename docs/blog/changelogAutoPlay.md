@@ -138,7 +138,7 @@ module.exports = {
 
 如果该项目使用了 webpack，可以使用 markdown-loader.
 
-```
+```js
 第一次写工具库，难免有瑕疵，欢迎大家 pr，但是还请口下留情😄
 喜欢的话给个 star吧
 ```
