@@ -2,6 +2,7 @@
 nav:
   title: 数据库
   path: /db
+toc: content
 group:
   title: 💊 redis
   order: 1
@@ -11,12 +12,9 @@ group:
 
 ## 下载
 
-
 [官方网站](https://redis.io/)
 
-
 ## 安装
-
 
 ```javascript
 解压
@@ -31,18 +29,16 @@ sudo make test
 sudo make install
 ```
 
-
 ## 启动
 
-
 ```javascript
-redis-server
+redis - server;
 ```
-
 
 ## 配置
 
 ### 新建目录
+
 ```
 sudo mkdir  redis-4.0.8/bin
 sudo mkdir  redis-4.0.8/etc
@@ -59,8 +55,7 @@ cp src/redis-cli bin
 cp src/redis-server bin
 ```
 
-## 修改redis.conf
-
+## 修改 redis.conf
 
 ```t
 #修改为守护模式
@@ -101,28 +96,30 @@ appendonly no
 appendfsync everysec
 ```
 
-
 ## 启动服务
 
-
 ### 启动
+
 > ./bin/redis-server etc/redis.conf
 
 ### 查看日志
+
 > tail -f log-redis.log
 
 ### OK
+
 > ./bin/redis-cli
 
 ## 基本命令
 
-
 ### 查看所有数据
-> keys *
+
+> keys \*
 
 ### 插入键值对
+
 > set a b
 
 ### 查看数据
-> get a
 
+> get a

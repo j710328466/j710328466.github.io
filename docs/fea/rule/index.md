@@ -2,10 +2,12 @@
 nav:
   title: 前端
   path: /fea
+toc: content
+title: 书写规范
 group:
   title: 💊 书写规范
   order: 4
-  path: /norms
+  path: /rule
 ---
 
 ## 💊 书写规范
@@ -15,13 +17,13 @@ group:
 **Bad:**
 
 ```js
-const yyyymmdstr = moment().format("YYYY/MM/DD");
+const yyyymmdstr = moment().format('YYYY/MM/DD');
 ```
 
 **Good:**
 
 ```js
-const currentDate = moment().format("YYYY/MM/DD");
+const currentDate = moment().format('YYYY/MM/DD');
 ```
 
 ### 对相同类型的变量使用相同的词汇表
@@ -86,7 +88,6 @@ const date = new Date();
 addMonthToDate(1, date);
 ```
 
-
 ### 函数应该只是一个抽象层次
 
 当你有一个以上的抽象层次时，你的函数通常做得太多了。拆分功能可以带来可重用性和更容易的测试。
@@ -99,20 +100,20 @@ function parseBetterJSAlternative(code) {
     // ...
   ];
 
-  const statements = code.split(" ");
+  const statements = code.split(' ');
   const tokens = [];
-  REGEXES.forEach(REGEX => {
-    statements.forEach(statement => {
+  REGEXES.forEach((REGEX) => {
+    statements.forEach((statement) => {
       // ...
     });
   });
 
   const ast = [];
-  tokens.forEach(token => {
+  tokens.forEach((token) => {
     // lex...
   });
 
-  ast.forEach(node => {
+  ast.forEach((node) => {
     // parse...
   });
 }
@@ -124,7 +125,7 @@ function parseBetterJSAlternative(code) {
 function parseBetterJSAlternative(code) {
   const tokens = tokenize(code);
   const syntaxTree = parse(tokens);
-  syntaxTree.forEach(node => {
+  syntaxTree.forEach((node) => {
     // parse...
   });
 }
@@ -134,10 +135,10 @@ function tokenize(code) {
     // ...
   ];
 
-  const statements = code.split(" ");
+  const statements = code.split(' ');
   const tokens = [];
-  REGEXES.forEach(REGEX => {
-    statements.forEach(statement => {
+  REGEXES.forEach((REGEX) => {
+    statements.forEach((statement) => {
       tokens.push(/* ... */);
     });
   });
@@ -147,7 +148,7 @@ function tokenize(code) {
 
 function parse(tokens) {
   const syntaxTree = [];
-  tokens.forEach(token => {
+  tokens.forEach((token) => {
     syntaxTree.push(/* ... */);
   });
 
@@ -165,14 +166,14 @@ function parse(tokens) {
 
 ```javascript
 function showDeveloperList(developers) {
-  developers.forEach(developer => {
+  developers.forEach((developer) => {
     const expectedSalary = developer.calculateExpectedSalary();
     const experience = developer.getExperience();
     const githubLink = developer.getGithubLink();
     const data = {
       expectedSalary,
       experience,
-      githubLink
+      githubLink,
     };
 
     render(data);
@@ -180,14 +181,14 @@ function showDeveloperList(developers) {
 }
 
 function showManagerList(managers) {
-  managers.forEach(manager => {
+  managers.forEach((manager) => {
     const expectedSalary = manager.calculateExpectedSalary();
     const experience = manager.getExperience();
     const portfolio = manager.getMBAProjects();
     const data = {
       expectedSalary,
       experience,
-      portfolio
+      portfolio,
     };
 
     render(data);
@@ -199,20 +200,20 @@ function showManagerList(managers) {
 
 ```javascript
 function showEmployeeList(employees) {
-  employees.forEach(employee => {
+  employees.forEach((employee) => {
     const expectedSalary = employee.calculateExpectedSalary();
     const experience = employee.getExperience();
 
     const data = {
       expectedSalary,
-      experience
+      experience,
     };
 
     switch (employee.type) {
-      case "manager":
+      case 'manager':
         data.portfolio = employee.getMBAProjects();
         break;
-      case "developer":
+      case 'developer':
         data.githubLink = employee.getGithubLink();
         break;
     }
@@ -222,22 +223,22 @@ function showEmployeeList(employees) {
 }
 ```
 
-### 使用Object.assign设置默认对象
+### 使用 Object.assign 设置默认对象
 
 **Bad:**
 
 ```javascript
 const menuConfig = {
   title: null,
-  body: "Bar",
+  body: 'Bar',
   buttonText: null,
-  cancellable: true
+  cancellable: true,
 };
 
 function createMenu(config) {
-  config.title = config.title || "Foo";
-  config.body = config.body || "Bar";
-  config.buttonText = config.buttonText || "Baz";
+  config.title = config.title || 'Foo';
+  config.body = config.body || 'Bar';
+  config.buttonText = config.buttonText || 'Baz';
   config.cancellable =
     config.cancellable !== undefined ? config.cancellable : true;
 }
@@ -249,23 +250,23 @@ createMenu(menuConfig);
 
 ```javascript
 const menuConfig = {
-  title: "Order",
+  title: 'Order',
   // User did not include 'body' key
-  buttonText: "Send",
-  cancellable: true
+  buttonText: 'Send',
+  cancellable: true,
 };
 
 function createMenu(config) {
   let finalConfig = Object.assign(
     {
-      title: "Foo",
-      body: "Bar",
-      buttonText: "Baz",
-      cancellable: true
+      title: 'Foo',
+      body: 'Bar',
+      buttonText: 'Baz',
+      cancellable: true,
     },
-    config
+    config,
   );
-  return finalConfig
+  return finalConfig;
   // config now equals: {title: "Order", body: "Bar", buttonText: "Send", cancellable: true}
   // ...
 }
@@ -306,10 +307,10 @@ function createTempFile(name) {
 **Bad:**
 
 ```javascript
-let name = "Ryan McDermott";
+let name = 'Ryan McDermott';
 
 function splitIntoFirstAndLastName() {
-  name = name.split(" ");
+  name = name.split(' ');
 }
 
 splitIntoFirstAndLastName();
@@ -321,10 +322,10 @@ console.log(name); // ['Ryan', 'McDermott'];
 
 ```javascript
 function splitIntoFirstAndLastName(name) {
-  return name.split(" ");
+  return name.split(' ');
 }
 
-const name = "Ryan McDermott";
+const name = 'Ryan McDermott';
 const newName = splitIntoFirstAndLastName(name);
 
 console.log(name); // 'Ryan McDermott';
@@ -356,7 +357,7 @@ const addItemToCart = (cart, item) => {
 ```javascript
 Array.prototype.diff = function diff(comparisonArray) {
   const hash = new Set(comparisonArray);
-  return this.filter(elem => !hash.has(elem));
+  return this.filter((elem) => !hash.has(elem));
 };
 ```
 
@@ -366,35 +367,35 @@ Array.prototype.diff = function diff(comparisonArray) {
 class SuperArray extends Array {
   diff(comparisonArray) {
     const hash = new Set(comparisonArray);
-    return this.filter(elem => !hash.has(elem));
+    return this.filter((elem) => !hash.has(elem));
   }
 }
 ```
 
 ### 多用函数式编程
 
-JavaScript不像Haskell那样是一种函数式语言，但它具有函数式风格。函数式语言更简洁，更容易测试。如果可以的话，尽量使用这种编程风格。
+JavaScript 不像 Haskell 那样是一种函数式语言，但它具有函数式风格。函数式语言更简洁，更容易测试。如果可以的话，尽量使用这种编程风格。
 
 **Bad:**
 
 ```javascript
 const programmerOutput = [
   {
-    name: "Uncle Bobby",
-    linesOfCode: 500
+    name: 'Uncle Bobby',
+    linesOfCode: 500,
   },
   {
-    name: "Suzie Q",
-    linesOfCode: 1500
+    name: 'Suzie Q',
+    linesOfCode: 1500,
   },
   {
-    name: "Jimmy Gosling",
-    linesOfCode: 150
+    name: 'Jimmy Gosling',
+    linesOfCode: 150,
   },
   {
-    name: "Gracie Hopper",
-    linesOfCode: 1000
-  }
+    name: 'Gracie Hopper',
+    linesOfCode: 1000,
+  },
 ];
 
 let totalOutput = 0;
@@ -409,26 +410,26 @@ for (let i = 0; i < programmerOutput.length; i++) {
 ```javascript
 const programmerOutput = [
   {
-    name: "Uncle Bobby",
-    linesOfCode: 500
+    name: 'Uncle Bobby',
+    linesOfCode: 500,
   },
   {
-    name: "Suzie Q",
-    linesOfCode: 1500
+    name: 'Suzie Q',
+    linesOfCode: 1500,
   },
   {
-    name: "Jimmy Gosling",
-    linesOfCode: 150
+    name: 'Jimmy Gosling',
+    linesOfCode: 150,
   },
   {
-    name: "Gracie Hopper",
-    linesOfCode: 1000
-  }
+    name: 'Gracie Hopper',
+    linesOfCode: 1000,
+  },
 ];
 
 const totalOutput = programmerOutput.reduce(
   (totalLines, output) => totalLines + output.linesOfCode,
-  0
+  0,
 );
 ```
 
@@ -437,7 +438,7 @@ const totalOutput = programmerOutput.reduce(
 **Bad:**
 
 ```javascript
-if (fsm.state === "fetching" && isEmpty(listNode)) {
+if (fsm.state === 'fetching' && isEmpty(listNode)) {
   // ...
 }
 ```
@@ -446,7 +447,7 @@ if (fsm.state === "fetching" && isEmpty(listNode)) {
 
 ```javascript
 function shouldShowSpinner(fsm, listNode) {
-  return fsm.state === "fetching" && isEmpty(listNode);
+  return fsm.state === 'fetching' && isEmpty(listNode);
 }
 
 if (shouldShowSpinner(fsmInstance, listNodeInstance)) {
@@ -456,7 +457,7 @@ if (shouldShowSpinner(fsmInstance, listNodeInstance)) {
 
 ### 避免条件
 
-这似乎是一个不可能完成的任务。大多数人一听到这句话就会说:“如果没有if语句，我该怎么做呢?”答案是，您可以在许多情况下使用多态性来实现相同的任务。第二个问题通常是，"这很好，但我为什么要这么做?"答案是我们以前学到的一个干净的代码概念:一个函数应该只做一件事。当你有带有if语句的类和函数时，你是在告诉用户你的函数做不止一件事。记住，只做一件事。
+这似乎是一个不可能完成的任务。大多数人一听到这句话就会说:“如果没有 if 语句，我该怎么做呢?”答案是，您可以在许多情况下使用多态性来实现相同的任务。第二个问题通常是，"这很好，但我为什么要这么做?"答案是我们以前学到的一个干净的代码概念:一个函数应该只做一件事。当你有带有 if 语句的类和函数时，你是在告诉用户你的函数做不止一件事。记住，只做一件事。
 
 **Bad:**
 
@@ -465,11 +466,11 @@ class Airplane {
   // ...
   getCruisingAltitude() {
     switch (this.type) {
-      case "777":
+      case '777':
         return this.getMaxAltitude() - this.getPassengerCount();
-      case "Air Force One":
+      case 'Air Force One':
         return this.getMaxAltitude();
-      case "Cessna":
+      case 'Cessna':
         return this.getMaxAltitude() - this.getFuelExpenditure();
     }
   }
@@ -507,16 +508,16 @@ class Cessna extends Airplane {
 
 ### 避免类型检查 (part 1)
 
-JavaScript是无类型的，这意味着函数可以接受任何类型的参数。有时，您会被这种自由所困扰，并忍不住在函数中进行类型检查。有很多方法可以避免这样做。首先要考虑的是一致的api。
+JavaScript 是无类型的，这意味着函数可以接受任何类型的参数。有时，您会被这种自由所困扰，并忍不住在函数中进行类型检查。有很多方法可以避免这样做。首先要考虑的是一致的 api。
 
 **Bad:**
 
 ```javascript
 function travelToTexas(vehicle) {
   if (vehicle instanceof Bicycle) {
-    vehicle.pedal(this.currentLocation, new Location("texas"));
+    vehicle.pedal(this.currentLocation, new Location('texas'));
   } else if (vehicle instanceof Car) {
-    vehicle.drive(this.currentLocation, new Location("texas"));
+    vehicle.drive(this.currentLocation, new Location('texas'));
   }
 }
 ```
@@ -525,25 +526,25 @@ function travelToTexas(vehicle) {
 
 ```javascript
 function travelToTexas(vehicle) {
-  vehicle.move(this.currentLocation, new Location("texas"));
+  vehicle.move(this.currentLocation, new Location('texas'));
 }
 ```
 
 ### 避免类型检查 (part 2)
 
-如果你使用的是基本的原始值，比如字符串和整数，你不能使用多态性，但你仍然觉得有必要进行类型检查，你应该考虑使用TypeScript。它是普通JavaScript的一个很好的替代方案，因为它提供了标准JavaScript语法之上的静态类型。手动类型检查常规JavaScript的问题是，要想做得好，需要太多额外的废话，以至于你得到的伪“类型安全”并不能弥补失去的可读性。保持JavaScript整洁，编写优秀的测试，并进行良好的代码审查。
+如果你使用的是基本的原始值，比如字符串和整数，你不能使用多态性，但你仍然觉得有必要进行类型检查，你应该考虑使用 TypeScript。它是普通 JavaScript 的一个很好的替代方案，因为它提供了标准 JavaScript 语法之上的静态类型。手动类型检查常规 JavaScript 的问题是，要想做得好，需要太多额外的废话，以至于你得到的伪“类型安全”并不能弥补失去的可读性。保持 JavaScript 整洁，编写优秀的测试，并进行良好的代码审查。
 **Bad:**
 
 ```javascript
 function combine(val1, val2) {
   if (
-    (typeof val1 === "number" && typeof val2 === "number") ||
-    (typeof val1 === "string" && typeof val2 === "string")
+    (typeof val1 === 'number' && typeof val2 === 'number') ||
+    (typeof val1 === 'string' && typeof val2 === 'string')
   ) {
     return val1 + val2;
   }
 
-  throw new Error("Must be of type String or Number");
+  throw new Error('Must be of type String or Number');
 }
 ```
 
@@ -589,7 +590,7 @@ function newRequestModule(url) {
 }
 
 const req = newRequestModule;
-inventoryTracker("apples", req, "www.inventory-awesome.io");
+inventoryTracker('apples', req, 'www.inventory-awesome.io');
 ```
 
 **Good:**
@@ -600,17 +601,17 @@ function newRequestModule(url) {
 }
 
 const req = newRequestModule;
-inventoryTracker("apples", req, "www.inventory-awesome.io");
+inventoryTracker('apples', req, 'www.inventory-awesome.io');
 ```
 
 ## **对象和数据结构**
 
-### 使用getters/setters语句
+### 使用 getters/setters 语句
 
-使用getter和setter访问对象上的数据可能比简单地查找对象上的属性更好。你可能会问:“为什么?“，下面列举了一些原因：
+使用 getter 和 setter 访问对象上的数据可能比简单地查找对象上的属性更好。你可能会问:“为什么?“，下面列举了一些原因：
 
 - 当您想要做的不仅仅是获取一个对象属性时，您不必在代码库中查找和更改每个访问器。
-- 使得`set`执行集合时添加验证变得简单。 
+- 使得`set`执行集合时添加验证变得简单。
 - 易于添加日志和错误处理时，获取和设置。
 - 你可以延迟加载对象的属性，比如说从服务器获取。
 
@@ -621,7 +622,7 @@ function makeBankAccount() {
   // ...
 
   return {
-    balance: 0
+    balance: 0,
     // ...
   };
 }
@@ -651,7 +652,7 @@ function makeBankAccount() {
   return {
     // ...
     getBalance,
-    setBalance
+    setBalance,
   };
 }
 
@@ -661,12 +662,12 @@ account.setBalance(100);
 
 ### 使对象具有私有成员
 
-这可以通过闭包(针对ES5及以下版本)来实现。
+这可以通过闭包(针对 ES5 及以下版本)来实现。
 
 **Bad:**
 
 ```javascript
-const Employee = function(name) {
+const Employee = function (name) {
   this.name = name;
 };
 
@@ -674,7 +675,7 @@ Employee.prototype.getName = function getName() {
   return this.name;
 };
 
-const employee = new Employee("John Doe");
+const employee = new Employee('John Doe');
 console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 delete employee.name;
 console.log(`Employee name: ${employee.getName()}`); // Employee name: undefined
@@ -687,11 +688,11 @@ function makeEmployee(name) {
   return {
     getName() {
       return name;
-    }
+    },
   };
 }
 
-const employee = makeEmployee("John Doe");
+const employee = makeEmployee('John Doe');
 console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 delete employee.name;
 console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
@@ -699,14 +700,14 @@ console.log(`Employee name: ${employee.getName()}`); // Employee name: John Doe
 
 ## **Classes**
 
-### 多用ES6
+### 多用 ES6
 
 **Bad:**
 
 ```javascript
-const Animal = function(age) {
+const Animal = function (age) {
   if (!(this instanceof Animal)) {
-    throw new Error("Instantiate Animal with `new`");
+    throw new Error('Instantiate Animal with `new`');
   }
 
   this.age = age;
@@ -714,9 +715,9 @@ const Animal = function(age) {
 
 Animal.prototype.move = function move() {};
 
-const Mammal = function(age, furColor) {
+const Mammal = function (age, furColor) {
   if (!(this instanceof Mammal)) {
-    throw new Error("Instantiate Mammal with `new`");
+    throw new Error('Instantiate Mammal with `new`');
   }
 
   Animal.call(this, age);
@@ -727,9 +728,9 @@ Mammal.prototype = Object.create(Animal.prototype);
 Mammal.prototype.constructor = Mammal;
 Mammal.prototype.liveBirth = function liveBirth() {};
 
-const Human = function(age, furColor, languageSpoken) {
+const Human = function (age, furColor, languageSpoken) {
   if (!(this instanceof Human)) {
-    throw new Error("Instantiate Human with `new`");
+    throw new Error('Instantiate Human with `new`');
   }
 
   Mammal.call(this, age, furColor);
@@ -808,8 +809,8 @@ class Car {
   }
 }
 
-const car = new Car("Ford", "F-150", "red");
-car.setColor("pink");
+const car = new Car('Ford', 'F-150', 'red');
+car.setColor('pink');
 car.save();
 ```
 
@@ -848,12 +849,12 @@ class Car {
   }
 }
 
-const car = new Car("Ford", "F-150", "red").setColor("pink").save();
+const car = new Car('Ford', 'F-150', 'red').setColor('pink').save();
 ```
 
 ### 偏好组合而非继承
 
-正如在Gang of Four的设计模式中所说的那样，您应该尽可能地选择组合而不是继承。有很多很好的理由使用继承，也有很多很好的理由使用组合。这条格言的主要观点是，如果你的头脑本能地倾向于继承，试着思考一下构图是否能更好地模拟你的问题。在某些情况下是可以的。
+正如在 Gang of Four 的设计模式中所说的那样，您应该尽可能地选择组合而不是继承。有很多很好的理由使用继承，也有很多很好的理由使用组合。这条格言的主要观点是，如果你的头脑本能地倾向于继承，试着思考一下构图是否能更好地模拟你的问题。在某些情况下是可以的。
 
 您可能会想，“我应该在什么时候使用继承?”这取决于您手头的问题，但这是继承比组合更有意义的一些不错的点：
 
@@ -915,7 +916,7 @@ class Employee {
 
 ### 单一责任原则
 
-正如Clean Code中所述，“一个类的更改原因不应该超过一个”。如果你只能带一个行李箱上飞机，那就很容易把一门课程塞进很多功能中。这样做的问题是，你的类在概念上没有连贯性，这会给它带来很多改变的理由。将更改类的时间最小化是很重要的。这很重要，因为如果一个类中有太多的功能，而您修改了其中的一部分，就很难理解这将如何影响代码库中的其他依赖模块。
+正如 Clean Code 中所述，“一个类的更改原因不应该超过一个”。如果你只能带一个行李箱上飞机，那就很容易把一门课程塞进很多功能中。这样做的问题是，你的类在概念上没有连贯性，这会给它带来很多改变的理由。将更改类的时间最小化是很重要的。这很重要，因为如果一个类中有太多的功能，而您修改了其中的一部分，就很难理解这将如何影响代码库中的其他依赖模块。
 
 **Bad:**
 
@@ -966,7 +967,7 @@ class UserSettings {
 
 ### 开放封闭原则
 
-正如Bertrand Meyer所说，“软件实体(类、模块、函数等)应该对扩展开放，但对修改关闭。”这意味着什么呢?这个原则基本上是说，您应该允许用户添加新功能，而不改变现有的代码。
+正如 Bertrand Meyer 所说，“软件实体(类、模块、函数等)应该对扩展开放，但对修改关闭。”这意味着什么呢?这个原则基本上是说，您应该允许用户添加新功能，而不改变现有的代码。
 
 **Bad:**
 
@@ -974,14 +975,14 @@ class UserSettings {
 class AjaxAdapter extends Adapter {
   constructor() {
     super();
-    this.name = "ajaxAdapter";
+    this.name = 'ajaxAdapter';
   }
 }
 
 class NodeAdapter extends Adapter {
   constructor() {
     super();
-    this.name = "nodeAdapter";
+    this.name = 'nodeAdapter';
   }
 }
 
@@ -991,12 +992,12 @@ class HttpRequester {
   }
 
   fetch(url) {
-    if (this.adapter.name === "ajaxAdapter") {
-      return makeAjaxCall(url).then(response => {
+    if (this.adapter.name === 'ajaxAdapter') {
+      return makeAjaxCall(url).then((response) => {
         // transform response and return
       });
-    } else if (this.adapter.name === "nodeAdapter") {
-      return makeHttpCall(url).then(response => {
+    } else if (this.adapter.name === 'nodeAdapter') {
+      return makeHttpCall(url).then((response) => {
         // transform response and return
       });
     }
@@ -1018,7 +1019,7 @@ function makeHttpCall(url) {
 class AjaxAdapter extends Adapter {
   constructor() {
     super();
-    this.name = "ajaxAdapter";
+    this.name = 'ajaxAdapter';
   }
 
   request(url) {
@@ -1029,7 +1030,7 @@ class AjaxAdapter extends Adapter {
 class NodeAdapter extends Adapter {
   constructor() {
     super();
-    this.name = "nodeAdapter";
+    this.name = 'nodeAdapter';
   }
 
   request(url) {
@@ -1043,7 +1044,7 @@ class HttpRequester {
   }
 
   fetch(url) {
-    return this.adapter.request(url).then(response => {
+    return this.adapter.request(url).then((response) => {
       // transform response and return
     });
   }
@@ -1052,7 +1053,7 @@ class HttpRequester {
 
 ### 里氏替换原则
 
-对于一个非常简单的概念来说，这是一个可怕的术语。它被正式定义为“如果S是T的子类型，那么T类型的对象可以被S类型的对象替换(也就是说，S类型的对象可以替换T类型的对象)，而不改变该程序的任何理想属性(正确性，执行的任务，等等)。”这是一个更可怕的定义。
+对于一个非常简单的概念来说，这是一个可怕的术语。它被正式定义为“如果 S 是 T 的子类型，那么 T 类型的对象可以被 S 类型的对象替换(也就是说，S 类型的对象可以替换 T 类型的对象)，而不改变该程序的任何理想属性(正确性，执行的任务，等等)。”这是一个更可怕的定义。
 
 对此最好的解释是，如果你有一个父类和一个子类，那么基类和子类可以互换使用，而不会得到错误的结果。这可能仍然令人困惑，所以让我们看看经典的正方形-矩形示例。从数学上讲，正方形是一个矩形，但是如果您通过继承使用“is-a”关系来建模它，您很快就会遇到麻烦。
 
@@ -1099,7 +1100,7 @@ class Square extends Rectangle {
 }
 
 function renderLargeRectangles(rectangles) {
-  rectangles.forEach(rectangle => {
+  rectangles.forEach((rectangle) => {
     rectangle.setWidth(4);
     rectangle.setHeight(5);
     const area = rectangle.getArea(); // BAD: Returns 25 for Square. Should be 20.
@@ -1148,7 +1149,7 @@ class Square extends Shape {
 }
 
 function renderLargeShapes(shapes) {
-  shapes.forEach(shape => {
+  shapes.forEach((shape) => {
     const area = shape.getArea();
     shape.render(area);
   });
@@ -1160,11 +1161,11 @@ renderLargeShapes(shapes);
 
 ### 接口隔离原理
 
-JavaScript没有接口，所以这个原则不像其他原则那么严格。然而，即使在JavaScript缺乏类型系统的情况下，它也很重要和相关。
+JavaScript 没有接口，所以这个原则不像其他原则那么严格。然而，即使在 JavaScript 缺乏类型系统的情况下，它也很重要和相关。
 
-ISP声明:“不应该强迫客户依赖他们不使用的接口。”由于duck类型，接口在JavaScript中是隐式契约
+ISP 声明:“不应该强迫客户依赖他们不使用的接口。”由于 duck 类型，接口在 JavaScript 中是隐式契约
 
-在JavaScript中演示这一原则的一个很好的例子是需要大型设置对象的类。不需要客户设置大量的选项是有益的，因为大多数时候他们不需要所有的设置。使它们可选有助于防止出现“臃肿”。
+在 JavaScript 中演示这一原则的一个很好的例子是需要大型设置对象的类。不需要客户设置大量的选项是有益的，因为大多数时候他们不需要所有的设置。使它们可选有助于防止出现“臃肿”。
 
 **Bad:**
 
@@ -1186,8 +1187,8 @@ class DOMTraverser {
 }
 
 const $ = new DOMTraverser({
-  rootNode: document.getElementsByTagName("body"),
-  animationModule() {} // Most of the time, we won't need to animate when traversing.
+  rootNode: document.getElementsByTagName('body'),
+  animationModule() {}, // Most of the time, we won't need to animate when traversing.
   // ...
 });
 ```
@@ -1219,10 +1220,10 @@ class DOMTraverser {
 }
 
 const $ = new DOMTraverser({
-  rootNode: document.getElementsByTagName("body"),
+  rootNode: document.getElementsByTagName('body'),
   options: {
-    animationModule() {}
-  }
+    animationModule() {},
+  },
 });
 ```
 
@@ -1242,7 +1243,7 @@ const $ = new DOMTraverser({
 ```javascript
 class InventoryRequester {
   constructor() {
-    this.REQ_METHODS = ["HTTP"];
+    this.REQ_METHODS = ['HTTP'];
   }
 
   requestItem(item) {
@@ -1260,13 +1261,13 @@ class InventoryTracker {
   }
 
   requestItems() {
-    this.items.forEach(item => {
+    this.items.forEach((item) => {
       this.requester.requestItem(item);
     });
   }
 }
 
-const inventoryTracker = new InventoryTracker(["apples", "bananas"]);
+const inventoryTracker = new InventoryTracker(['apples', 'bananas']);
 inventoryTracker.requestItems();
 ```
 
@@ -1280,7 +1281,7 @@ class InventoryTracker {
   }
 
   requestItems() {
-    this.items.forEach(item => {
+    this.items.forEach((item) => {
       this.requester.requestItem(item);
     });
   }
@@ -1288,7 +1289,7 @@ class InventoryTracker {
 
 class InventoryRequesterV1 {
   constructor() {
-    this.REQ_METHODS = ["HTTP"];
+    this.REQ_METHODS = ['HTTP'];
   }
 
   requestItem(item) {
@@ -1298,7 +1299,7 @@ class InventoryRequesterV1 {
 
 class InventoryRequesterV2 {
   constructor() {
-    this.REQ_METHODS = ["WS"];
+    this.REQ_METHODS = ['WS'];
   }
 
   requestItem(item) {
@@ -1309,8 +1310,8 @@ class InventoryRequesterV2 {
 // By constructing our dependencies externally and injecting them, we can easily
 // substitute our request module for a fancy new one that uses WebSockets.
 const inventoryTracker = new InventoryTracker(
-  ["apples", "bananas"],
-  new InventoryRequesterV2()
+  ['apples', 'bananas'],
+  new InventoryRequesterV2(),
 );
 inventoryTracker.requestItems();
 ```
@@ -1322,23 +1323,23 @@ inventoryTracker.requestItems();
 **Bad:**
 
 ```javascript
-import assert from "assert";
+import assert from 'assert';
 
-describe("MomentJS", () => {
-  it("handles date boundaries", () => {
+describe('MomentJS', () => {
+  it('handles date boundaries', () => {
     let date;
 
-    date = new MomentJS("1/1/2015");
+    date = new MomentJS('1/1/2015');
     date.addDays(30);
-    assert.equal("1/31/2015", date);
+    assert.equal('1/31/2015', date);
 
-    date = new MomentJS("2/1/2016");
+    date = new MomentJS('2/1/2016');
     date.addDays(28);
-    assert.equal("02/29/2016", date);
+    assert.equal('02/29/2016', date);
 
-    date = new MomentJS("2/1/2015");
+    date = new MomentJS('2/1/2015');
     date.addDays(28);
-    assert.equal("03/01/2015", date);
+    assert.equal('03/01/2015', date);
   });
 });
 ```
@@ -1346,32 +1347,32 @@ describe("MomentJS", () => {
 **Good:**
 
 ```javascript
-import assert from "assert";
+import assert from 'assert';
 
-describe("MomentJS", () => {
-  it("handles 30-day months", () => {
-    const date = new MomentJS("1/1/2015");
+describe('MomentJS', () => {
+  it('handles 30-day months', () => {
+    const date = new MomentJS('1/1/2015');
     date.addDays(30);
-    assert.equal("1/31/2015", date);
+    assert.equal('1/31/2015', date);
   });
 
-  it("handles leap year", () => {
-    const date = new MomentJS("2/1/2016");
+  it('handles leap year', () => {
+    const date = new MomentJS('2/1/2016');
     date.addDays(28);
-    assert.equal("02/29/2016", date);
+    assert.equal('02/29/2016', date);
   });
 
-  it("handles non-leap year", () => {
-    const date = new MomentJS("2/1/2015");
+  it('handles non-leap year', () => {
+    const date = new MomentJS('2/1/2015');
     date.addDays(28);
-    assert.equal("03/01/2015", date);
+    assert.equal('03/01/2015', date);
   });
 });
 ```
 
 ## **并发性**
 
-### 尽量使用promise
+### 尽量使用 promise
 
 Callbacks aren't clean, and they cause excessive amounts of nesting. With ES2015/ES6,
 Promises are a built-in global type. Use them!
@@ -1379,64 +1380,63 @@ Promises are a built-in global type. Use them!
 **Bad:**
 
 ```javascript
-import { get } from "request";
-import { writeFile } from "fs";
+import { get } from 'request';
+import { writeFile } from 'fs';
 
 get(
-  "https://en.wikipedia.org/wiki/Robert_Cecil_Martin",
+  'https://en.wikipedia.org/wiki/Robert_Cecil_Martin',
   (requestErr, response, body) => {
     if (requestErr) {
       console.error(requestErr);
     } else {
-      writeFile("article.html", body, writeErr => {
+      writeFile('article.html', body, (writeErr) => {
         if (writeErr) {
           console.error(writeErr);
         } else {
-          console.log("File written");
+          console.log('File written');
         }
       });
     }
-  }
+  },
 );
 ```
 
 **Good:**
 
 ```javascript
-import { get } from "request-promise";
-import { writeFile } from "fs-extra";
+import { get } from 'request-promise';
+import { writeFile } from 'fs-extra';
 
-get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
-  .then(body => {
-    return writeFile("article.html", body);
+get('https://en.wikipedia.org/wiki/Robert_Cecil_Martin')
+  .then((body) => {
+    return writeFile('article.html', body);
   })
   .then(() => {
-    console.log("File written");
+    console.log('File written');
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err);
   });
 ```
 
-### Async/Await 更优于Promise
+### Async/Await 更优于 Promise
 
 Promise 是回调的一个非常干净的替代方案，但 `ES2017/ES8` 带来了 `async` 和 `await` ，它们提供了一个更干净的解决方案。 您所需要的只是一个以 async 关键字为前缀的函数，然后您就可以在没有 then 函数链的情况下命令式地编写逻辑。 如果您今天可以利用 `ES2017/ES8` 功能，请使用它！
-
 
 **Bad:**
 
 ```javascript
-import { get } from "request-promise";
-import { writeFile } from "fs-extra";
+import { get } from 'request-promise';
+import { writeFile } from 'fs-extra';
 
-get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
-  .then(body => {
-    return writeFile("article.html", body);
+get('https://en.wikipedia.org/wiki/Robert_Cecil_Martin')
+  .then((body) => {
+    return writeFile('article.html', body);
   })
   .then(() => {
-    console.log("File written");
+    console.log('File written');
   })
-  .catch(err => {
+  .catch((err) => {
     console.error(err);
   });
 ```
@@ -1444,22 +1444,20 @@ get("https://en.wikipedia.org/wiki/Robert_Cecil_Martin")
 **Good:**
 
 ```javascript
-import { get } from "request-promise";
-import { writeFile } from "fs-extra";
+import { get } from 'request-promise';
+import { writeFile } from 'fs-extra';
 
 async function getCleanCodeArticle() {
   try {
-    const body = await get(
-      "https://en.wikipedia.org/wiki/Robert_Cecil_Martin"
-    );
-    await writeFile("article.html", body);
-    console.log("File written");
+    const body = await get('https://en.wikipedia.org/wiki/Robert_Cecil_Martin');
+    await writeFile('article.html', body);
+    console.log('File written');
   } catch (err) {
     console.error(err);
   }
 }
 
-getCleanCodeArticle()
+getCleanCodeArticle();
 ```
 
 ## **错误警告捕捉**
@@ -1498,7 +1496,7 @@ try {
 
 ### 一致化命名
 
-JavaScript是无类型的，所以大写可以告诉你很多关于变量、函数等的信息。这些规则是主观的，所以你的团队可以选择他们想要的任何规则。关键是，无论你们选择什么，保持一致就好。
+JavaScript 是无类型的，所以大写可以告诉你很多关于变量、函数等的信息。这些规则是主观的，所以你的团队可以选择他们想要的任何规则。关键是，无论你们选择什么，保持一致就好。
 
 **Bad:**
 
@@ -1506,8 +1504,8 @@ JavaScript是无类型的，所以大写可以告诉你很多关于变量、函�
 const DAYS_IN_WEEK = 7;
 const daysInMonth = 30;
 
-const songs = ["Back In Black", "Stairway to Heaven", "Hey Jude"];
-const Artists = ["ACDC", "Led Zeppelin", "The Beatles"];
+const songs = ['Back In Black', 'Stairway to Heaven', 'Hey Jude'];
+const Artists = ['ACDC', 'Led Zeppelin', 'The Beatles'];
 
 function eraseDatabase() {}
 function restore_database() {}
@@ -1522,8 +1520,8 @@ class Alpaca {}
 const DAYS_IN_WEEK = 7;
 const DAYS_IN_MONTH = 30;
 
-const SONGS = ["Back In Black", "Stairway to Heaven", "Hey Jude"];
-const ARTISTS = ["ACDC", "Led Zeppelin", "The Beatles"];
+const SONGS = ['Back In Black', 'Stairway to Heaven', 'Hey Jude'];
+const ARTISTS = ['ACDC', 'Led Zeppelin', 'The Beatles'];
 
 function eraseDatabase() {}
 function restoreDatabase() {}
@@ -1545,11 +1543,11 @@ class PerformanceReview {
   }
 
   lookupPeers() {
-    return db.lookup(this.employee, "peers");
+    return db.lookup(this.employee, 'peers');
   }
 
   lookupManager() {
-    return db.lookup(this.employee, "manager");
+    return db.lookup(this.employee, 'manager');
   }
 
   getPeerReviews() {
@@ -1596,7 +1594,7 @@ class PerformanceReview {
   }
 
   lookupPeers() {
-    return db.lookup(this.employee, "peers");
+    return db.lookup(this.employee, 'peers');
   }
 
   getManagerReview() {
@@ -1604,7 +1602,7 @@ class PerformanceReview {
   }
 
   lookupManager() {
-    return db.lookup(this.employee, "manager");
+    return db.lookup(this.employee, 'manager');
   }
 
   getSelfReview() {

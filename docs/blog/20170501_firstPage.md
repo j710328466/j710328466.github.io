@@ -4,8 +4,11 @@ nav:
   path: /blog
 order: 999
 category: Components
+toc: content
 title: 用Vue高仿qq音乐官网-pc端
-group: 2017年
+group:
+  title: 2017年
+  order: 999
 ---
 
 ## 用 Vue 高仿 qq 音乐官网-pc 端

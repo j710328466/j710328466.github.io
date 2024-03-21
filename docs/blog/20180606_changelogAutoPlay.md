@@ -3,9 +3,12 @@ nav:
   title: 文章
   path: /blog
 order: 999
+toc: content
 category: Components
+group:
+  title: 2018年
+  order: 18
 title: changelog 日志自动生成插件
-group: 2018年
 ---
 
 ## changelog 日志自动生成插件

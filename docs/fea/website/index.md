@@ -2,6 +2,7 @@
 nav:
   title: 前端
   path: /fea
+toc: content
 group:
   title: 💊 学习文档
   order: 1

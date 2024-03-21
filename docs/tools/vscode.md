@@ -2,6 +2,7 @@
 nav:
   title: 工具
   path: /tools
+toc: content
 group:
   title: 💊 vscode
   order: 9
@@ -24,13 +25,12 @@ group:
 
 > vsce login {publisher}
 
-记得上[azure](https://devlifestyle.visualstudio.com/_usersSettings/tokens) 生成token，并记住它
+记得上[azure](https://devlifestyle.visualstudio.com/_usersSettings/tokens) 生成 token，并记住它
 
 ### 第四步：发布
 
 > vsce publish --no-dependencies
-会生成一个访问链接，点击进入即可查看
-
+> 会生成一个访问链接，点击进入即可查看
 
 ## 插件推荐
 
@@ -56,11 +56,11 @@ markdown 预览插件
 
 ### cssrem
 
-rem转换工具,移动端开发可以安装
+rem 转换工具,移动端开发可以安装
 
 ### Debugger for Chrome
 
-debugger插件，正在学怎么用
+debugger 插件，正在学怎么用
 
 ### ESlint
 
@@ -103,7 +103,8 @@ markdown 语法提示插件
 插件备份工具，同步用的，神器
 
 ### background
-> ps: 有的时候超级超级吃 CPU，好像有点bug 慎用！！
+
+> ps: 有的时候超级超级吃 CPU，好像有点 bug 慎用！！
 
 一款美化插件配置如下：
 
@@ -119,4 +120,3 @@ markdown 语法提示插件
         "height": "1150px"
     }
 ```
-

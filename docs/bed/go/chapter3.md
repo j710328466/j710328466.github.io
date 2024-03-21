@@ -2,6 +2,7 @@
 nav:
   title: 后端
   path: /bed
+toc: content
 group:
   title: Go
   order: 4

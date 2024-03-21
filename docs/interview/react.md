@@ -2,9 +2,11 @@
 nav:
   title: 面试
   path: /interview
+toc: content
+title: React
 group:
-  title: 💊 面试题库
-  order: 6
+  title: 前端
+  order: 8
 ---
 
 # React
@@ -393,5 +395,4 @@ redux 分为几个重要的概念：1. store（容器）、2. state（数据）�
 
 ## 参考文档
 
-> https://juejin.cn/post/6844903922453200904
-> <https://react.iamkasong.com/process/doubleBuffer.html#%E5%8F%8C%E7%BC%93%E5%AD%98fiber%E6%A0%91>
+> https://juejin.cn/post/6844903922453200904 > <https://react.iamkasong.com/process/doubleBuffer.html#%E5%8F%8C%E7%BC%93%E5%AD%98fiber%E6%A0%91>

@@ -4,8 +4,11 @@ nav:
   path: /blog
 order: 999
 category: Components
+toc: content
 title: 如何终端 ssh 免密登录 ECS
-group: 2018年
+group:
+  title: 2018年
+  order: 18
 ---
 
 ## 如何终端 ssh 免密登录 ECS

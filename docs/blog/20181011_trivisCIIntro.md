@@ -4,8 +4,11 @@ nav:
   path: /blog
 order: 999
 category: Components
+toc: content
 title: travisCI 持续集成 gh-page 并部署
-group: 2018年
+group:
+  title: 2018年
+  order: 18
 ---
 
 ## travisCI 持续集成 gh-page 并部署

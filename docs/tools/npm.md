@@ -2,6 +2,7 @@
 nav:
   title: 工具
   path: /tools
+toc: content
 group:
   title: 💊 npm 操作手册
   order: 2

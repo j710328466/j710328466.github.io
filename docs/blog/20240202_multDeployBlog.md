@@ -3,9 +3,12 @@ nav:
   title: 文章
   path: /blog
 order: 999
+toc: content
 category: Components
 title: 多节点部署静态资源方案
-group: 2024年
+group:
+  title: 2024年
+  order: 1
 ---
 
 ## 背景

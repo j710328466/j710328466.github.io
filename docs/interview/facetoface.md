@@ -2,6 +2,7 @@
 nav:
   title: 面试
   path: /interview
+toc: content
 group:
   title: 💊 面试题库
   order: 1

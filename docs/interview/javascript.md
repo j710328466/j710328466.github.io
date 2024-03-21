@@ -2,8 +2,10 @@
 nav:
   title: 面试
   path: /interview
+toc: content
+title: JavaScript
 group:
-  title: 💊 面试题库
+  title: 前端
   order: 3
 ---
 
@@ -519,7 +521,7 @@ const fn = (cb: (name: string) => void) => {
 
 当读取实例的属性获取不到时，如果找不到，就会查找与对象关联的原型中的属性，还找不到就会去找原型的原型，一直到顶层，这样的一层层的关系嵌套称为**原型链**
 
-1. 每一个对象都有****proto****这是浏览器早期为了让我们能访问 prototype。
+1. 每一个对象都有\***\*proto\*\***这是浏览器早期为了让我们能访问 prototype。
 2. \_ \_proto\_\_  的 constructor（构造函数）里面有 prototype。
 3. \_ \_proto\_\_  下面有几个方法：hasOwnProperty 、toString、toLocalString、valueOf、isPrototypeOf
 4. 原型的  `constructor`  属性指向构造函数，构造函数又通过  `prototype`  属性指回原型，但是并不是所有函数都具有这个属性，`Function.prototype.bind()`  就没有这个属性。

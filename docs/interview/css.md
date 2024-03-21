@@ -2,8 +2,10 @@
 nav:
   title: 面试
   path: /interview
+toc: content
+title: CSS
 group:
-  title: 💊 面试题库
+  title: 前端
   order: 2
 ---
 
@@ -11,33 +13,29 @@ group:
 
 ## 清除浮动
 
-
-- 使用clear
-- 使用overflow
-- 使用css的*：after
-
-
+- 使用 clear
+- 使用 overflow
+- 使用 css 的\*：after
 
 ## 居中设置
 
-
 ### 1· 水平居中
 
-- flex布局
+- flex 布局
 
-> 设置justify-content：center；items-align: center;
+> 设置 justify-content：center；items-align: center;
 
 ### 2· 垂直居中
 
 - 多行文本（内联元素）
 
-> a: 插入 table ，再设置vertical-align: middle;
-> b: 先设置display： table-cell；再设置vertical-align: middle;
+> a: 插入 table ，再设置 vertical-align: middle;
+> b: 先设置 display： table-cell；再设置 vertical-align: middle;
 
-## link 和 @import的区别
+## link 和 @import 的区别
 
-- link除了加载css，还能用于定义RSS，定义rel链接属性，import只能引入css
-- 页面加载时，link同时加载，而@import引用的css会等到页面被加载完之后再加载
+- link 除了加载 css，还能用于定义 RSS，定义 rel 链接属性，import 只能引入 css
+- 页面加载时，link 同时加载，而@import 引用的 css 会等到页面被加载完之后再加载
 - import 只在 ie5 以上被识别
 
 ## css 盒子模型
@@ -46,13 +44,13 @@ group:
 
 ## css 选择符号
 
-- id选择器
+- id 选择器
 - 类选择器
 - 标签选择器
 - 相邻选择器 +
 - 子选择器 >
 - 后代选择器
-- 通配符选择器 *
+- 通配符选择器 \*
 - 属性选择器 （a[rel = 'external'])
 - 伪类选择器 hover nth-child
 - 优先级
@@ -93,7 +91,7 @@ group:
 }
 ```
 
-## 1px边框
+## 1px 边框
 
 ```javascript
 /* 定义 */
@@ -131,7 +129,7 @@ group:
 /* 使用方式 */
 @include border-1px(rgba(7, 17, 27, .1));
 ```
- 
+
 ## 形成**BFC**(Block Formatting Context)的几种方式
 
 ```javascript
@@ -185,7 +183,6 @@ body {
 
 ### 双飞翼布局
 
-
 ```html
 //html
 <body>
@@ -198,32 +195,32 @@ body {
 
 // css
 <style>
- .main-wrapper {
-  float: left;
-  width: 100%;
-}
+  .main-wrapper {
+    float: left;
+    width: 100%;
+  }
 
-.main {
-  height: 300px;
-  margin-left: 210px;
-  margin-right: 190px;
-  background-color: rgba(255, 0, 0, .5);
-}
+  .main {
+    height: 300px;
+    margin-left: 210px;
+    margin-right: 190px;
+    background-color: rgba(255, 0, 0, 0.5);
+  }
 
-.sub {
-  float: left;
-  width: 200px;
-  height: 300px;
-  margin-left: -100%;
-  background-color: rgba(0, 255, 0, .5);
-}
+  .sub {
+    float: left;
+    width: 200px;
+    height: 300px;
+    margin-left: -100%;
+    background-color: rgba(0, 255, 0, 0.5);
+  }
 
-.extra {
-  float: left;
-  width: 180px;
-  height: 300px;
-  margin-left: -180px;
-  background-color: rgba(0, 0, 255, .5);
-}
+  .extra {
+    float: left;
+    width: 180px;
+    height: 300px;
+    margin-left: -180px;
+    background-color: rgba(0, 0, 255, 0.5);
+  }
 </style>
 ```

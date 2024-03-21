@@ -2,12 +2,12 @@
 nav:
   title: 面试
   path: /interview
+toc: content
+title: Vite
 group:
-  title: 💊 面试题库
-  order: 2
+  title: 前端
+  order: 8
 ---
-
-# 打包工具
 
 ## vite 和 webpack 的区别
 

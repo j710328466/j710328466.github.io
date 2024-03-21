@@ -3,9 +3,12 @@ nav:
   title: 文章
   path: /blog
 order: 999
+toc: content
 category: Components
 title: changelog 日志自动生成工具升级啦~
-group: 2020年
+group:
+  title: 2019年
+  order: 16
 ---
 
 # changelog 日志自动生成工具升级啦~
