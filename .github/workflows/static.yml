@@ -23,8 +23,8 @@ jobs:
       - name: Build
         run: yarn build
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          # Upload entire repository
-          path: 'docs-dist'
+          github_token: ${{ secrets.ACTION_SECRET }}
+          publish_dir: ./docs-dist
