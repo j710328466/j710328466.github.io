@@ -2,6 +2,7 @@
 nav:
   title: 前端
   path: /fea
+  order: 1
 toc: content
 group:
   title: 💊 canvas

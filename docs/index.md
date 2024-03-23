@@ -1,5 +1,7 @@
 ---
 title: Nice Note
+description: 前端架构师dev的笔记，包括但不限于前端相关的知识
+keywords: [前端, 后端, 数据库, 生活方式, 运维]
 hero:
   title: Nice Note
   description: dev 的博客

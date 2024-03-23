@@ -2,6 +2,7 @@
 nav:
   title: 前端
   path: /fea
+  order: 1
 toc: content
 title: 书写规范
 group:

@@ -2,6 +2,7 @@
 nav:
   title: 工具
   path: /tools
+  order: 6
 toc: content
 group:
   title: 录屏

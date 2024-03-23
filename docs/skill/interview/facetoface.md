@@ -1,7 +1,8 @@
 ---
 nav:
-  title: 面试
-  path: /interview
+  title: 技巧
+  path: /skill
+  order: 5
 toc: content
 group:
   title: 💊 面试题库

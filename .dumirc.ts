@@ -15,10 +15,8 @@ export default defineConfig({
   logo: 'https://i.niupic.com/images/2021/06/07/9krN.png',
   favicons: ['https://i.niupic.com/images/2021/06/07/9krN.png'],
   outputPath: 'docs-dist',
+  exportStatic: {},
   hash: true,
-  history: {
-    type: 'hash',
-  },
   publicPath: '/',
   resolve: {
     docDirs: ['docs'],
