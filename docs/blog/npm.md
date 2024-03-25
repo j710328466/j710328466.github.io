@@ -1,16 +1,13 @@
 ---
 nav:
-  title: 工具
-  path: /tools
-  order: 6
+  title: 文章
+  path: /blog
 toc: content
+category: Components
+title: npm 操作手册
 group:
-  title: 💊 npm 操作手册
-  order: 2
-  path: /npm
+  title: 2018年
 ---
-
-# 💊 npm 操作手册
 
 ## 发布 npm 包
 

@@ -1,16 +1,13 @@
 ---
 nav:
-  title: 工具
-  path: /tools
-  order: 6
+  title: 文章
+  path: /blog
 toc: content
+category: Components
+title: Git 入门
 group:
-  title: 💊 git
-  order: 1
-  path: /git
+  title: 2020年
 ---
-
-# 💊 git
 
 centos 安装命令：
 

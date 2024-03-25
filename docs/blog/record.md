@@ -1,12 +1,12 @@
 ---
 nav:
-  title: 工具
-  path: /tools
-  order: 6
+  title: 文章
+  path: /blog
 toc: content
+category: Components
+title: 录屏软件推荐
 group:
-  title: 录屏
-  order: 4
+  title: 2021年
 ---
 
 ## 软件推荐

@@ -1,20 +1,16 @@
 ---
 nav:
-  title: 工具
-  path: /tools
-  order: 6
+  title: 文章
+  path: /blog
 toc: content
+category: Components
+title: centOS 入门
 group:
-  title: 💊 终端
-  order: 4
-  path: /centos
+  title: 2020年
+  order: 3
 ---
 
-# 💊 终端
-
-## 好用的终端
-
-> [electerm](https://github.com/electerm/electerm)
+> 好用的终端： [electerm](https://github.com/electerm/electerm)
 
 ## 常用命令
 

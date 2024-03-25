@@ -1,16 +1,13 @@
 ---
 nav:
-  title: 工具
-  path: /tools
-  order: 6
+  title: 文章
+  path: /blog
 toc: content
+category: Components
+title: PM2 入门
 group:
-  title: 💊 pm2
-  order: 1
-  path: /pm2
+  title: 2018年
 ---
-
-# 💊 pm2
 
 ## 配置文件说明
 

@@ -1,16 +1,14 @@
 ---
 nav:
-  title: 工具
-  path: /tools
-  order: 6
+  title: 文章
+  path: /blog
 toc: content
+category: Components
+title: 如何配置 https？
 group:
-  title: 💊 配置https
-  order: 2
-  path: /https
+  title: 2020年
+  order: 3
 ---
-
-# 💊 配置 https
 
 ## 配置流程
 

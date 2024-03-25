@@ -1,16 +1,14 @@
 ---
 nav:
-  title: 工具
-  path: /tools
-  order: 6
+  title: 文章
+  path: /blog
 toc: content
+category: Components
+title: docker 入门
 group:
-  title: 💊 docker
-  order: 4
-  path: /docker
+  title: 2020年
+  order: 3
 ---
-
-# 💊 docker
 
 ## 通过 brew 下载
 

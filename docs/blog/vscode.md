@@ -1,13 +1,13 @@
 ---
 nav:
-  title: 工具
-  path: /tools
-  order: 6
+  title: 文章
+  path: /blog
 toc: content
+category: Components
+title: Vscode 插件开发入门
 group:
-  title: 💊 vscode
-  order: 9
-  path: /vscode
+  title: 2021年
+  order: 2
 ---
 
 # 💊 vscode

@@ -1,16 +1,13 @@
 ---
 nav:
-  title: 工具
-  path: /tools
-  order: 6
+  title: 文章
+  path: /blog
 toc: content
+category: Components
+title: Nginx 入门
 group:
-  title: 💊 nginx
-  order: 1
-  path: /nginx
+  title: 2019年
 ---
-
-# 💊 nginx
 
 ## 安装
 
