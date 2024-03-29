@@ -33,5 +33,11 @@ export default defineConfig({
     statsFilename: 'stats.json',
     logLevel: 'info',
     defaultSizes: 'parsed', // stat  // gzip
-  }
+  },
+  sitemap: {
+    hostname: 'https://j710328466.github.io'
+  },
+  copy: [
+    { from: 'public', to: 'docs-dist' }
+  ]
 });
