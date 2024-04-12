@@ -23,6 +23,12 @@ export default defineConfig({
     atomDirs: [{ type: 'component', dir: 'src' }],
     codeBlockMode: 'passive',
   },
+  scripts: [
+    {
+      src: 'https://umami.jiangzhixiong.com/script.js',
+      'data-website-id': '8b5e3f5f-0922-43d3-9e20-b5b3b87a1f9e'
+    }
+  ],
   locales: [{ id: 'zh-CN', name: '中文' }], // 2.0 默认值
   analyze: {
     analyzerMode: 'server',

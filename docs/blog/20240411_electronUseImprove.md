@@ -4,14 +4,44 @@ nav:
   path: /blog
 category: Components
 toc: content
-title: electron 保姆级入门手册(二)
+title: electron 踩坑大全
 keywords: [electron, 客户端]
 description: Electron 是一个由 GitHub 开发的开源桌面应用程序开发框架，可以使用 HTML、CSS 和 JavaScript 构建跨平台的桌面应用程序
 group:
   title: 2024年
 ---
 
-## 应用打包与发布
+## 介绍
+
+## 进阶功能
+
+### 添加 filter 滤镜
+
+<https://www.nuevodevel.com/nuevo/showcase/filters>
+
+## 踩坑记录
+
+### Illegal invocation: Function must be called on an object of type App
+
+这个问题主要来自，ipc 调用报错，解决方案目前也没找到：
+
+```js
+// 示例代码
+ipcMain.handle('getPlatform', () => {
+  app.getPath('appData');
+  return `hi, i'm from ${process.platform}`;
+});
+```
+
+这会导致在客户端调用的时候，报错。
+
+## 签名报错: sha512 checksum mismatch, expected
+
+```js
+sha512 checksum mismatch, expected 6LQI2d9BPC3Xs0ZoTQe1o3tPiA28c7+PY69Q9i/pD8lY45psMtHuLwv3vRckiVr3Zx1cbNyLlBR8STwCdcHwtA==, got SfLnj0czCr7vVbgAev1PTV7gYnEtx8gyEUGx5QIO9AWoArCPHLz8JLTKweAA42/Zysx77xuhxN1cgAcjKsRZlw==
+```
+
+参考：<https://www.electron.build/code-signing>
 
 - 将 Electron 应用打包成可执行文件
 - 在不同平台上发布应用，如 Windows、macOS 和 Linux

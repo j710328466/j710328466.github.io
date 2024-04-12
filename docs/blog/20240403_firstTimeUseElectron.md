@@ -61,6 +61,7 @@ npm i electron
 <html>
   <head>
     <meta charset="UTF-8" />
+    <!-- 这个 CSP 部分的介绍可以去看看关于安全的板块，建议加上 -->
     <meta
       http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self'"
@@ -82,25 +83,25 @@ npm i electron
 
 ### 5. 创建 preload 预加载脚本
 
-在根目录下创建 preload.ts 文件，写入：
+在根目录下创建 preload.ts 文件，这个模块功能主要是把客户端的一些底层能力暴露给浏览器端，写入：
 
 ```js
 // preload.ts
 import { contextBridge  } from 'electron/core'
 
 contextBridge.exposeInMainWorld('baseAPI', {
-  getNodeVersion: () => process.versions.node,
-  getChromeVersion: () => process.versions.chrome,
-  getElectronVersion: () => process.versions.electron
-  setTitle: (title: string) => ipcRenderer.send('set-title', title),
+  getNodeVersion: () => process.versions.node,   // 获取node版本
+  getChromeVersion: () => process.versions.chrome,  // 获取chrome版本
+  getElectronVersion: () => process.versions.electron // 获取 electron版本
+  setTitle: (title: string) => ipcRenderer.send('set-title', title)  // 设置显示的标题
 })
 ```
 
-**versions**: 注入 windows 的全局 api 对象实例，这里透传了 node 版本号，chrome 版本号，electron 版本号，和修改标题事件
+**versions**: 注入 windows 的全局 api 对象实例，里面透传了 node 版本号，chrome 版本号，electron 版本号，和修改标题事件
 
 ### 6. 创建 renderer 渲染层脚本
 
-这个其实就是正常开发中的 JavaScript 脚本，无非就是比原本的 windows 实例多了一些 API (由 preload 注入)：
+这个其实就是正常开发中的 JavaScript 脚本，无非就是比原本的 windows 实例多了一些 API (这里是由 preload 注入的 baseAPI)：
 
 ```ts
 const info = document.getElementById('info');
@@ -111,7 +112,7 @@ info.innerText = `
 `;
 
 window.onload = () => {
-  baseAPI.setTitle('修改标题为：nicecode');
+  baseAPI.setTitle('修改标题为-nicecode');
 };
 ```
 
@@ -131,7 +132,7 @@ const createWindow = () => {
     },
   });
 
-  // 监听修改标题事件
+  // 监听修改标题事件, 和上文中的send相呼应
   ipcMain.on('set-title', (event, title) => {
     const webContents = event.sender;
     const win = BrowserWindow.fromWebContents(webContents);
@@ -177,6 +178,12 @@ app.on('window-all-closed', () => {
 
 ## 资源与社区
 
+我调研了相关的一系列客户端的解决方案总共有三个：electron、flutter、react-native。为啥我选择了 electron。
+
+具体来说的话相对其它俩，我感觉上手更快，前端基本可以做到无缝衔接，没有什么额外的语法。另外一点的话它更贴近原生，后期做一些交互场景和动画也会更加丝滑。
+
+**前端为啥叫前端，就是因为我们更关注视觉和交互，抛弃了这个前端还剩啥？**
+
 ### Flutter
 
 Flutter 是一个由谷歌开发的跨平台应用程序开发框架，可以同时用于构建 iOS、Android、Web 和桌面应用程序。Flutter 使用 Dart 编程语言，具有热重载、丰富的 UI 组件、优秀的性能和良好的可定制性等优势。
@@ -197,4 +204,4 @@ React Native 是一个由 Facebook 开发的框架，用于构建原生移动应
 
 一般情况下，PC 端应用更适合使用 Electron，因为它更贴近底层，中间有一层 node 桥接，让你调用操作系统的底层能力会更丝滑。而移动端应用更适合使用 React Native 或者 flutter，他们会让用户有更好的交互和性能体验。
 
-下一节，我讲讲客户端打包，和我在打包过程中发现的一些问题。
+下回我讲讲客户端打包，和我在打包过程中发现的一些问题，踩的一些坑。
