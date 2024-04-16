@@ -26,7 +26,7 @@ export default defineConfig({
   scripts: [
     {
       src: 'https://umami.jiangzhixiong.com/script.js',
-      'data-website-id': '8b5e3f5f-0922-43d3-9e20-b5b3b87a1f9e'
+      'data-website-id': 'c7e0118c-7e49-48e1-bd72-1e5e54181ab5'
     }
   ],
   locales: [{ id: 'zh-CN', name: '中文' }], // 2.0 默认值
